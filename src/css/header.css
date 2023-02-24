@@ -1,0 +1,49 @@
+.title {
+    padding: 2rem 1rem;
+    background-color: #e9ecef;
+    border-radius: 0.3rem;
+    text-align: center;
+}
+
+.title > img {
+    vertical-align: middle;
+}
+
+.logo {
+    margin: 0.8rem 1rem;
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.toggle {
+    display: none;
+    font-size: 1.4rem;
+    padding: 0.8rem 1rem;
+}
+
+.header__menu-list {
+    list-style: none;
+    display: flex;
+}
+
+.header__list-item {
+    padding: 0 1rem;
+}
+
+.header__list-item > a {
+    color: white;
+    text-decoration-line: none;
+}
+
+.header__left {
+    display: flex;
+}
+
+.header__right {
+    list-style: none;
+    display: flex;
+}
+
+.header__right div {
+    margin: 0 1rem;
+}

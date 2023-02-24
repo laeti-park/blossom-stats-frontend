@@ -1,0 +1,53 @@
+import React from "react";
+import {Link} from "react-router-dom";
+
+const index = () => {
+    return (
+        <div className={'main__box'}>
+            <img className={'main__logo_image'} src={'/images/blossom_logo/blossom_logo_horizontal.png'}
+                 alt={'Blossom Logo'}/>
+            <div className={'main__logo_text'}>Stats For Blossom Club</div>
+            <div className={'main__logo_text'}>┕ Club Since 2019.12.18.</div>
+            <hr/>
+            <ul>
+                <h3>▶ Blossom Stats 메뉴 목록</h3>
+                <h5>* 클릭 시 해당 페이지로 이동합니다.</h5>
+                <li>
+                    <Link to={'/member'}>
+                        <img src={'/images/game_icon/leaderboards.webp'} alt={'클럽원'}/>
+                        클럽원
+                    </Link>
+                </li>
+                <li>
+                    <Link to={'/brawler'}>
+                        <img src={'/images/game_icon/brawler.webp'} alt={'브롤러'}/>
+                        브롤러
+                    </Link>
+                </li>
+                <li>
+                    <Link to={'/record'}>
+                        <img src={'/images/game_icon/brawl_pass_free.webp'} alt={'일일기록'}/>
+                        일일기록
+                    </Link>
+                </li>
+                <li>
+                    <Link to={'/season'}>
+                        <img src={'/images/game_icon/brawl_pass.webp'} alt={'시즌기록'}/>
+                        시즌기록
+                    </Link>
+                </li>
+                <li className={'gray'}>
+                    준비 중
+                </li>
+                <li className={'gray'}>
+                    준비 중
+                </li>
+                <li>
+                    <a href={'https://open.kakao.com/o/g6X3nY9c'}>문의방</a>
+                </li>
+            </ul>
+        </div>
+    )
+}
+
+export default index;

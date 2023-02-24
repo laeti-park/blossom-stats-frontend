@@ -1,0 +1,375 @@
+.table__box {
+    padding: 10px 10px 40px 10px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.table__box > thead > tr:first-child > th:first-child {
+    border-top-left-radius: 6px;
+}
+
+.table__box > thead > tr:first-child > th:last-child {
+    border-top-right-radius: 6px;
+}
+
+.table__box > thead > tr > th {
+    border-bottom: 1px solid #FFD1D1;
+    background-color: #FF9494;
+}
+
+.table__head_row__trophy {
+    width: 78px;
+    padding: 6px 0 6px 0;
+}
+
+.table__head_row__rank {
+    width: 56px;
+    padding: 6px 0 6px 0;
+}
+
+.table__head_row__image {
+    height: 16px;
+    margin-right: 4px;
+}
+
+.main_row__box > td {
+    background-color: #FFE3E1;
+}
+
+.main_row__box > td:first-child {
+    max-width: 168px;
+    padding-left: 16px;
+}
+
+.main_row__box img {
+    height: 14px;
+    margin-right: 6px;
+}
+
+.sub_row__box {
+    font-size: 0.8rem;
+    background-color: #FFF5E4;
+}
+
+.sub_row__box img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin-right: 6px;
+}
+
+.sub_row__box p {
+    width: 50%
+}
+
+.sub_row__battle_log {
+    height: 360px;
+    vertical-align: top;
+}
+
+.sub_row__battle_log__list {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.sub_row__content {
+    display: flex;
+    padding: 4px 0 4px 0;
+}
+
+.table__hide {
+    display: none;
+}
+
+.table__open {
+    display: table-row;
+}
+
+.record__box {
+    min-width: 340px;
+    width: 340px;
+    margin-bottom: 10px;
+}
+
+.record__box > thead > tr:first-child > th:first-child {
+    border-top-left-radius: 6px;
+    text-align: left;
+    width: 160px;
+}
+
+.record__box > thead > tr:first-child > th:last-child {
+    border-top-right-radius: 6px;
+}
+
+.record__box > thead > tr > th {
+    font-size: 14px;
+    border-bottom: 1px solid #949CDF;
+    background-color: #A7C5EB;
+}
+
+.record__content {
+    display: table-row;
+}
+
+.record__content > td {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.record__content__triple_box {
+    display: flex;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.record__content__triple_box > div {
+    padding: 6px;
+}
+
+.triple__team1 {
+    width: 50%;
+    background-color: #B5EAEA;
+    border-bottom-left-radius: 5px;
+}
+
+.triple__team2 {
+    width: 50%;
+    background-color: #FFBCBC;
+    border-bottom-right-radius: 5px;
+}
+
+.record__content__duo_box {
+    display: block;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.record__content__duo_box > div {
+    padding: 6px;
+}
+
+.duo__team1 {
+    display: flex;
+    background-color: #4BAEA0;
+}
+
+.duo__team2 {
+    display: flex;
+    background-color: #B6E6BD;
+}
+
+.duo__team3 {
+    display: flex;
+    background-color: #F1F0CF;
+}
+
+.duo__team4 {
+    display: flex;
+    background-color: #FDE2E2;
+}
+
+.duo__team5 {
+    display: flex;
+    background-color: #FFB6B6;
+}
+
+.solo__team1 {
+    display: flex;
+    background-color: #4BAEA0;
+}
+
+.solo__team2 {
+    display: flex;
+    background-color: #4bc2b0;
+}
+
+.solo__team3 {
+    display: flex;
+    background-color: #B6E6BD;
+}
+
+.solo__team4 {
+    display: flex;
+    background-color: #b6fad1;
+}
+
+.solo__team5 {
+    display: flex;
+    background-color: #F1F0CF;
+}
+
+.solo__team6 {
+    display: flex;
+    background-color: #f1f0e3;
+}
+
+.solo__team7 {
+    display: flex;
+    background-color: #FDE2E2;
+}
+
+.solo__team8 {
+    display: flex;
+    background-color: #fdcef6;
+}
+
+.solo__team9 {
+    display: flex;
+    background-color: #FDE2E2;
+}
+
+.solo__team0 {
+    display: flex;
+    background-color: #fdecec;
+}
+
+.record__content__player {
+    min-width: 150px;
+    min-height: 54px;
+    height: 54px;
+    padding: 2px;
+}
+
+.record__content__player > div {
+    margin-bottom: 2px;
+}
+
+.record__content__image {
+    margin: 0 4px 0 0;
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.record__content__small_image {
+    margin: 0 4px 0 4px;
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.record__content__level {
+    display: inline-block;
+    min-width: 40px;
+    width: 40px;
+    margin: 0 6px 0 6px;
+    text-align: left;
+}
+
+.record__content__name {
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* Season Table Content */
+
+.season__title,
+.season__content {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    max-height: 32px;
+    border-bottom: 1px solid darkgrey;
+}
+
+.season__title {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.season__content {
+    font-size: 0.72rem;
+    text-align: right;
+}
+
+.season__title > li:first-child,
+.season__content > li:first-child {
+    margin-left: 2px;
+    width: 120px;
+    border-right: 1px solid darkgrey;
+}
+
+.season__content > li:first-child {
+    text-align: left;
+}
+
+.season__title > li:nth-child(2),
+.season__content > li:nth-child(2) {
+    width: 32px;
+    border-right: 1px solid darkgrey;
+    text-align: center;
+}
+
+.season__title > li:nth-child(3),
+.season__content > li:nth-child(3) {
+    width: 32px;
+    border-right: 1px solid darkgrey;
+    text-align: center;
+}
+
+.season__title > li:nth-child(4),
+.season__content > li:nth-child(4) {
+    width: 60px;
+    border-right: 1px solid darkgrey;
+    text-align: center;
+}
+
+.season__title > li:nth-child(5),
+.season__content > li:nth-child(5) {
+    width: 36px;
+    border-right: 1px solid darkgrey;
+}
+
+.season__content > li:nth-child(5) {
+    padding-right: 4px;
+}
+
+.season__title > li:nth-child(6),
+.season__content > li:nth-child(6) {
+    width: 48px;
+    border-right: 1px solid darkgrey;
+}
+
+.season__content > li:nth-child(6) {
+    padding-right: 4px;
+}
+
+.season__title > li:last-child,
+.season__content > li:last-child {
+    width: 40px;
+}
+
+.season__content > li:last-child {
+    padding-right: 4px;
+}
+
+.season__content > li > img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    margin: 0;
+}
+
+
+@media (min-width: 410px) {
+    .table__box {
+        padding: 10px 10px 10px 10px;
+        width: 400px;
+        max-width: 400px;
+    }
+
+    .main_row__box > td:first-child {
+        width: 200px;
+    }
+
+    .sub_row__box {
+        font-size: 0.9rem;
+    }
+}
