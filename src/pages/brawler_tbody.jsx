@@ -73,7 +73,7 @@ const brawlerTable = ({brawler, memberBrawlers, members}) => {
                             </tr>
                             <tr className='table__hide'>
                                 <td className='sub_row__box' colSpan='4'>
-                                    <div className='sub_row__content'>
+                                    <div>
                                         <p>
                                             <img src={'images/game_icon/account.webp'} alt={'계정'}/>
                                             태그 : {item.member_id}
@@ -84,7 +84,7 @@ const brawlerTable = ({brawler, memberBrawlers, members}) => {
                                         </p>
                                     </div>
                                     <hr/>
-                                    <div className='sub_row__content'>
+                                    <div>
                                         <p>
                                             <img src={'images/game_icon/trophy.webp'}
                                                  alt='트로피'/>
@@ -97,7 +97,7 @@ const brawlerTable = ({brawler, memberBrawlers, members}) => {
                                             현재 트로피 : {item.trophy_current}개
                                         </p>
                                     </div>
-                                    <div className='sub_row__content'>
+                                    <div>
                                         <p>
                                             <img src={'images/game_icon/trophy_plus.webp'}
                                                  alt='트로피 변화량'/>
@@ -111,7 +111,7 @@ const brawlerTable = ({brawler, memberBrawlers, members}) => {
                                         </p>
                                     </div>
                                     <hr/>
-                                    <div className='sub_row__content'>
+                                    <div>
                                         <p>
                                             <img
                                                 src={'images/game_mode/trophyLeague.webp'}
@@ -125,7 +125,7 @@ const brawlerTable = ({brawler, memberBrawlers, members}) => {
                                             파워 리그 경기 : {item.match_league}회
                                         </p>
                                     </div>
-                                    <div className='sub_row__content'>
+                                    <div>
                                         <p>
                                             <img
                                                 src={'images/game_mode/trophyLeague.webp'}

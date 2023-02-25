@@ -24,8 +24,8 @@ export default ({member}) => {
     }
 
     return (
-        <div>
-            <div className='sub_row__content'>
+        <React.Fragment>
+            <div>
                 <p>
                     <img src={'images/game_icon/account.webp'} alt={'계정'}/>
                     태그 : {member.id}
@@ -95,6 +95,6 @@ export default ({member}) => {
                     )
                 })
             }
-        </div>
+        </React.Fragment>
     )
 }

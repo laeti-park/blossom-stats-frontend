@@ -23,9 +23,11 @@ function App() {
     return (
         <div>
             <div className='title'>
-                <img src={'images/blossom_logo/blossom_logo_horizontal.png'}
-                     alt={'Blossom Logo'}
-                     width='360px'/>
+                <Link to='/'
+                      onClick={() => setIsToggled(!isToggled)}>
+                    <img src={'images/blossom_logo/blossom_logo_horizontal.png'}
+                         alt={'Blossom Logo'}/>
+                </Link>
             </div>
             <Header isToggled={isToggled}>
                 <div
@@ -86,7 +88,7 @@ const Header = styled.div`
   @media screen and (max-width: 768px) {
     justify-content: space-between;
     flex-wrap: wrap;
-
+    
     .header__right {
       display: ${(props) => (props.userToggled ? 'flex' : 'none')};
       flex-direction: column;

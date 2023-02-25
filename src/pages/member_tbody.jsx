@@ -1,4 +1,5 @@
 import React from 'react';
+import {CopyToClipboard} from "react-copy-to-clipboard";
 
 const roman = ['I', 'II', 'III'];
 
@@ -45,18 +46,23 @@ export default ({members}) => {
                         </tr>
                         <tr className='table__hide'>
                             <td className='sub_row__box' colSpan='4'>
-                                <div className='sub_row__content'>
+                                <div>
                                     <p>
                                         <img src={'images/game_icon/account.webp'} alt={'계정'}/>
                                         태그 : {item.id}
                                     </p>
                                     <p>
-                                        <button>태그 복사</button>
-                                        <button>친구 신청</button>
+                                        <CopyToClipboard className={'sub_row__clipboard'} text={item.id}
+                                                         onCopy={() => alert('태그를 복사했습니다.')}>
+                                            <span>태그 복사</span>
+                                        </CopyToClipboard>
+                                        <CopyToClipboard className={'sub_row__clipboard'} text={item.id}><a
+                                            href={'brawlstars://'}>복사 후 친구 신청</a>
+                                        </CopyToClipboard>
                                     </p>
                                 </div>
                                 <hr/>
-                                <div className='sub_row__content'>
+                                <div>
                                     <p>
                                         <img src={'images/game_icon/trophy.webp'} alt='트로피'/>
                                         현재 트로피 : {item.trophy_current}개
@@ -66,7 +72,7 @@ export default ({members}) => {
                                         최고 트로피 : {item.trophy_highest}개
                                     </p>
                                 </div>
-                                <div className='sub_row__content'>
+                                <div>
                                     <p>
                                         <img src={'images/game_mode/rankTriple.webp'} alt={'3vs3'}/>
                                         3vs3 승리 : {item.victory_triple}회
@@ -77,7 +83,7 @@ export default ({members}) => {
                                     </p>
                                 </div>
                                 <hr/>
-                                <div className='sub_row__content'>
+                                <div>
                                     <p>
                                         <img src={'images/trophy_rank/25.png'} alt={'rank25'}/>
                                         Rank : {item.rank_25}개
@@ -92,7 +98,8 @@ export default ({members}) => {
                                     </p>
                                 </div>
                                 <hr/>
-                                <div className='sub_row__content'>
+                                <span>* 파워 리그를 해야 랭크가 갱신됩니다.</span>
+                                <div>
                                     <p>
                                         <img src={'images/game_mode/rankSolo.webp'}
                                              alt={'솔로'}/>
@@ -109,7 +116,7 @@ export default ({members}) => {
                                         {roman[(item.league_team_current % 3)]}
                                     </p>
                                 </div>
-                                <div className='sub_row__content'>
+                                <div>
                                     <p>
                                         <img src={'images/game_mode/rankSolo.webp'}
                                              alt='솔로'/>

@@ -83,7 +83,7 @@ export default ({gameMode, members, battleLog, maps, brawlers}) => {
                                 </tr>
                                 <tr className='table__hide'>
                                     <td className='sub_row__box sub_row__battle_log' colSpan='3'>
-                                        <div className='sub_row__content'>
+                                        <div>
                                             <p>
                                                 <img src={'images/game_icon/account.webp'} alt={'계정'}/>
                                                 태그 : {items.id}

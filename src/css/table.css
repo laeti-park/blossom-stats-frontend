@@ -51,6 +51,11 @@
     background-color: #FFF5E4;
 }
 
+.sub_row__box > div {
+    display: flex;
+    padding: 4px 0 4px 0;
+}
+
 .sub_row__box img {
     width: 20px;
     height: 20px;
@@ -62,19 +67,31 @@
     width: 50%
 }
 
+.sub_row__clipboard {
+    list-style: none;
+    width: 50%;
+    height: 24px;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #C3AED6;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    padding: 6px 6px 6px 6px;
+    margin-right: 10px;
+}
+
 .sub_row__battle_log {
     height: 360px;
     vertical-align: top;
 }
 
 .sub_row__battle_log__list {
+    display: block !important;
     height: 300px;
     overflow-y: scroll;
-}
-
-.sub_row__content {
-    display: flex;
-    padding: 4px 0 4px 0;
 }
 
 .table__hide {

@@ -5,8 +5,15 @@
     text-align: center;
 }
 
-.title > img {
+.title img {
     vertical-align: middle;
+    width: 100%;
+}
+
+@media (min-width: 410px) {
+    .title img{
+        width: 360px;
+    }
 }
 
 .logo {

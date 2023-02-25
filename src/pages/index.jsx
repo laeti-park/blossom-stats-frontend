@@ -4,10 +4,7 @@ import {Link} from "react-router-dom";
 const index = () => {
     return (
         <div className={'main__box'}>
-            <img className={'main__logo_image'} src={'/images/blossom_logo/blossom_logo_horizontal.png'}
-                 alt={'Blossom Logo'}/>
-            <div className={'main__logo_text'}>Stats For Blossom Club</div>
-            <div className={'main__logo_text'}>┕ Club Since 2019.12.18.</div>
+            <div className={'main__logo_text'}>Club Since 2019.12.18.</div>
             <hr/>
             <ul>
                 <h3>▶ Blossom Stats 메뉴 목록</h3>
@@ -43,7 +40,9 @@ const index = () => {
                     준비 중
                 </li>
                 <li>
-                    <a href={'https://open.kakao.com/o/g6X3nY9c'}>문의방</a>
+                    <a href={'https://open.kakao.com/o/g6X3nY9c'} target={'_blank'}>
+                        <img src={'/images/etc_icon/kakaotalk.webp'} alt={'카카오톡'}/>문의방
+                    </a>
                 </li>
             </ul>
         </div>
