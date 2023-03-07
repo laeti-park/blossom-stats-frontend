@@ -3,28 +3,28 @@ import React from "react";
 const brawlerPicked = ({brawler, pick}) => {
 
     const brawlersPickTrophy = pick.filter((element) => {
-        return ['0'].includes(element.battle_type);
+        return ['0'].includes(element.match_type);
     });
 
     const filterPickTrophy = pick.filter((element) => {
-        return element.brawler_id === brawler.id && ['0', '2', '3'].includes(element.battle_type);
+        return element.brawler_id === brawler.id && ['0'].includes(element.match_type);
     });
 
     const brawlersPickLeague = pick.filter((element) => {
-        return ['2', '3'].includes(element.battle_type);
+        return ['2', '3'].includes(element.match_type);
     });
 
     const filterPickLeague = pick.filter((element) => {
-        return element.brawler_id === brawler.id && ['2', '3'].includes(element.battle_type);
+        return element.brawler_id === brawler.id && ['2', '3'].includes(element.match_type);
     });
 
-    const pickTotalTrophy = brawlersPickTrophy.reduce((sum, item) => sum + (item['match'] || 0), 0);
-    const pickMatchTrophy = filterPickTrophy.reduce((sum, item) => sum + (item['match'] || 0), 0);
-    const pickVictoryTrophy = filterPickTrophy.reduce((sum, item) => sum + (item['victory'] || 0), 0);
+    const pickTotalTrophy = brawlersPickTrophy.reduce((sum, item) => sum + (item['match_count'] || 0), 0);
+    const pickMatchTrophy = filterPickTrophy.reduce((sum, item) => sum + (item['match_count'] || 0), 0);
+    const pickVictoryTrophy = filterPickTrophy.reduce((sum, item) => sum + (item['victory_count'] || 0), 0);
 
-    const pickTotalLeague = brawlersPickLeague.reduce((sum, item) => sum + (item['match'] || 0), 0);
-    const pickMatchLeague = filterPickLeague.reduce((sum, item) => sum + (item['match'] || 0), 0);
-    const pickVictoryLeague = filterPickLeague.reduce((sum, item) => sum + (item['victory'] || 0), 0);
+    const pickTotalLeague = brawlersPickLeague.reduce((sum, item) => sum + (item['match_count'] || 0), 0);
+    const pickMatchLeague = filterPickLeague.reduce((sum, item) => sum + (item['match_count'] || 0), 0);
+    const pickVictoryLeague = filterPickLeague.reduce((sum, item) => sum + (item['victory_count'] || 0), 0);
 
 
     return (

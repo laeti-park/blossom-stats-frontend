@@ -10,19 +10,7 @@ const onRowClicked = (event) => {
     }
 };
 
-export default ({gameMode, members, battleLog, maps, brawlers}) => {
-
-    const getMemberName = (id) => {
-        const item = members.find((element) => {
-            return element.id === id;
-        })
-
-        if (item !== undefined) {
-            return item.name;
-        } else {
-            return 0;
-        }
-    }
+export default ({gameMode, battleLog, maps, brawlers}) => {
 
     return (
         <table className='table__box'>
@@ -47,31 +35,31 @@ export default ({gameMode, members, battleLog, maps, brawlers}) => {
             </thead>
             <tbody>
             {
-                battleLog.map(items => {
-                    if (items.battles.length > 0) {
-                        const match = items.battles.length
-                        const victory = items.battles.filter((elements) => {
-                            return elements.battle.filter((element) => {
-                                return element.tag === items.id && element.result === '0';
+                battleLog.length > 0 ? battleLog.map(member => {
+                    if (member.battles.length > 0) {
+                        const match = member.battles.length;
+                        const victory = member.battles.filter((elements) => {
+                            return elements.players.filter((element) => {
+                                return element.player_id === member.id && element.result === '-1';
                             }).length > 0
                         }).length
 
-                        const trophyChange = items.battles.filter((element) => {
-                            return element.type === '0';
-                        }).length > 0 ? items.battles.filter((element) => {
-                            return element.type === '0';
+                        const trophyChange = member.battles.filter((element) => {
+                            return element.info.match_type === '0';
+                        }).length > 0 ? member.battles.filter((element) => {
+                            return element.info.match_type === '0';
                         }).map((element) => {
-                            return parseInt(element.trophy_change);
+                            return parseInt(element.info.match_change);
                         }).reduce((trophy, total) => trophy + total) : 0;
 
                         const victoryRate = isNaN(victory / match) ? 0 : Math.round((victory / match) * 10000) / 100.0
 
                         return (
-                            <React.Fragment key={items.id}>
+                            <React.Fragment key={member.id}>
                                 <tr className='main_row__box'
                                     onClick={onRowClicked}>
                                     <td>
-                                        {getMemberName(items.id)}
+                                        {member.name}
                                     </td>
                                     <td>
                                         {match}회
@@ -86,7 +74,7 @@ export default ({gameMode, members, battleLog, maps, brawlers}) => {
                                         <div>
                                             <p>
                                                 <img src={'images/game_icon/account.webp'} alt={'계정'}/>
-                                                태그 : {items.id}
+                                                태그 : {member.id}
                                             </p>
                                             <p>
                                                 <img src={'images/game_icon/quests.webp'} alt={'퀘스트'}/>
@@ -94,7 +82,7 @@ export default ({gameMode, members, battleLog, maps, brawlers}) => {
                                             </p>
                                         </div>
                                         <hr/>
-                                        <SubContents items={items}
+                                        <SubContents member={member}
                                                      rotation={gameMode}
                                                      maps={maps}/>
                                     </td>
@@ -102,7 +90,7 @@ export default ({gameMode, members, battleLog, maps, brawlers}) => {
                             </React.Fragment>
                         )
                     }
-            })
+            }) : null
             }
             </tbody>
         </table>

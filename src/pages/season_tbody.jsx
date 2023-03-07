@@ -53,7 +53,7 @@ export default ({members}) => {
                                     {member.record_match}회
                                 </td>
                                 <td>
-                                    {member.record_trophy_change}
+                                    {member.record_match_change}
                                 </td>
                                 <td>
                                     {member.friend_total_point}

@@ -14,7 +14,6 @@ export default () => {
         new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()).getTime() + diffKST));
     const tomorrow = React.useRef(
         new Date(new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() + 1).getTime() + diffKST));
-    const [members, setMembers] = React.useState([]);
     const battleLog = React.useRef([]);
     const gameMode = React.useRef('all');
     const gameType = React.useRef('all');
@@ -32,15 +31,13 @@ export default () => {
                 mode: gameMode.current
             },
         }).then(async (result) => {
-            await setMembers(result.data.members);
             await setSeason(result.data.season);
             await setMaps(result.data.rotation);
-            battleLog.current = result.data.battleLog.sort((a, b) => {
+            battleLog.current = result.data.members.sort((a, b) => {
                 return b.battles.length - a.battles.length;
             });
-
         });
-    }, [today, tomorrow]);
+    }, [battleLog.current, today, tomorrow]);
 
     const getData = () => {
         axios.get(`${url}/record`, {
@@ -51,8 +48,8 @@ export default () => {
                 mode: gameMode.current
             },
         }).then(async (result) => {
-            await setMembers(result.data.members);
-            battleLog.current = result.data.battleLog.sort((a, b) => {
+            console.log(result.request.responseURL);
+            battleLog.current = result.data.members.sort((a, b) => {
                 return b.battles.length - a.battles.length;
             });
         });
@@ -216,7 +213,6 @@ export default () => {
             </div>
             <div>
                 <DailyBattleLog gameMode={gameMode.current}
-                                members={members}
                                 battleLog={battleLog.current}
                                 maps={maps}/>
             </div>

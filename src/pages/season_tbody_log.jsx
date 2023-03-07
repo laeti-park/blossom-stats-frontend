@@ -7,17 +7,17 @@ const typeNameArray = ['trophyLeague', 'friendly', 'powerLeague', 'powerLeague',
 export default ({member}) => {
 
     function getRankName(item) {
-        if (['0', '4', '5'].includes(item.game_type)) {
-            return rankNameArray[item.trophy_grade]
-        } else if (item.game_type === '6') {
+        if (['0', '4', '5'].includes(item.match_type)) {
+            return rankNameArray[item.match_grade]
+        } else if (item.match_type === '6') {
             return '-';
         } else {
             return (
                 <React.Fragment>
                     <img className={'sub_row__image'}
-                         src={`images/league_rank/${Math.floor((item.trophy_grade - 1) / 3)}.webp`}
+                         src={`images/league_rank/${Math.floor((item.match_grade - 1) / 3)}.webp`}
                          alt={'파워 리그 랭크'}/>
-                    {roman[((item.trophy_grade - 1) % 3)]}
+                    {roman[((item.match_grade - 1) % 3)]}
                 </React.Fragment>
             )
         }
@@ -73,7 +73,7 @@ export default ({member}) => {
                                 {item.friend_name}
                             </li>
                             <li>
-                                <img src={`images/game_mode/${typeNameArray[item.game_type]}.webp`} alt={'게임 방식'}/>
+                                <img src={`images/game_mode/${typeNameArray[item.match_type]}.webp`} alt={'게임 방식'}/>
                             </li>
                             <li>
                                 <img src={`images/game_mode/${item.map_mode}.webp`} alt={'게임 모드'}/>
