@@ -1,7 +1,14 @@
 .table__box {
-    padding: 10px 10px 40px 10px;
+    padding: 0;
     width: 100%;
     max-width: 100%;
+}
+
+/* thead */
+
+.table__box > thead > tr > th {
+    border-bottom: 1px solid #FFD1D1;
+    background-color: #FF9494;
 }
 
 .table__box > thead > tr:first-child > th:first-child {
@@ -12,33 +19,57 @@
     border-top-right-radius: 6px;
 }
 
-.table__box > thead > tr > th {
-    border-bottom: 1px solid #FFD1D1;
-    background-color: #FF9494;
+.table__box th:first-child,
+.table__box td:first-child {
+    width: 40%;
+    max-width: 40%;
+    padding-left: 20px;
 }
 
-.table__head_row__trophy {
-    width: 78px;
-    padding: 6px 0 6px 0;
+.table__box th:nth-child(n+2),
+.table__box td:nth-child(n+2) {
+    width: 20%;
+    max-width: 20%;
 }
 
-.table__head_row__rank {
-    width: 56px;
-    padding: 6px 0 6px 0;
+.table__box th:nth-child(2) {
+    border-top-right-radius: 6px;
 }
 
-.table__head_row__image {
-    height: 16px;
+.table__box th:nth-child(n+3),
+.table__box td:nth-child(n+3) {
+    display: none;
+}
+
+@media (min-width: 576px) {
+
+    .table__box th:nth-child(2) {
+        border-top-right-radius: 0;
+    }
+
+    .table__box th:nth-child(n+3),
+    .table__box td:nth-child(n+3) {
+        display: table-cell;
+    }
+
+    .table__box th:last-child {
+        border-top-right-radius: 6px;
+    }
+}
+
+.table__box th > img,
+.table__box td > img {
+    height: 18px;
     margin-right: 4px;
 }
 
-.main_row__box > td {
+.table__box td {
     background-color: #FFE3E1;
 }
 
-.main_row__box > td:first-child {
-    max-width: 168px;
-    padding-left: 16px;
+.table__hide > td,
+.table__open > td {
+    background-color: #FEFEFE;
 }
 
 .main_row__box img {
@@ -65,22 +96,6 @@
 
 .sub_row__box p {
     width: 50%
-}
-
-.sub_row__clipboard {
-    list-style: none;
-    width: 50%;
-    height: 24px;
-    color: white;
-    font-size: 13px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    background-color: #C3AED6;
-    border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    padding: 6px 6px 6px 6px;
-    margin-right: 10px;
 }
 
 .sub_row__battle_log {
@@ -372,21 +387,4 @@
     height: 16px;
     object-fit: contain;
     margin: 0;
-}
-
-
-@media (min-width: 410px) {
-    .table__box {
-        padding: 10px 10px 10px 10px;
-        width: 400px;
-        max-width: 400px;
-    }
-
-    .main_row__box > td:first-child {
-        width: 200px;
-    }
-
-    .sub_row__box {
-        font-size: 0.9rem;
-    }
 }

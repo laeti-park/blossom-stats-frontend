@@ -15,6 +15,7 @@ body {
     font-size: 1.1rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #F7E8F6;
 }
 
 code {
@@ -50,12 +51,12 @@ table {
 }
 
 th {
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 8px 4px 8px 4px;
 }
 
 td {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 10px 4px 10px 4px;
     height: 42px;
     font-weight: 500;
@@ -77,32 +78,6 @@ br {
 
 .flex_box {
     display: block;
-}
-
-@media (min-width: 410px) {
-    body {
-        font-size: 1.2rem;
-    }
-
-    th {
-        font-size: 0.9rem;
-    }
-
-    td {
-        font-size: 0.8rem;
-    }
-
-    .main__logo_text {
-        font-size: 20px !important;
-    }
-
-    .main__box > ul {
-        width: 410px;
-    }
-
-    .main__box > ul > li {
-        width: 200px
-    }
 }
 
 .main__box {
@@ -140,7 +115,7 @@ br {
     color: inherit;
 }
 
-.main__box > ul > li > a > img{
+.main__box > ul > li > a > img {
     height: 20px;
     margin-right: 8px;
 }
@@ -164,4 +139,79 @@ br {
     color: #ed67af;
     font-size: 4.4vw;
     white-space: nowrap;
+}
+
+
+.container_block,
+.container_flex{
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.container_flex{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: space-between;
+}
+
+.container_block {
+    padding: 10px 12px 0 12px;
+    display: block;
+}
+
+.row_box_1,
+.row_box_2,
+.row_box_3 {
+    padding: 10px 0 10px 0;
+}
+
+.row_box_1,
+.row_box_2 {
+    display: flex;
+    gap: 10px;
+}
+
+.row_box_2 {
+    flex-wrap: wrap;
+}
+
+.row_box_3 {
+    display: block;
+}
+
+@media (min-width: 576px) {
+    .container_block,
+    .container_flex{
+        max-width: 556px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container_block{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    .row_box_2 {
+        flex-wrap: nowrap;
+    }
+}
+
+@media (min-width: 768px) {
+    .container_block,
+    .container_flex {
+        max-width: 748px;
+        margin: 0 auto;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .container_block,
+    .container_flex {
+        max-width: 924px;
+        margin: 0 auto;
+    }
 }

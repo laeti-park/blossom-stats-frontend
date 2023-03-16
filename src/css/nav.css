@@ -36,10 +36,6 @@
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     background-color: transparent;
     border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -87,10 +83,6 @@
     background-color: #B2C8DF;
 }
 
-.nav__checkbox,
-.nav__radio {
-    display: none;
-}
 
 .nav__radio + img {
     background-color: #C3AED6;
