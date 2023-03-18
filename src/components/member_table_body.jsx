@@ -6,10 +6,6 @@ const roman = ['I', 'II', 'III'];
 export default ({members}) => {
     const navigate = useNavigate();
 
-    members.sort((a, b) => {
-        return b.trophy_current - a.trophy_current;
-    })
-
     return (
         <tbody>
         {

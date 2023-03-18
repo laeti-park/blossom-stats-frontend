@@ -1,16 +1,18 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import BrawlerPicked from './brawler_info';
-import MemberBrawler from './brawler_tbody';
+import BrawlerPicked from '../components/brawler_info';
+import MemberBrawler from '../components/brawler_table';
+import BrawlerList from '../components/brawler_list'
+
+import '../css/brawler.css';
 
 const url = process.env.REACT_APP_BASE_URL;
 
 export default () => {
-    const [members, setMembers] = React.useState([]);
-    const [brawlers, setBrawlers] = React.useState([]);
-    const [memberBrawlers, setMemberBrawlers] = React.useState([]);
-    const [pick, setPick] = React.useState([]);
-    const [brawler, setBrawler] = React.useState({
+    const [brawlers, setBrawlers] = useState([]);
+    const [memberBrawlers, setMemberBrawlers] = useState([]);
+    const [pick, setPick] = useState([]);
+    const [brawler, setBrawler] = useState({
         "id": "16000000",
         "name": "쉘리",
         "rarity": "기본",
@@ -18,65 +20,35 @@ export default () => {
         "gender": "여성",
         "icon": "<:Brawler_1:1015890389993005096>"
     });
-    const [radio, setRadio] = React.useState('16000000');
 
-    const onBrawlerSelected = (e, brawler) => {
-        setBrawler(brawler);
-    }
+    useEffect(() => {
+        axios.get(`${url}/brawler`, {
+            params: {
+                brawler: brawler.id,
+            },
+        }).then((result) => {
+            setBrawlers(result.data.brawlers);
+            setMemberBrawlers(result.data.memberBrawlers);
+            setPick(result.data.pick);
+        });
+    }, [brawler]);
 
-    const handleRadioButton = (e) => {
-        setRadio(e.target.value);
-    }
-
-    React.useEffect(() => {
-        axios.get(`${url}/brawler`)
-            .then((result) => {
-                setBrawlers(result.data.brawlers);
-                setMemberBrawlers(result.data.memberBrawlers);
-                setPick(result.data.pick);
-            });
-    }, []);
-
-    React.useEffect(() => {
-        axios.get(`${url}/member`)
-            .then((result) => {
-                setMembers(result.data);
-            });
-    }, []);
+    const getBrawlers = (id) => {
+        setBrawler(id);
+    };
 
     return (
-        <div className="flex_box">
-            <nav className="nav__brawler_box">
-                <div className="nav__list">
-                    {
-                        brawlers.map(item => {
-                            return (
-                                <label key={item.id}>
-                                    <input
-                                        type="radio"
-                                        className="nav__radio"
-                                        value={item.id}
-                                        checked={radio === item.id}
-                                        onChange={handleRadioButton}/>
-                                    <img className="nav__brawler"
-                                         src={`/images/brawler_profile/${item.id}.webp`}
-                                         alt={item.id}
-                                         onClick={(e) => onBrawlerSelected(e, item)}/>
-                                </label>
-                            )
-                        })
-                    }
-                </div>
-            </nav>
-            <div>
+        <div className='container_flex'>
+            <BrawlerList brawlers={brawlers}
+                         getBrawlers={getBrawlers}/>
+            <div className={'member_brawler__box'}>
                 <BrawlerPicked
                     brawler={brawler}
                     pick={pick}/>
                 <MemberBrawler
-                    brawler={brawler.id}
-                    memberBrawlers={memberBrawlers}
-                    members={members}/>
+                    memberBrawlers={memberBrawlers}/>
             </div>
+
         </div>
     )
 }

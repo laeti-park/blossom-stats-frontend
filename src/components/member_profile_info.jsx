@@ -7,7 +7,7 @@ const ProfileInfo = (props) => {
     return (
         <React.Fragment>
             <div className={'row_box_2'}>
-                <table className={'table__box'}>
+                <table className={'table__box_1'}>
                     <thead>
                     <tr>
                         <th colSpan={2}>
@@ -64,7 +64,7 @@ const ProfileInfo = (props) => {
 
                     </tbody>
                 </table>
-                <table className={'table__box'}>
+                <table className={'table__box_1'}>
                     <thead>
                     <tr>
                         <th colSpan={2}>

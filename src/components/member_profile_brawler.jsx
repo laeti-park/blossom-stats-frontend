@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 
 const ProfileBrawler = (props) => {
-        console.log(props)
 
         return (
             <React.Fragment>
@@ -94,7 +93,7 @@ const SummaryBox = styled.div`
     font-size: 0.9rem;
   }
 
-  @media screen and (min-width: 576px) {
+  @media screen and (min-width: 768px) {
     height: 60px;
     
     .summary_title > img {

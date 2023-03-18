@@ -66,7 +66,13 @@ const ProfileFriend = (props) => {
                                                                  alt={'점수구간'}/> : ['2', '3'].includes(friend.match_type) ?
                                                                 <img className={'summary_image_3'}
                                                                      src={`/images/league_rank/${Math.floor((friend.match_grade - 1) / 3)}.webp`}
-                                                                     alt={'점수구간'}/> : 0
+                                                                     alt={'점수구간'}/> : friend.match_type === '6' ?
+                                                                    <img className={'summary_image_3'}
+                                                                         src={`/images/game_mode/clubLeague.webp`}
+                                                                         alt={'점수구간'}/> :
+                                                                    <img className={'summary_image_3'}
+                                                                         src={`/images/game_mode/challenge.webp`}
+                                                                         alt={'점수구간'}/>
                                                     }
                                                 </span>
                                                 <span>

@@ -1,0 +1,31 @@
+.footer {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #343A40;
+}
+
+.footer > div {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    color: white;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer > div > span {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.footer > div > span svg {
+    height: 0.8rem;
+}
+
+.footer svg {
+    vertical-align: text-top;
+}

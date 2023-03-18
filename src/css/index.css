@@ -143,15 +143,20 @@ br {
 
 
 .container_block,
-.container_flex{
+.container_menu,
+.container_flex {
     flex-wrap: wrap;
     max-width: 100%;
 }
 
-.container_flex{
+.container_menu {
     display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
+    justify-content: space-between;
+}
+
+.container_flex {
+    padding: 10px 12px 0 12px;
+    display: flex;
     justify-content: space-between;
 }
 
@@ -182,17 +187,17 @@ br {
 
 @media (min-width: 576px) {
     .container_block,
-    .container_flex{
+    .container_menu,
+    .container_flex {
         max-width: 556px;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .container_block{
+    .container_block {
         padding-left: 10px;
         padding-right: 10px;
     }
-
 
     .row_box_2 {
         flex-wrap: nowrap;
@@ -201,6 +206,7 @@ br {
 
 @media (min-width: 768px) {
     .container_block,
+    .container_menu,
     .container_flex {
         max-width: 748px;
         margin: 0 auto;
@@ -210,6 +216,7 @@ br {
 
 @media (min-width: 1024px) {
     .container_block,
+    .container_menu,
     .container_flex {
         max-width: 924px;
         margin: 0 auto;

@@ -1,9 +1,9 @@
-import Tbody from "./member_tbody";
 import React from "react";
+import MemberTableBody from "./member_table_body";
 
-const memberTable = ({members}) => {
+const MemberTable = ({members}) => {
     return(
-        <table className='table__box'>
+        <table className='table__box_1'>
             <thead>
             <tr>
                 <th>
@@ -32,9 +32,9 @@ const memberTable = ({members}) => {
                 </th>
             </tr>
             </thead>
-            <Tbody members={members}/>
+            <MemberTableBody members={members}/>
         </table>
     )
 }
 
-export default memberTable;
+export default MemberTable;

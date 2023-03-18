@@ -11,7 +11,6 @@ const ProfileSeason = (props) => {
     const [soloLeagueToggle, setSoloLeagueToggle] = useState(false);
     const [teamLeagueToggle, setTeamLeagueToggle] = useState(false);
 
-
     const arrowTrophyRotate = {
         padding: '2px',
         transform: trophyToggle ? 'rotate(90deg)' : '',

@@ -1,19 +1,19 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import {useParams} from "react-router-dom";
-import MemberMain from '../components/profile_main';
-import MemberInfo from '../components/profile_info';
-import DailyRecord from '../components/profile_daily';
-import SeasonRecord from '../components/profile_season';
-import FriendRecord from '../components/profile_friend';
-import Brawlers from '../components/profile_brawler';
+import MemberMain from '../components/member_profile_main';
+import MemberInfo from '../components/member_profile_info';
+import DailyRecord from '../components/member_profile_daily';
+import SeasonRecord from '../components/member_profile_season';
+import FriendRecord from '../components/member_profile_friend';
+import Brawlers from '../components/member_profile_brawler';
 
 import '../css/profile.css';
 
 const url = process.env.REACT_APP_BASE_URL;
 const diffKST = 9 * 60 * 60 * 1000;
 
-const Profile = () => {
+const Member_profile = () => {
     const {id} = useParams();
     const [member, setMember] = useState([]);
     const [battles, setBattles] = useState([]);
@@ -90,4 +90,4 @@ const Profile = () => {
     )
 }
 
-export default Profile;
+export default Member_profile;

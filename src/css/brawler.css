@@ -1,25 +1,82 @@
-.nav__brawler_box {
-    padding-top: 10px;
-    height: 160px;
-    margin: 0 0 0 10px;
+.member_brawler__box {
+    width: 100%;
+}
+
+.brawler_box {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
     overflow-y: scroll;
 }
 
-.nav__game_mode_box {
+.info__box {
     width: 100%;
-    padding: 10px 4px 10px 10px;
+    margin-bottom: 10px;
+    color: #EFEFEF;
 }
 
-.nav__list {
+.info__box > img {
+    height: 100%;
+}
+
+.info__title {
+    padding: 10px;
+    gap: 6px;
     display: flex;
-    flex-wrap: wrap;
+    background-color: #39375B;
+    border-radius: 0.25rem 0.25rem 0 0;
 }
 
-.nav__list > div {
-    width: 100%;
+.info__title > img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: left;
 }
 
-.nav__brawler_box::-webkit-scrollbar {
+
+.info__title h3 {
+    font-weight: normal;
+}
+
+.info__title span {
+    font-size: 16px;
+    color: #FFD1D1;
+}
+
+.info__detail {
+    padding: 10px;
+    gap: 6px;
+    background-color: #745C97;
+    border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.info__detail > div {
+    display: flex;
+}
+
+.info__detail > div > div {
+    display: flex;
+    width: 50%;
+}
+
+.info__detail > div > div > img {
+    width: 28px;
+    margin-right: 4px;
+    object-fit: contain;
+    object-position: top;
+}
+
+.detail__title {
+    font-size: 13px;
+    color: #FFD1D1;
+}
+
+.radio_button {
+    display: none;
+}
+
+.brawler_box::-webkit-scrollbar {
     display: none;
 }
 
@@ -84,67 +141,42 @@
 }
 
 
-.nav__radio + img {
+.radio_button + img {
     background-color: #C3AED6;
 }
 
-.nav__radio:checked + img {
+.radio_button:checked + img {
     background-color: #8675A9;
 }
 
-.nav__radio:hover + img {
+.radio_button:hover + img {
     background-color: #8675A9;
     outline: 2px solid #8675A9;
     outline-offset: -1px;
 }
 
-.nav__radio:disabled + img {
+.radio_button:disabled + img {
     background-color: #DDDDDD;
     filter: grayscale(100%);
     outline: none;
 }
 
 @media (min-width: 768px) {
+    .member_brawler__box {
+        width: 60%;
+    }
+
     .flex_box {
         display: flex;
     }
 
-    .nav__brawler_box {
-        overflow-y: auto;
-        width: 320px;
-        min-width: 320px;
+    .brawler_box {
+        width: 40%;
         height: 100%;
+        max-height: 100%;
     }
 
     .nav__game_mode_box {
-        width: 380px;
-    }
-}
-
-@media (min-width: 410px) {
-    .nav__game_mode_box {
-        width: 400px;
-        padding-top: 10px;
-    }
-
-    .nav__all {
-        width: 380px;
-    }
-
-    .nav__items {
-        width: 188px;
-    }
-
-    .nav__item {
-        width: 60px;
-    }
-
-    .nav__date_box_content:hover,
-    .nav__checkbox:checked + div {
-        background-color: #B2C8DF;
-    }
-
-    .nav__date_box {
         width: 380px;
     }
 }
