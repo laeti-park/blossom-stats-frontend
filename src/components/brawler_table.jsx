@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Pagination from "./pagination";
+import Tool_pagination from "./tool_pagination";
 import {useNavigate} from "react-router-dom";
 
 const BrawlerTable = ({memberBrawlers}) => {
@@ -41,11 +41,9 @@ const BrawlerTable = ({memberBrawlers}) => {
                         return (
                             <tr className='main_row__box'
                                 key={`${brawler.member_id}_${brawler.brawler_id}`}
-                                onClick={
-                                    () => {
-                                        navigate(`./${brawler.member_id.replace('#', '')}`)
-                                    }
-                                }>
+                                onClick={() => {
+                                    navigate(`./${brawler.member_id.replace('#', '')}`)
+                                }}>
                                 <td>
                                     {brawler.name}
                                 </td>
@@ -63,9 +61,9 @@ const BrawlerTable = ({memberBrawlers}) => {
                 }
                 </tbody>
             </table>
-            <Pagination page={page}
-                        total={total}
-                        getPage={getPage}/>
+            <Tool_pagination page={page}
+                             total={total}
+                             getPage={getPage}/>
         </React.Fragment>
     )
 }

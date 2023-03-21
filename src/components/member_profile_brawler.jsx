@@ -33,8 +33,8 @@ const ProfileBrawler = (props) => {
                                                      alt={'트로피'}/>
                                                 <span>현재 : {brawler.trophy_current}개</span>
                                                 <span>(<img className={'summary_image_3'}
-                                                                 src={require('../images/game_icon/trophy_plus.webp')}
-                                                                 alt={'트로피'}/>
+                                                            src={require('../images/game_icon/trophy_plus.webp')}
+                                                            alt={'트로피'}/>
                                                     {brawler.trophy_current - brawler.trophy_begin}개)</span>
                                             </div>
                                             <div>
@@ -95,11 +95,11 @@ const SummaryBox = styled.div`
 
   @media screen and (min-width: 768px) {
     height: 60px;
-    
+
     .summary_title > img {
       height: 28px;
     }
-    
+
     .summary_content {
       font-size: 1rem;
       display: flex;

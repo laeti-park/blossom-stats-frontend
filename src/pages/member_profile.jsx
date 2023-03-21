@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import {useParams} from "react-router-dom";
-import MemberMain from '../components/member_profile_main';
+import Profile from '../components/tool_profile';
 import MemberInfo from '../components/member_profile_info';
 import DailyRecord from '../components/member_profile_daily';
 import SeasonRecord from '../components/member_profile_season';
@@ -13,7 +13,7 @@ import '../css/profile.css';
 const url = process.env.REACT_APP_BASE_URL;
 const diffKST = 9 * 60 * 60 * 1000;
 
-const Member_profile = () => {
+const Member_Profile = () => {
     const {id} = useParams();
     const [member, setMember] = useState([]);
     const [battles, setBattles] = useState([]);
@@ -61,7 +61,7 @@ const Member_profile = () => {
 
     return (
         <div className={'container_block'}>
-            <MemberMain id={member.id}
+            <Profile id={member.id}
                         name={member.name}
                         profile={member.profile_picture}/>
             <MemberInfo trophyCurrent={member.trophy_current}
@@ -90,4 +90,4 @@ const Member_profile = () => {
     )
 }
 
-export default Member_profile;
+export default Member_Profile;

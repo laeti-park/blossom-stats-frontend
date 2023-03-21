@@ -3,7 +3,7 @@ import {faAngleLeft, faAngleRight} from '@fortawesome/free-solid-svg-icons';
 
 import "../css/pagination.css";
 
-const Pagination = ({page, total, getPage}) => {
+const Tool_pagination = ({page, total, getPage}) => {
     return (
         <div className={'pagination'}>
             <button onClick={() => getPage(page - 1)} disabled={page === 1}>
@@ -15,4 +15,4 @@ const Pagination = ({page, total, getPage}) => {
         </div>
     );
 }
-export default Pagination;
+export default Tool_pagination;
