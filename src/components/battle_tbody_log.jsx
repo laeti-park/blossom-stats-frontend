@@ -22,7 +22,7 @@ const battleLog = ({member, maps}) => {
             return (
                 <React.Fragment key={`${player.player_id}_${player.match_type}`}>
                     <img className={'sub_row__image'}
-                         src={`images/league_rank/${Math.floor((player.brawler_trophy - 1) / 3)}.webp`}
+                         src={`/images/league_rank/${Math.floor((player.brawler_trophy - 1) / 3)}.webp`}
                          alt={'파워 리그 랭크'}/>
                     {roman[((player.brawler_trophy - 1) % 3)]}
                 </React.Fragment>)

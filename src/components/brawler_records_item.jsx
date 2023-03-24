@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import styled from "styled-components";
+import {AreaChart, Area, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer} from "recharts";
 
-const RecordsItem = ({brawler, trophyMatchTotal, leagueMatchTotal, rarity}) => {
+const RecordsItem = ({brawler, trophyMatchTotal, leagueMatchTotal, rarity, brawlerChange}) => {
     const [graph, setGraph] = useState(false);
 
     const brawlerRank = (trophy) => {
@@ -38,7 +39,7 @@ const RecordsItem = ({brawler, trophyMatchTotal, leagueMatchTotal, rarity}) => {
                         <div>
                             <img src={require(`../images/game_icon/trophy_plus.webp`)}
                                  alt={'트로피 변화량'}/> 변화량
-                            : {brawler.trophy_begin - brawler.trophy_current}
+                            : {brawler.trophy_current - brawler.trophy_begin}
                         </div>
                     </div>
                 </div>
@@ -70,13 +71,32 @@ const RecordsItem = ({brawler, trophyMatchTotal, leagueMatchTotal, rarity}) => {
                         <button className={'brawler_button'}
                                 onClick={() => {
                                     setGraph(!graph)
-                                }}>
+                                }}
+                        disabled={brawlerChange.length === 0}>
                         </button>
                     </div>
                 </div>
             </div>
             <div className={'brawler_graph'}>
-                hello
+                <ResponsiveContainer width="100%" height={300}>
+                    <AreaChart data={brawlerChange}
+                               margin={{
+                                   top: 20,
+                                   right: 20,
+                                   left: 0,
+                                   bottom: 10,
+                               }}>
+                        <CartesianGrid/>
+                        <XAxis dataKey="match_date" stroke="white"/>
+                        <YAxis stroke="white" domain={['auto', 'auto']}/>
+                        <Tooltip labelStyle={{color: "black"}}/>
+                        <Area name="트로피" type="monotone"
+                              dataKey="match_change"
+                              stroke="#39375B"
+                              strokeWidth={2}
+                              dot={{ stroke: '#F9F5EB', strokeWidth: 2}}/>
+                    </AreaChart>
+                </ResponsiveContainer>
             </div>
         </ItemBox>
     )
@@ -178,12 +198,13 @@ const ItemBox = styled.div`
   }
 
   .brawler_graph {
-    max-height: ${props => (props.visible ? '40px' : 0)};
+    max-height: ${props => (props.visible ? '' : 0)};
     padding: ${props => (props.visible ? '10px' : 0)};
     transform: scaleY(${props => (props.visible ? 1 : 0)});
     transform-origin: top;
-    transition: transform 0.26s ease;
+    transition: transform 0.25s ease;
     background-color: #3A4F7A;
+    font-size: 14px;
   }
 
   @media screen and (min-width: 768px) {

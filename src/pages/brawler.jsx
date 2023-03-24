@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import BrawlerPicked from '../components/brawler_info';
-import MemberBrawler from '../components/brawler_table';
+import BrawlerTable from '../components/brawler_table';
 import BrawlerList from '../components/brawler_list'
 
 import '../css/brawler.css';
@@ -41,11 +41,11 @@ export default () => {
         <div className='container_flex'>
             <BrawlerList brawlers={brawlers}
                          getBrawlers={getBrawlers}/>
-            <div className={'member_brawler__box'}>
+            <div className={'brawler_table__box'}>
                 <BrawlerPicked
                     brawler={brawler}
                     pick={pick}/>
-                <MemberBrawler
+                <BrawlerTable
                     memberBrawlers={memberBrawlers}/>
             </div>
 

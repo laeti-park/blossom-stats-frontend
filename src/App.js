@@ -9,7 +9,7 @@ import Index from './pages';
 import Member from './pages/member';
 import Member_Profile from './pages/member_profile';
 import Brawler from "./pages/brawler";
-import Brawler_Records from './pages/brawler_records';
+import BrawlerRecords from './pages/brawler_records';
 import Record from "./pages/battle";
 import Season from "./pages/season";
 import Footer from "./components/main_footer";
@@ -71,7 +71,7 @@ function App() {
                 <Route path='/member' element={<Member/>}/>
                 <Route path='/member/:id' element={<Member_Profile/>}/>
                 <Route path='/brawler' element={<Brawler/>}/>
-                <Route path='/brawler/:id' element={<Brawler_Records/>}/>
+                <Route path='/brawler/:id' element={<BrawlerRecords/>}/>
                 <Route path='/battle' element={<Record/>}/>
                 <Route path='/season' element={<Season/>}/>
             </Routes>

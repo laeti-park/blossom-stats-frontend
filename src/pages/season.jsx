@@ -1,19 +1,21 @@
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
 import axios from "axios";
-import Season from "./season_tbody";
+import Season from "../components/season_table";
+
+import '../css/record.css';
 
 const url = process.env.REACT_APP_BASE_URL;
 const typeList = ['all', 'trophyLeague', 'powerLeague', 'clubLeague', 'challenge'];
 const modeList = ['gemGrab', 'brawlBall', 'bounty', 'heist', 'hotZone', 'knockout', 'dual', 'soloShowdown', 'duoShowdown']
 
 export default () => {
-    const [members, setMembers] = React.useState([]);
-    const gameMode = React.useRef('all');
-    const gameType = React.useRef('all');
-    const [radio, setRadio] = React.useState('all');
-    const [season, setSeason] = React.useState({});
+    const [members, setMembers] = useState([]);
+    const gameMode = useRef('all');
+    const gameType = useRef('all');
+    const [radio, setRadio] = useState('all');
+    const [season, setSeason] = useState({});
 
-    React.useEffect(() => {
+    useEffect(() => {
         axios.get(`${url}/season`, {
             params: {
                 type: gameType.current,
@@ -49,128 +51,149 @@ export default () => {
     startDate.setDate(startDate.getDate() - 1);
 
     return (
-        <div className={'flex_box'}>
-            <div>
-                <nav className={'nav__game_mode_box'}>
+        <div className={'container_flex'}>
+            <nav className={'game_mode__box'}>
+                <div className={'game_mode__list'}>
                     <label>
-                        <input type="radio" className={'nav__radio'}
+                        <input type="radio" className={'radio_button'}
                                value={'all'}
                                checked={radio === 'all'}
                                onChange={handleRadioButton}/>
-                        <img className={'nav__all'}
-                             src={'/images/game_mode/all.webp'} alt={'전체'}/>
+                        <img className={'rectangle_image'}
+                             src={'/images/game_mode/all.webp'}
+                             alt={'전체'}/>
                     </label>
                     <label>
-                        <input type="radio" className={'nav__radio'}
+                        <input type="radio" className={'radio_button'}
                                value={'trophyLeague'}
                                checked={radio === 'trophyLeague'}
                                onChange={handleRadioButton}/>
-                        <img className={'nav__items'}
-                             src={'/images/game_mode/trophyLeague.webp'} alt={'트로피 리그'}/>
+                        <img className={'rectangle_image'}
+                             src={'/images/game_mode/trophyLeague.webp'}
+                             alt={'트로피 리그'}/>
                     </label>
                     <label>
-                        <input type="radio" className={'nav__radio'}
+                        <input type="radio" className={'radio_button'}
                                value={'powerLeague'}
                                checked={radio === 'powerLeague'}
                                onChange={handleRadioButton}/>
-                        <img className={'nav__items'}
-                             src={'/images/game_mode/powerLeague.webp'} alt={'파워 리그'}/>
+                        <img className={'rectangle_image'}
+                             src={'/images/game_mode/powerLeague.webp'}
+                             alt={'파워 리그'}/>
                     </label>
                     <label>
-                        <input type="radio" className={'nav__radio'}
+                        <input type="radio" className={'radio_button'}
                                value={'gemGrab'}
                                checked={radio === 'gemGrab'}
                                onChange={handleRadioButton}/>
-                        <img className={'nav__item'}
-                             src={'/images/game_mode/gemGrab.webp'} alt={'젬 그랩'}/>
+                        <img className={'rectangle_image'}
+                             src={'/images/game_mode/gemGrab.webp'}
+                             alt={'젬 그랩'}/>
                     </label>
                     <label>
-                        <input type="radio" className={'nav__radio'}
+                        <input type="radio" className={'radio_button'}
                                value={'brawlBall'}
                                checked={radio === 'brawlBall'}
                                onChange={handleRadioButton}/>
-                        <img className={'nav__item'}
-                             src={'/images/game_mode/brawlBall.webp'} alt={'브롤 볼'}/>
+                        <img className={'rectangle_image'}
+                             src={'/images/game_mode/brawlBall.webp'}
+                             alt={'브롤 볼'}/>
                     </label>
                     <label>
-                        <input type="radio" className={'nav__radio'}
+                        <input type="radio" className={'radio_button'}
                                value={'bounty'}
                                checked={radio === 'bounty'}
                                onChange={handleRadioButton}/>
-                        <img className={'nav__item'}
-                             src={'/images/game_mode/bounty.webp'} alt={'바운티'}/>
+                        <img className={'rectangle_image'}
+                             src={'/images/game_mode/bounty.webp'}
+                             alt={'바운티'}/>
                     </label>
                     <label>
-                        <input type="radio" className={'nav__radio'}
+                        <input type="radio" className={'radio_button'}
                                value={'heist'}
                                checked={radio === 'heist'}
                                onChange={handleRadioButton}/>
-                        <img className={'nav__item'}
-                             src={'/images/game_mode/heist.webp'} alt={'하이스트'}/>
+                        <img className={'rectangle_image'}
+                             src={'/images/game_mode/heist.webp'}
+                             alt={'하이스트'}/>
                     </label>
                     <label>
-                        <input type="radio" className={'nav__radio'}
+                        <input type="radio" className={'radio_button'}
                                value={'hotZone'}
                                checked={radio === 'hotZone'}
                                onChange={handleRadioButton}/>
-                        <img className={'nav__item'}
-                             src={'/images/game_mode/hotZone.webp'} alt={'핫 존'}/>
+                        <img className={'rectangle_image'}
+                             src={'/images/game_mode/hotZone.webp'}
+                             alt={'핫 존'}/>
                     </label>
                     <label>
-                        <input type="radio" className={'nav__radio'}
+                        <input type="radio" className={'radio_button'}
                                value={'knockout'}
                                checked={radio === 'knockout'}
                                onChange={handleRadioButton}/>
-                        <img className={'nav__item'}
-                             src={'/images/game_mode/knockout.webp'} alt={'녹아웃'}/>
+                        <img className={'rectangle_image'}
+                             src={'/images/game_mode/knockout.webp'}
+                             alt={'녹아웃'}/>
                     </label>
                     <label>
-                        <input type="radio" className={'nav__radio'}
-                               value={'dual'}
-                               checked={radio === 'dual'}
+                        <input type="radio" className={'radio_button'}
+                               value={'basketBrawl'}
+                               checked={radio === 'basketBrawl'}
+                               onChange={handleRadioButton}/>
+                        <img className={'rectangle_image'}
+                             src={'/images/game_mode/basketBrawl.webp'}
+                             alt={'바스켓 브롤'}/>
+                    </label>
+                    <label>
+                        <input type="radio" className={'radio_button'}
+                               value={'duels'}
+                               checked={radio === 'duels'}
                                onChange={handleRadioButton}
                                disabled={true}/>
-                        <img className={'nav__item'}
-                             src={'/images/game_mode/dual.webp'} alt={'듀얼'}/>
+                        <img className={'rectangle_image'}
+                             src={'/images/game_mode/duels.webp'}
+                             alt={'듀얼'}/>
                     </label>
                     <label>
-                        <input type="radio" className={'nav__radio'}
+                        <input type="radio" className={'radio_button'}
                                value={'soloShowdown'}
                                checked={radio === 'soloShowdown'}
                                onChange={handleRadioButton}
                                disabled={true}/>
-                        <img className={'nav__item'}
-                             src={'/images/game_mode/soloShowdown.webp'} alt={'솔로 쇼다운'}/>
+                        <img className={'rectangle_image'}
+                             src={'/images/game_mode/soloShowdown.webp'}
+                             alt={'솔로 쇼다운'}/>
                     </label>
                     <label>
-                        <input type="radio" className={'nav__radio'}
+                        <input type="radio" className={'radio_button'}
                                value={'duoShowdown'}
                                checked={radio === 'duoShowdown'}
                                onChange={handleRadioButton}/>
-                        <img className={'nav__item'}
-                             src={'/images/game_mode/duoShowdown.webp'} alt={'듀오 쇼다운'}/>
+                        <img className={'rectangle_image'}
+                             src={'/images/game_mode/duoShowdown.webp'}
+                             alt={'듀오 쇼다운'}/>
                     </label>
                     <label>
-                        <input type="radio" className={'nav__radio'}
+                        <input type="radio" className={'radio_button'}
                                value={'clubLeague'}
                                checked={radio === 'clubLeague'}
                                onChange={handleRadioButton}/>
-                        <img className={'nav__item'}
-                             src={'/images/game_mode/clubLeague.webp'} alt={'클럽 리그'}/>
+                        <img className={'rectangle_image'}
+                             src={'/images/game_mode/clubLeague.webp'}
+                             alt={'클럽 리그'}/>
                     </label>
                     <label>
-                        <input type="radio" className={'nav__radio'}
+                        <input type="radio" className={'radio_button'}
                                value={'challenge'}
                                checked={radio === 'challenge'}
                                onChange={handleRadioButton}/>
-                        <img className={'nav__item'}
-                             src={'/images/game_mode/challenge.webp'} alt={'챌린지'}/>
+                        <img className={'rectangle_image'}
+                             src={'/images/game_mode/challenge.webp'}
+                             alt={'챌린지'}/>
                     </label>
-                </nav>
-            </div>
-            <div>
-                <Season members={members}/>
-            </div>
+                </div>
+            </nav>
+            <Season members={members}/>
         </div>
     );
 }

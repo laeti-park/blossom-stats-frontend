@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Tool_pagination from "./tool_pagination";
+import ToolPagination from "./tool_pagination";
 import {useNavigate} from "react-router-dom";
 
 const BrawlerTable = ({memberBrawlers}) => {
@@ -61,9 +61,9 @@ const BrawlerTable = ({memberBrawlers}) => {
                 }
                 </tbody>
             </table>
-            <Tool_pagination page={page}
-                             total={total}
-                             getPage={getPage}/>
+            <ToolPagination page={page}
+                            total={total}
+                            getPage={getPage}/>
         </React.Fragment>
     )
 }

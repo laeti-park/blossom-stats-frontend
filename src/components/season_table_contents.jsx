@@ -27,11 +27,11 @@ export default ({member}) => {
         <React.Fragment>
             <div>
                 <p>
-                    <img src={'images/game_icon/account.webp'} alt={'계정'}/>
+                    <img src={require('../images/game_icon/account.webp')} alt={'계정'}/>
                     태그 : {member.id}
                 </p>
                 <p>
-                    <img src={'images/game_icon/quests.webp'} alt={'퀘스트'}/>
+                    <img src={require('../images/game_icon/quests.webp')} alt={'퀘스트'}/>
                     승률 : {member.record_victory_rate}%
                 </p>
             </div>

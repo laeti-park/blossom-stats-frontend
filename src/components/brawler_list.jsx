@@ -1,8 +1,8 @@
-import React from "react";
+import {useState} from "react";
 
 const BrawlerList = (props) => {
-    const [radio, setRadio] = React.useState('16000000');
-    const onBrawlerSelected = (e, brawler) => {
+    const [radio, setRadio] = useState('16000000');
+    const onBrawlerSelected = (brawler) => {
         props.getBrawlers(brawler);
     };
 
@@ -12,7 +12,7 @@ const BrawlerList = (props) => {
 
     return (
         <nav className="brawler_box">
-            <div className="nav__list">
+            <div>
                 {
                     props.brawlers.map(brawler => {
                         return (
@@ -23,10 +23,10 @@ const BrawlerList = (props) => {
                                     value={brawler.id}
                                     checked={radio === brawler.id}
                                     onChange={handleRadioButton}/>
-                                <img className="nav__brawler"
+                                <img className={"square_image"}
                                      src={`/images/brawler_profile/${brawler.id}.webp`}
                                      alt={brawler.id}
-                                     onClick={(e) => onBrawlerSelected(e, brawler)}/>
+                                     onClick={() => onBrawlerSelected(brawler)}/>
                             </label>
                         )
                     })

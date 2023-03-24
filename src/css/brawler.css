@@ -1,4 +1,4 @@
-.member_brawler__box {
+.brawler_table__box {
     width: 100%;
 }
 
@@ -7,6 +7,12 @@
     height: 200px;
     margin-bottom: 10px;
     overflow-y: scroll;
+}
+
+.brawler_box > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .info__box {
@@ -80,67 +86,6 @@
     display: none;
 }
 
-.nav__date_box_content,
-.nav__all,
-.nav__items,
-.nav__item,
-.nav__brawler {
-    height: 60px;
-    object-fit: contain;
-    display: inline-block;
-    font-weight: 400;
-    color: #212529;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    background-color: transparent;
-    border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    padding: 6px 6px 6px 6px;
-    margin: 0 4px 4px 0;
-}
-
-.nav__brawler {
-    width: 60px;
-    object-position: left;
-    object-fit: cover;
-}
-
-.nav__all {
-    width: 100%;
-}
-
-.nav__items {
-    width: 48.6%;
-}
-
-.nav__item {
-    width: 15.5%;
-}
-
-.nav__date_box {
-    margin: 0 10px 0 10px;
-    text-align: center;
-}
-
-.nav__date_box > div {
-    display: flex;
-    justify-content: space-between;
-}
-
-.nav__date_box > label > div {
-    width: 100%;
-    height: 32px;
-    margin: 10px 10px 0 0;
-    background-color: #C4D7E0;
-}
-
-.nav__date_box_content:hover,
-.nav__checkbox:checked + div {
-    background-color: #B2C8DF;
-}
-
-
 .radio_button + img {
     background-color: #C3AED6;
 }
@@ -162,21 +107,13 @@
 }
 
 @media (min-width: 768px) {
-    .member_brawler__box {
+    .brawler_table__box {
         width: 60%;
-    }
-
-    .flex_box {
-        display: flex;
     }
 
     .brawler_box {
         width: 40%;
         height: 100%;
         max-height: 100%;
-    }
-
-    .nav__game_mode_box {
-        width: 380px;
     }
 }

@@ -15,12 +15,21 @@ const RecordsList = (props) => {
                 <div className={'summary_list_2'}>
                     {
                         props.brawlers.map(brawler => {
+
+                            const brawlerChange = props.brawlerChange
+                                .filter(item => item.brawler_id === brawler.brawler_id)
+                                .map(item => {
+                                    item.match_change = parseInt(brawler.trophy_begin) + parseInt(item.match_change);
+                                    return item;
+                                });
+
                             return (
                                 <InfoBox key={`${brawler.member_id}_${brawler.brawler_id}`}
                                          brawler={brawler}
                                          trophyMatchTotal={trophyMatchTotal}
                                          leagueMatchTotal={leagueMatchTotal}
-                                         rarity={brawler[`Brawler.rarity`]}/>
+                                         rarity={brawler[`Brawler.rarity`]}
+                                         brawlerChange={brawlerChange}/>
                             )
                         })
                     }

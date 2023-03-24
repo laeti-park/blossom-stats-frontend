@@ -222,3 +222,29 @@ br {
         margin: 0 auto;
     }
 }
+
+.square_image,
+.rectangle_image {
+    height: 60px;
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    padding: 6px 6px 6px 6px;
+}
+
+.square_image {
+    width: 60px;
+    object-fit: cover;
+    object-position: left;
+}
+
+.rectangle_image {
+    width: 100%;
+    object-fit: contain;
+}

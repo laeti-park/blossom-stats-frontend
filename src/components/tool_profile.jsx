@@ -1,9 +1,7 @@
 import React from "react";
 import {CopyToClipboard} from "react-copy-to-clipboard";
 
-const ProfileMain = (props) => {
-    console.log(props)
-
+const ToolProfile = (props) => {
     return (
         <React.Fragment>
             <div className={'row_box_1'}>
@@ -28,4 +26,4 @@ const ProfileMain = (props) => {
     )
 }
 
-export default ProfileMain;
+export default ToolProfile;
