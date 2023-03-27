@@ -1,15 +1,16 @@
-import React from "react";
-/*
-const onRowClicked = (event) => {
-    const trNextSibling = event.target.closest('tr').nextSibling;
-    if (trNextSibling.className.includes('table__hide')) {
-        trNextSibling.className = 'table__open';
-    } else if (trNextSibling.className.includes('table__open')) {
-        trNextSibling.className = 'table__hide';
-    }
-};*/
+import {useNavigate} from "react-router-dom";
+import ToolPagination from "./tool_pagination";
 
-export default ({members}) => {
+export default (props) => {
+    console.log(props)
+    const navigate = useNavigate();
+
+    const offset = (props.page - 1) * 12;
+    const total = Math.ceil(props.members.length / 12);
+
+    const getPage = (num) => {
+        props.getPage(num);
+    };
 
     return (
         <div className={'battle_table__box'}>
@@ -17,52 +18,51 @@ export default ({members}) => {
                 <thead>
                 <tr>
                     <th>
-                        <img className='table__head_row__image'
-                             src={require('../images/game_icon/account.webp')} alt='닉네임'/>
+                        <img src={require('../images/game_icon/account.webp')} alt='닉네임'/>
                         닉네임
                     </th>
-                    <th className='table__head_row__rank'>
-                        <img className='table__head_row__image'
-                             src={require('../images/game_icon/trophy.webp')} alt='트로피'/>
+                    <th>
+                        <img src={require('../images/game_icon/trophy.webp')} alt='트로피'/>
                         매치/변화
                     </th>
-                    <th className='member_table__trophy'>
-                        <img className='table__head_row__image'
-                             src={require('../images/game_icon/friendly.webp')} alt='친밀도'/>
+                    <th>
+                        <img src={require('../images/game_icon/friendly.webp')} alt='친밀도'/>
                         친밀도
                     </th>
                 </tr>
                 </thead>
                 <tbody>
                 {
-                    members.map(member => {
-
+                    props.members.slice(offset, offset + 12).map(member => {
                         return (
-                            <React.Fragment key={member.id}>
-                                <tr className='main_row__box'>
-                                    <td>
-                                        {member.name}
-                                    </td>
-                                    <td>
-                                        <div>
-                                            {member.record_match}회
-                                        </div>
-                                        <div>
-                                            <img className='table__head_row__image'
-                                                 src={require('../images/game_icon/trophy_plus.webp')} alt='트로피 변화량'/>
-                                            {member.record_match_change}
-                                        </div>
-                                    </td>
-                                    <td>
-                                        {member.friend_total_point}
-                                    </td>
-                                </tr>
-                            </React.Fragment>
+                            <tr key={member.id}
+                                onClick={() => {
+                                    navigate(`../member/${member.id.replace('#', '')}`)
+                                }}>
+                                <td>
+                                    {member.name}
+                                </td>
+                                <td>
+                                    <div>
+                                        {member.records.match_count}회
+                                    </div>
+                                    <div>
+                                        <img src={require('../images/game_icon/trophy_plus.webp')} alt='트로피 변화량'/>
+                                        {member.records.match_change}
+                                    </div>
+                                </td>
+                                <td>
+                                    {member.friends !== undefined ? member.friends.point.toFixed(2) : 0}
+                                </td>
+                            </tr>
                         )
                     })
                 }
                 </tbody>
             </table>
+            <ToolPagination page={props.page}
+                            total={total}
+                            getPage={getPage}/>
         </div>
     )
 }

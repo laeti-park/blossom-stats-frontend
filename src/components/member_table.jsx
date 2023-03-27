@@ -1,8 +1,11 @@
-import React from "react";
-import MemberTableBody from "./member_table_body";
+import {useNavigate} from "react-router-dom";
+
+const roman = ['I', 'II', 'III'];
 
 const MemberTable = ({members}) => {
-    return(
+    const navigate = useNavigate();
+
+    return (
         <table className='table__box_1'>
             <thead>
             <tr>
@@ -32,7 +35,38 @@ const MemberTable = ({members}) => {
                 </th>
             </tr>
             </thead>
-            <MemberTableBody members={members}/>
+            <tbody>
+            {
+                members.map(member => {
+                    return (
+                        <tr key={member.id}
+                            onClick={
+                            () => {
+                                navigate(`./${member.id.replace('#', '')}`)
+                            }}>
+                            <td>
+                                {member.name}
+                            </td>
+                            <td>
+                                <img src={require('../images/game_icon/trophy.webp')}
+                                     alt='트로피'/>
+                                {member.trophy_current}
+                            </td>
+                            <td>
+                                <img src={`images/league_rank/${Math.floor(member.league_solo_current / 3)}.webp`}
+                                     alt={'솔로'}/>
+                                {roman[(member.league_solo_current % 3)]}
+                            </td>
+                            <td>
+                                <img src={`images/league_rank/${Math.floor(member.league_team_current / 3)}.webp`}
+                                     alt={'파워 리그 랭크'}/>
+                                {roman[(member.league_team_current % 3)]}
+                            </td>
+                        </tr>
+                    )
+                })
+            }
+            </tbody>
         </table>
     )
 }

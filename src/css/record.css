@@ -25,11 +25,9 @@
 
 .game_mode__list > div {
     width: 100%;
-
 }
 
 .battle_table__box {
-    display: flex;
     width: 100%;
 }
 

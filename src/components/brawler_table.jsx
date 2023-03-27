@@ -19,18 +19,15 @@ const BrawlerTable = ({memberBrawlers}) => {
                 <thead>
                 <tr>
                     <th>
-                        <img className='table__head_row__image'
-                             src={require('../images/game_icon/account.webp')} alt='닉네임'/>
+                        <img src={require('../images/game_icon/account.webp')} alt='닉네임'/>
                         닉네임
                     </th>
-                    <th className='member_table__trophy'>
-                        <img className='table__head_row__image'
-                             src={require('../images/game_icon/trophy.webp')} alt='트로피'/>
+                    <th>
+                        <img src={require('../images/game_icon/trophy.webp')} alt='트로피'/>
                         현재
                     </th>
-                    <th className='member_table__trophy'>
-                        <img className='table__head_row__image'
-                             src={require('../images/game_icon/trophy.webp')} alt='트로피'/>
+                    <th>
+                        <img src={require('../images/game_icon/trophy.webp')} alt='트로피'/>
                         최고
                     </th>
                 </tr>
@@ -39,8 +36,7 @@ const BrawlerTable = ({memberBrawlers}) => {
                 {
                     memberBrawlers.slice(offset, offset + 12).map(brawler => {
                         return (
-                            <tr className='main_row__box'
-                                key={`${brawler.member_id}_${brawler.brawler_id}`}
+                            <tr key={`${brawler.member_id}_${brawler.brawler_id}`}
                                 onClick={() => {
                                     navigate(`./${brawler.member_id.replace('#', '')}`)
                                 }}>

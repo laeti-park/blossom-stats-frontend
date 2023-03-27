@@ -3,12 +3,9 @@ import {useState} from "react";
 const ToolMatchMenu = (props) => {
     const [radio, setRadio] = useState('all');
 
-    const onMenuSelected = (menu) => {
-        props.getRadio(menu);
-    };
-
     const handleRadioButton = (e) => {
         setRadio(e.target.value);
+        props.getRadio(e.target.value);
     };
 
     return (
@@ -20,8 +17,7 @@ const ToolMatchMenu = (props) => {
                        onChange={handleRadioButton}/>
                 <img className={'rectangle_image'}
                      src={'/images/game_mode/all.webp'}
-                     alt={'전체'}
-                     onClick={() => onMenuSelected(radio)}/>
+                     alt={'전체'}/>
             </label>
             <label>
                 <input type="radio" className={'radio_button'}
@@ -30,8 +26,7 @@ const ToolMatchMenu = (props) => {
                        onChange={handleRadioButton}/>
                 <img className={'rectangle_image'}
                      src={'/images/game_mode/trophyLeague.webp'}
-                     alt={'트로피 리그'}
-                     onClick={() => onMenuSelected(radio)}/>
+                     alt={'트로피 리그'}/>
             </label>
             <label>
                 <input type="radio" className={'radio_button'}
@@ -40,8 +35,7 @@ const ToolMatchMenu = (props) => {
                        onChange={handleRadioButton}/>
                 <img className={'rectangle_image'}
                      src={'/images/game_mode/powerLeague.webp'}
-                     alt={'파워 리그'}
-                     onClick={() => onMenuSelected(radio)}/>
+                     alt={'파워 리그'}/>
             </label>
             <label>
                 <input type="radio" className={'radio_button'}
@@ -50,8 +44,7 @@ const ToolMatchMenu = (props) => {
                        onChange={handleRadioButton}/>
                 <img className={'rectangle_image'}
                      src={'/images/game_mode/gemGrab.webp'}
-                     alt={'젬 그랩'}
-                     onClick={() => onMenuSelected(radio)}/>
+                     alt={'젬 그랩'}/>
             </label>
             <label>
                 <input type="radio" className={'radio_button'}
@@ -60,8 +53,7 @@ const ToolMatchMenu = (props) => {
                        onChange={handleRadioButton}/>
                 <img className={'rectangle_image'}
                      src={'/images/game_mode/brawlBall.webp'}
-                     alt={'브롤 볼'}
-                     onClick={() => onMenuSelected(radio)}/>
+                     alt={'브롤 볼'}/>
             </label>
             <label>
                 <input type="radio" className={'radio_button'}
@@ -70,8 +62,7 @@ const ToolMatchMenu = (props) => {
                        onChange={handleRadioButton}/>
                 <img className={'rectangle_image'}
                      src={'/images/game_mode/bounty.webp'}
-                     alt={'바운티'}
-                     onClick={() => onMenuSelected(radio)}/>
+                     alt={'바운티'}/>
             </label>
             <label>
                 <input type="radio" className={'radio_button'}
@@ -80,8 +71,7 @@ const ToolMatchMenu = (props) => {
                        onChange={handleRadioButton}/>
                 <img className={'rectangle_image'}
                      src={'/images/game_mode/heist.webp'}
-                     alt={'하이스트'}
-                     onClick={() => onMenuSelected(radio)}/>
+                     alt={'하이스트'}/>
             </label>
             <label>
                 <input type="radio" className={'radio_button'}
@@ -90,8 +80,7 @@ const ToolMatchMenu = (props) => {
                        onChange={handleRadioButton}/>
                 <img className={'rectangle_image'}
                      src={'/images/game_mode/hotZone.webp'}
-                     alt={'핫 존'}
-                     onClick={() => onMenuSelected(radio)}/>
+                     alt={'핫 존'}/>
             </label>
             <label>
                 <input type="radio" className={'radio_button'}
@@ -100,8 +89,7 @@ const ToolMatchMenu = (props) => {
                        onChange={handleRadioButton}/>
                 <img className={'rectangle_image'}
                      src={'/images/game_mode/knockout.webp'}
-                     alt={'녹아웃'}
-                     onClick={() => onMenuSelected(radio)}/>
+                     alt={'녹아웃'}/>
             </label>
             <label>
                 <input type="radio" className={'radio_button'}
@@ -110,30 +98,25 @@ const ToolMatchMenu = (props) => {
                        onChange={handleRadioButton}/>
                 <img className={'rectangle_image'}
                      src={'/images/game_mode/basketBrawl.webp'}
-                     alt={'바스켓 브롤'}
-                     onClick={() => onMenuSelected(radio)}/>
+                     alt={'바스켓 브롤'}/>
             </label>
             <label>
                 <input type="radio" className={'radio_button'}
                        value={'duels'}
                        checked={radio === 'duels'}
-                       onChange={handleRadioButton}
-                       disabled={true}/>
+                       onChange={handleRadioButton}/>
                 <img className={'rectangle_image'}
                      src={'/images/game_mode/duels.webp'}
-                     alt={'듀얼'}
-                     onClick={() => onMenuSelected(radio)}/>
+                     alt={'듀얼'}/>
             </label>
             <label>
                 <input type="radio" className={'radio_button'}
                        value={'soloShowdown'}
                        checked={radio === 'soloShowdown'}
-                       onChange={handleRadioButton}
-                       disabled={true}/>
+                       onChange={handleRadioButton}/>
                 <img className={'rectangle_image'}
                      src={'/images/game_mode/soloShowdown.webp'}
-                     alt={'솔로 쇼다운'}
-                     onClick={() => onMenuSelected(radio)}/>
+                     alt={'솔로 쇼다운'}/>
             </label>
             <label>
                 <input type="radio" className={'radio_button'}
@@ -142,8 +125,7 @@ const ToolMatchMenu = (props) => {
                        onChange={handleRadioButton}/>
                 <img className={'rectangle_image'}
                      src={'/images/game_mode/duoShowdown.webp'}
-                     alt={'듀오 쇼다운'}
-                     onClick={() => onMenuSelected(radio)}/>
+                     alt={'듀오 쇼다운'}/>
             </label>
             <label>
                 <input type="radio" className={'radio_button'}
@@ -152,8 +134,7 @@ const ToolMatchMenu = (props) => {
                        onChange={handleRadioButton}/>
                 <img className={'rectangle_image'}
                      src={'/images/game_mode/clubLeague.webp'}
-                     alt={'클럽 리그'}
-                     onClick={() => onMenuSelected(radio)}/>
+                     alt={'클럽 리그'}/>
             </label>
             <label>
                 <input type="radio" className={'radio_button'}
@@ -162,8 +143,7 @@ const ToolMatchMenu = (props) => {
                        onChange={handleRadioButton}/>
                 <img className={'rectangle_image'}
                      src={'/images/game_mode/challenge.webp'}
-                     alt={'챌린지'}
-                     onClick={() => onMenuSelected(radio)}/>
+                     alt={'챌린지'}/>
             </label>
         </div>
     );

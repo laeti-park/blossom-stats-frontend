@@ -6,10 +6,10 @@ import "../css/pagination.css";
 const ToolPagination = ({page, total, getPage}) => {
     return (
         <div className={'pagination'}>
-            <button onClick={() => getPage(page - 1)} disabled={page === 1}>
+            <button onClick={() => getPage(page - 1)} disabled={page <= 1}>
                 <FontAwesomeIcon icon={faAngleLeft}/> 이전
             </button>
-            <button onClick={() => getPage(page + 1)} disabled={page === total}>
+            <button onClick={() => getPage(page + 1)} disabled={page === total || total === 0}>
                 다음 <FontAwesomeIcon icon={faAngleRight}/>
             </button>
         </div>

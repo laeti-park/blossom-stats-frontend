@@ -27,7 +27,6 @@ const ProfileSeason = (props) => {
         transition: 'transform 0.3s ease',
     };
 
-
     const drawCount = (matchCount, victoryCount, defeatCount) => {
         return matchCount - (parseInt(victoryCount) + parseInt(defeatCount));
     }

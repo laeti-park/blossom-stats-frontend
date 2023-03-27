@@ -38,17 +38,16 @@ const Member_Profile = () => {
                 today: today,
                 tomorrow: tomorrow
             },
-        })
-            .then(async (result) => {
-                setMember(result.data.member);
-                setBattles(result.data.battles);
-                setRecords(result.data.records);
-                setSeason(result.data.season);
-                setDailyCount(result.data.dailyCount);
-                setSeasonCount(result.data.seasonCount);
-                setFriends(result.data.friends);
-                setBrawlers(result.data.brawlers);
-            });
+        }).then(async (result) => {
+            setMember(result.data.member);
+            setBattles(result.data.battles);
+            setRecords(result.data.records);
+            setSeason(result.data.season);
+            setDailyCount(result.data.dailyCount);
+            setSeasonCount(result.data.seasonCount);
+            setFriends(result.data.friends);
+            setBrawlers(result.data.brawlers);
+        });
     }, [today, tomorrow]);
 
     const getDate = (today, tomorrow) => {
@@ -62,8 +61,8 @@ const Member_Profile = () => {
     return (
         <div className={'container_block'}>
             <Profile id={member.id}
-                        name={member.name}
-                        profile={member.profile_picture}/>
+                     name={member.name}
+                     profile={member.profile_picture}/>
             <MemberInfo trophyCurrent={member.trophy_current}
                         trophyHighest={member.trophy_highest}
                         soloCurrent={member.league_solo_current}

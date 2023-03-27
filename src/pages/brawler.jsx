@@ -48,7 +48,6 @@ export default () => {
                 <BrawlerTable
                     memberBrawlers={memberBrawlers}/>
             </div>
-
         </div>
     )
 }
