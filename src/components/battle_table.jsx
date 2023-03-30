@@ -46,7 +46,8 @@ export default (props) => {
                                         {member.match_count}회
                                     </td>
                                     <td>
-                                        <img src={require('../images/game_icon/trophy.webp')} alt='트로피'/>
+                                        <img src={require('../images/game_icon/trophy.webp')}
+                                             alt='트로피'/>
                                         {member.match_change}
                                     </td>
                                 </tr>

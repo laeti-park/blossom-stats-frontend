@@ -7,10 +7,11 @@ import {faBars, faTimes} from '@fortawesome/free-solid-svg-icons';
 
 import Index from './pages';
 import Member from './pages/member';
-import Member_Profile from './pages/member_profile';
+import MemberProfile from './pages/member_profile';
+import Battle from "./pages/battle";
+import BattleRecords from "./pages/battle_records";
 import Brawler from "./pages/brawler";
 import BrawlerRecords from './pages/brawler_records';
-import Record from "./pages/battle";
 import Season from "./pages/season";
 import Footer from "./components/main_footer";
 
@@ -69,10 +70,11 @@ function App() {
             <Routes>
                 <Route path='/' element={<Index/>}/>
                 <Route path='/member' element={<Member/>}/>
-                <Route path='/member/:id' element={<Member_Profile/>}/>
+                <Route path='/member/:id' element={<MemberProfile/>}/>
                 <Route path='/brawler' element={<Brawler/>}/>
                 <Route path='/brawler/:id' element={<BrawlerRecords/>}/>
-                <Route path='/battle' element={<Record/>}/>
+                <Route path='/battle' element={<Battle/>}/>
+                <Route path='/battle/:id' element={<BattleRecords/>}/>
                 <Route path='/season' element={<Season/>}/>
             </Routes>
             <Footer/>

@@ -3,7 +3,6 @@ import axios from "axios";
 import {useParams} from "react-router-dom";
 import Profile from "../components/tool_profile";
 import Brawlers from "../components/brwaler_records_list";
-import RadarChart from "../components/brawler_records_radar"
 
 import '../css/profile.css';
 
@@ -23,7 +22,6 @@ const BrawlerRecords = () => {
                 setBrawlerChange(result.data.brawlerChange);
             });
     }, []);
-    console.log(brawlers);
 
     return (
         <div className={'container_block'}>

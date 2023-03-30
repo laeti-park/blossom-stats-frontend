@@ -1,5 +1,6 @@
 import {useNavigate} from "react-router-dom";
 import ToolPagination from "./tool_pagination";
+import React from "react";
 
 export default (props) => {
     console.log(props)
@@ -44,14 +45,19 @@ export default (props) => {
                                 </td>
                                 <td>
                                     <div>
+                                        <img src={require('../images/game_icon/account.webp')}
+                                             alt='매치'/>
                                         {member.records.match_count}회
                                     </div>
                                     <div>
-                                        <img src={require('../images/game_icon/trophy_plus.webp')} alt='트로피 변화량'/>
-                                        {member.records.match_change}
+                                        <img src={require('../images/game_icon/trophy_plus.webp')}
+                                             alt='트로피 변화량'/>
+                                        {member.records.match_change}개
                                     </div>
                                 </td>
                                 <td>
+                                    <img src={require('../images/game_icon/friendly.webp')}
+                                         alt='트로피 변화량'/>
                                     {member.friends !== undefined ? member.friends.point.toFixed(2) : 0}
                                 </td>
                             </tr>
