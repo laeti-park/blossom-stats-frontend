@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import {useParams} from "react-router-dom";
 import Profile from "../components/tool_profile";
-import Brawlers from "../components/brwaler_records_list";
+import Brawlers from "../components/brawler_records_list";
 
 import '../css/profile.css';
 
