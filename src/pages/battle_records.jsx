@@ -36,7 +36,7 @@ const BattleRecords = () => {
             setBattles(result.data.battles);
             setSeason(result.data.season);
         });
-    }, []);
+    }, [today, tomorrow]);
 
 
     const getDate = (today, tomorrow) => {

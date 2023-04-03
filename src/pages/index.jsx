@@ -1,6 +1,8 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
+// TODO : context api 사용해서 props 넘기는 것 묶기
+
 const index = () => {
     return (
         <div className={'main__box'}>

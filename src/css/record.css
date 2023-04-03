@@ -41,3 +41,8 @@
         width: 60%;
     }
 }
+
+.battle_detail {
+    display: flex;
+    justify-content: space-between;
+}
