@@ -43,6 +43,72 @@
 }
 
 .battle_detail {
+    font-size: 12px;
+}
+
+.battle_1v1 > div {
     display: flex;
-    justify-content: space-between;
+    gap: 1%;
+    text-align: center;
+}
+
+.battle_1v1 > div {
+    padding: 10px;
+}
+
+.battle_survive > div {
+    padding: 10px 1px 10px 1px;
+}
+
+.battle_survive {
+    display: flex;
+    justify-content: center;
+}
+
+.battle_detail > div > div {
+    display: flex;
+}
+
+.battle_player_name {
+    width: 76px;
+    margin-top: 2px;
+    display: block !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 8px;
+}
+
+.battle_detail > div > div > img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    object-position: left;
+    margin-right: 4px;
+}
+
+.battle_detail > div > div > div > div {
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+}
+
+.battle_detail > div > div > div > div > div {
+    display: flex;
+}
+
+.battle_detail > div > div > div img {
+    height: 10px;
+    margin-right: 2px;
+}
+
+
+.battle_1v1 > div:first-child {
+    background-color: #ABC9FF;
+    justify-content: right;
+}
+
+.battle_1v1 > div:last-child {
+    background-color: #FF8B8B;
+    justify-content: left;
 }

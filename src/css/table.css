@@ -1,12 +1,8 @@
 .table__box_1,
-.table__box_2  {
-    padding: 0;
-    width: 100%;
-}
-
+.table__box_2,
 .table__box_3 {
     padding: 0;
-    width: 49%;
+    width: 100%;
 }
 
 /* thead */
@@ -32,6 +28,11 @@
 
 /* tbody */
 
+.table__box_3 > tbody> tr > td {
+    padding: 0;
+    border: none;
+}
+
 .table__box_1 > tbody > tr,
 .table__box_2 > tbody > tr,
 .table__box_3 > tbody > tr {
@@ -41,7 +42,7 @@
 .table__box_1 th:first-child,
 .table__box_1 td:first-child,
 .table__box_2 th:first-child,
-.table__box_2 td:first-child  {
+.table__box_2 td:first-child {
     width: 40%;
     max-width: 40%;
     padding-left: 20px;
@@ -70,9 +71,7 @@
 .table__box_1 th img,
 .table__box_1 td img,
 .table__box_2 th img,
-.table__box_2 td img,
-.table__box_3 th img,
-.table__box_3 td img {
+.table__box_2 td img {
     height: 18px;
     margin-right: 4px;
 }
