@@ -72,7 +72,7 @@ const RecordsItem = ({brawler, trophyMatchTotal, leagueMatchTotal, rarity, brawl
                                 onClick={() => {
                                     setGraph(!graph)
                                 }}
-                        disabled={brawlerChange.length === 0}>
+                                disabled={brawlerChange.length === 0}>
                         </button>
                     </div>
                 </div>
@@ -94,7 +94,7 @@ const RecordsItem = ({brawler, trophyMatchTotal, leagueMatchTotal, rarity, brawl
                               dataKey="match_change"
                               stroke="#39375B"
                               strokeWidth={2}
-                              dot={{ stroke: '#F9F5EB', strokeWidth: 2}}/>
+                              dot={{stroke: '#F9F5EB', strokeWidth: 2}}/>
                     </AreaChart>
                 </ResponsiveContainer>
             </div>
@@ -104,7 +104,6 @@ const RecordsItem = ({brawler, trophyMatchTotal, leagueMatchTotal, rarity, brawl
 
 const ItemBox = styled.div`
   width: 100%;
-  justify-content: space-between;
   font-size: 1rem;
   color: white;
 

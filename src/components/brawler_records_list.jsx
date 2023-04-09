@@ -1,5 +1,5 @@
 import React from "react";
-import InfoBox from './brawler_records_item';
+import ListItem from './brawler_records_list_item';
 
 const RecordsList = (props) => {
 
@@ -23,12 +23,12 @@ const RecordsList = (props) => {
                             });
 
                         return (
-                            <InfoBox key={`${brawler.member_id}_${brawler.brawler_id}`}
-                                     brawler={brawler}
-                                     trophyMatchTotal={trophyMatchTotal}
-                                     leagueMatchTotal={leagueMatchTotal}
-                                     rarity={brawler[`Brawler.rarity`]}
-                                     brawlerChange={brawlerChange}/>
+                            <ListItem key={`${brawler.member_id}_${brawler.brawler_id}`}
+                                      brawler={brawler}
+                                      trophyMatchTotal={trophyMatchTotal}
+                                      leagueMatchTotal={leagueMatchTotal}
+                                      rarity={brawler[`Brawler.rarity`]}
+                                      brawlerChange={brawlerChange}/>
                         )
                     })
                 }

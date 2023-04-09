@@ -30,6 +30,8 @@ const Member_Profile = () => {
             new Date().getDate() + 1).getTime() + diffKST));
     const [season, setSeason] = useState({});
     const [friends, setFriends] = useState([]);
+    const [friendsGroup, setFriendsGroup] = useState([]);
+    const [friendsPoint, setFriendsPoint] = useState([]);
     const [brawlers, setBrawlers] = useState([]);
 
     useEffect(() => {
@@ -46,6 +48,8 @@ const Member_Profile = () => {
             setDailyCount(result.data.dailyCount);
             setSeasonCount(result.data.seasonCount);
             setFriends(result.data.friends);
+            setFriendsGroup(result.data.friendsGroup);
+            setFriendsPoint(result.data.friendsPoint);
             setBrawlers(result.data.brawlers);
         });
     }, [today, tomorrow]);
@@ -81,7 +85,9 @@ const Member_Profile = () => {
                          today={today}
                          getDate={getDate}
                          startDate={season.startDate}/>
-            <FriendRecord friends={friends}/>
+            <FriendRecord friendsGroup={friendsGroup}
+                          friendsPoint={friendsPoint}
+                          friends={friends}/>
             <SeasonRecord records={records}
                           seasonCount={seasonCount}/>
             <Brawlers brawlers={brawlers}/>

@@ -102,7 +102,6 @@
     margin-right: 2px;
 }
 
-
 .battle_1v1 > div:first-child {
     background-color: #ABC9FF;
     justify-content: right;
@@ -111,4 +110,26 @@
 .battle_1v1 > div:last-child {
     background-color: #FF8B8B;
     justify-content: left;
+}
+
+@media (min-width: 576px) {
+    .battle_detail {
+        font-size: 16px;
+    }
+
+    .battle_detail > div > div > img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .battle_detail > div > div > div img {
+        height: 16px;
+        margin-right: 4px;
+    }
+
+    .battle_player_name {
+        width: 120px;
+        margin-top: 4px;
+        font-size: 12px;
+    }
 }

@@ -33,27 +33,6 @@ const ProfileBrawler = (props) => {
                                                     alt={'트로피'}/>
                                             {brawler.trophy_current - brawler.trophy_begin}개)</span>
                                     </div>
-                                    <div>
-                                        <img className={'summary_image_3'}
-                                             src={require('../images/game_icon/account.webp')}
-                                             alt={'트로피'}/>
-                                        승률 : <span>
-                                                <img className={'summary_image_3'}
-                                                     src={require('../images/game_icon/trophy.webp')}
-                                                     alt={'트로피'}/>
-                                        {
-                                            brawler.victory_trophy !== 0 ?
-                                                Math.round(brawler.victory_trophy / (brawler.victory_trophy + brawler.defeat_trophy) * 100) : 0
-                                        }% / </span>
-                                        <span>
-                                                <img className={'summary_image_3'}
-                                                     src={'/images/game_mode/powerLeague.webp'}
-                                                     alt={'트로피'}/>
-                                            {
-                                                brawler.victory_league !== 0 ?
-                                                    Math.round(brawler.victory_league / (brawler.victory_league + brawler.defeat_league) * 100) : 0
-                                            }%</span>
-                                    </div>
                                 </div>
                             </SummaryBox>
                         )
@@ -65,8 +44,8 @@ const ProfileBrawler = (props) => {
 };
 
 const SummaryBox = styled.div`
-  display: flex;
   width: 100%;
+  display: flex;
   height: 72px;
   border: 1px solid #39375B;
   border-radius: 0.25rem;
@@ -88,16 +67,11 @@ const SummaryBox = styled.div`
   }
 
   @media screen and (min-width: 768px) {
+    width: 49%;
     height: 60px;
 
     .summary_title > img {
       height: 28px;
-    }
-
-    .summary_content {
-      font-size: 1rem;
-      display: flex;
-      gap: 10px;
     }
   }
 `;

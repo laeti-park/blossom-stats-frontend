@@ -141,12 +141,16 @@ br {
     white-space: nowrap;
 }
 
-
 .container_block,
 .container_menu,
 .container_flex {
     flex-wrap: wrap;
     max-width: 100%;
+}
+
+.container_block,
+.container_flex {
+    min-height: 900px
 }
 
 .container_menu {
@@ -156,7 +160,6 @@ br {
 
 .container_flex {
     padding: 10px 12px 0 12px;
-    display: flex;
     justify-content: space-between;
 }
 
@@ -210,6 +213,10 @@ br {
     .container_flex {
         max-width: 748px;
         margin: 0 auto;
+    }
+
+    .container_flex {
+        display: flex;
     }
 }
 

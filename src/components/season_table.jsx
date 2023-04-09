@@ -6,8 +6,8 @@ export default (props) => {
     console.log(props)
     const navigate = useNavigate();
 
-    const offset = (props.page - 1) * 12;
-    const total = Math.ceil(props.members.length / 12);
+    const offset = (props.page - 1) * 10;
+    const total = Math.ceil(props.members.length / 10);
 
     const getPage = (num) => {
         props.getPage(num);
@@ -34,7 +34,7 @@ export default (props) => {
                 </thead>
                 <tbody>
                 {
-                    props.members.slice(offset, offset + 12).map(member => {
+                    props.members.slice(offset, offset + 10).map(member => {
                         return (
                             <tr key={member.id}
                                 onClick={() => {
