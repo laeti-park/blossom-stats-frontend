@@ -15,7 +15,7 @@ const ToolMatchMenu = (props) => {
                        value={'all'}
                        checked={radio === 'all'}
                        onChange={handleRadioButton}/>
-                <img className={'rectangle_image'}
+                <img className={'rectangle__image'}
                      src={'/images/game_mode/all.webp'}
                      alt={'전체'}/>
             </label>
@@ -24,7 +24,7 @@ const ToolMatchMenu = (props) => {
                        value={'trophyLeague'}
                        checked={radio === 'trophyLeague'}
                        onChange={handleRadioButton}/>
-                <img className={'rectangle_image'}
+                <img className={'rectangle__image'}
                      src={'/images/game_mode/trophyLeague.webp'}
                      alt={'트로피 리그'}/>
             </label>
@@ -33,7 +33,7 @@ const ToolMatchMenu = (props) => {
                        value={'powerLeague'}
                        checked={radio === 'powerLeague'}
                        onChange={handleRadioButton}/>
-                <img className={'rectangle_image'}
+                <img className={'rectangle__image'}
                      src={'/images/game_mode/powerLeague.webp'}
                      alt={'파워 리그'}/>
             </label>
@@ -42,7 +42,7 @@ const ToolMatchMenu = (props) => {
                        value={'gemGrab'}
                        checked={radio === 'gemGrab'}
                        onChange={handleRadioButton}/>
-                <img className={'rectangle_image'}
+                <img className={'rectangle__image'}
                      src={'/images/game_mode/gemGrab.webp'}
                      alt={'젬 그랩'}/>
             </label>
@@ -51,7 +51,7 @@ const ToolMatchMenu = (props) => {
                        value={'brawlBall'}
                        checked={radio === 'brawlBall'}
                        onChange={handleRadioButton}/>
-                <img className={'rectangle_image'}
+                <img className={'rectangle__image'}
                      src={'/images/game_mode/brawlBall.webp'}
                      alt={'브롤 볼'}/>
             </label>
@@ -60,7 +60,7 @@ const ToolMatchMenu = (props) => {
                        value={'bounty'}
                        checked={radio === 'bounty'}
                        onChange={handleRadioButton}/>
-                <img className={'rectangle_image'}
+                <img className={'rectangle__image'}
                      src={'/images/game_mode/bounty.webp'}
                      alt={'바운티'}/>
             </label>
@@ -69,7 +69,7 @@ const ToolMatchMenu = (props) => {
                        value={'heist'}
                        checked={radio === 'heist'}
                        onChange={handleRadioButton}/>
-                <img className={'rectangle_image'}
+                <img className={'rectangle__image'}
                      src={'/images/game_mode/heist.webp'}
                      alt={'하이스트'}/>
             </label>
@@ -78,7 +78,7 @@ const ToolMatchMenu = (props) => {
                        value={'hotZone'}
                        checked={radio === 'hotZone'}
                        onChange={handleRadioButton}/>
-                <img className={'rectangle_image'}
+                <img className={'rectangle__image'}
                      src={'/images/game_mode/hotZone.webp'}
                      alt={'핫 존'}/>
             </label>
@@ -87,7 +87,7 @@ const ToolMatchMenu = (props) => {
                        value={'knockout'}
                        checked={radio === 'knockout'}
                        onChange={handleRadioButton}/>
-                <img className={'rectangle_image'}
+                <img className={'rectangle__image'}
                      src={'/images/game_mode/knockout.webp'}
                      alt={'녹아웃'}/>
             </label>
@@ -96,7 +96,7 @@ const ToolMatchMenu = (props) => {
                        value={'basketBrawl'}
                        checked={radio === 'basketBrawl'}
                        onChange={handleRadioButton}/>
-                <img className={'rectangle_image'}
+                <img className={'rectangle__image'}
                      src={'/images/game_mode/basketBrawl.webp'}
                      alt={'바스켓 브롤'}/>
             </label>
@@ -105,7 +105,7 @@ const ToolMatchMenu = (props) => {
                        value={'duels'}
                        checked={radio === 'duels'}
                        onChange={handleRadioButton}/>
-                <img className={'rectangle_image'}
+                <img className={'rectangle__image'}
                      src={'/images/game_mode/duels.webp'}
                      alt={'듀얼'}/>
             </label>
@@ -114,7 +114,7 @@ const ToolMatchMenu = (props) => {
                        value={'soloShowdown'}
                        checked={radio === 'soloShowdown'}
                        onChange={handleRadioButton}/>
-                <img className={'rectangle_image'}
+                <img className={'rectangle__image'}
                      src={'/images/game_mode/soloShowdown.webp'}
                      alt={'솔로 쇼다운'}/>
             </label>
@@ -123,7 +123,7 @@ const ToolMatchMenu = (props) => {
                        value={'duoShowdown'}
                        checked={radio === 'duoShowdown'}
                        onChange={handleRadioButton}/>
-                <img className={'rectangle_image'}
+                <img className={'rectangle__image'}
                      src={'/images/game_mode/duoShowdown.webp'}
                      alt={'듀오 쇼다운'}/>
             </label>
@@ -132,7 +132,7 @@ const ToolMatchMenu = (props) => {
                        value={'clubLeague'}
                        checked={radio === 'clubLeague'}
                        onChange={handleRadioButton}/>
-                <img className={'rectangle_image'}
+                <img className={'rectangle__image'}
                      src={'/images/game_mode/clubLeague.webp'}
                      alt={'클럽 리그'}/>
             </label>
@@ -141,7 +141,7 @@ const ToolMatchMenu = (props) => {
                        value={'challenge'}
                        checked={radio === 'challenge'}
                        onChange={handleRadioButton}/>
-                <img className={'rectangle_image'}
+                <img className={'rectangle__image'}
                      src={'/images/game_mode/challenge.webp'}
                      alt={'챌린지'}/>
             </label>

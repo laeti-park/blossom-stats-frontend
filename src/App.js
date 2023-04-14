@@ -50,7 +50,7 @@ function App() {
                         </li>
                         <li className='header__list-item'>
                             <Link to='/member'
-                                  onClick={() => setIsToggled(!isToggled)}>클럽원</Link>
+                                  onClick={() => setIsToggled(!isToggled)}>멤버</Link>
                         </li>
                         <li className='header__list-item'>
                             <Link to='/brawler'

@@ -5,16 +5,17 @@ import {Link} from "react-router-dom";
 
 const index = () => {
     return (
-        <div className={'main__box'}>
-            <div className={'main__logo_text'}>Club Since 2019.12.18.</div>
+        <div className={'container_block'}>
+            <img className={"blossom_stats__image"}
+                 src={require('../images/blossom_logo/blossom_stats.webp')}
+                 alt={'Blossom Stats'}/>
             <hr/>
-            <ul>
-                <h3>▶ Blossom Stats 메뉴 목록</h3>
-                <h5>* 클릭 시 해당 페이지로 이동합니다.</h5>
+            <h3>▶ Blossom Stats 메뉴 목록</h3>
+            <ul className={"menu__list"}>
                 <li>
                     <Link to={'/member'}>
-                        <img src={require('../images/game_icon/leaderboards.webp')} alt={'클럽원'}/>
-                        클럽원
+                        <img src={require('../images/game_icon/friendly.webp')} alt={'클럽원'}/>
+                        멤버
                     </Link>
                 </li>
                 <li>
@@ -24,7 +25,7 @@ const index = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to={'/record'}>
+                    <Link to={'/battle'}>
                         <img src={require('../images/game_icon/brawl_pass_free.webp')} alt={'일일기록'}/>
                         일일기록
                     </Link>
@@ -34,17 +35,6 @@ const index = () => {
                         <img src={require('../images/game_icon/brawl_pass.webp')} alt={'시즌기록'}/>
                         시즌기록
                     </Link>
-                </li>
-                <li className={'gray'}>
-                    준비 중
-                </li>
-                <li className={'gray'}>
-                    준비 중
-                </li>
-                <li>
-                    <a href={'https://open.kakao.com/o/g6X3nY9c'} target={'_blank'}>
-                        <img src={require('../images/etc_icon/kakaotalk.webp')} alt={'카카오톡'}/>문의방
-                    </a>
                 </li>
             </ul>
         </div>

@@ -12,9 +12,6 @@ const Footer = () => {
                 <a href={'https://github.com/blossom-club/blossom-web-frontend'} target={'_blank'}>
                     <FontAwesomeIcon icon={faGamepad}/> 사이트 소개
                 </a>
-                <a href={'https://open.kakao.com/o/g6X3nY9c'} target={'_blank'}>
-                    <FontAwesomeIcon icon={faMessage}/> 가입 & 문의
-                </a>
                 <a href={'https://open.kakao.com/me/Laeti_Cre'} target={'_blank'}>
                     <FontAwesomeIcon icon={faContactCard}/> 연락처
                 </a>

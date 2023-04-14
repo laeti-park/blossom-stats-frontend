@@ -4,7 +4,7 @@ import {CopyToClipboard} from "react-copy-to-clipboard";
 const ToolProfile = (props) => {
     return (
         <React.Fragment>
-            <div className={'row_box_1'}>
+            <div className={'row__box-1'}>
                 <img className={'profile_image'}
                      src={`/images/profile_pictures/${props.profile}.webp`}
                      alt={'프로필'}/>
@@ -13,7 +13,7 @@ const ToolProfile = (props) => {
                     <p>{props.id}</p>
                 </div>
             </div>
-            <div className={'row_box_3'}>
+            <div className={'row__box-3'}>
                 <CopyToClipboard className={'clipboard'} text={props.id}
                                  onCopy={() => alert('태그를 복사했습니다.')}>
                     <span>태그 복사</span>

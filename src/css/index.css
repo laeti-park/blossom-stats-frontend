@@ -76,16 +76,12 @@ br {
     line-height: 50%;
 }
 
-.flex_box {
-    display: block;
+.blossom_stats__image {
+    width: 100%;
 }
 
-.main__box {
+.menu__list {
     padding: 10px;
-}
-
-.main__box > ul {
-    max-width: 380px;
     margin: 10px 0 0 10px;
     gap: 6px;
     display: flex;
@@ -93,7 +89,7 @@ br {
     vertical-align: middle;
 }
 
-.main__box > ul > li {
+.menu__list > li {
     list-style: none;
     width: 49%;
     height: 60px;
@@ -109,36 +105,25 @@ br {
     padding: 10px 10px 10px 10px;
 }
 
-.main__box > ul > li > a {
+.menu__list > li > a {
     display: block;
     text-decoration: none;
     color: inherit;
 }
 
-.main__box > ul > li > a > img {
+.menu__list > li > a > img {
     height: 20px;
     margin-right: 8px;
 }
 
-.gray {
-    background-color: gray !important;
-}
-
-.main__box > ul > li:hover {
+.menu__list > li:hover {
     background-color: #8675A9;
 }
 
-.main__logo_image {
+.logo__image {
     max-width: 410px;
     width: 100%;
     margin-bottom: 4px;
-}
-
-.main__logo_text {
-    font-family: "Logo Font", serif;
-    color: #ed67af;
-    font-size: 4.4vw;
-    white-space: nowrap;
 }
 
 .container_block,
@@ -168,23 +153,23 @@ br {
     display: block;
 }
 
-.row_box_1,
-.row_box_2,
-.row_box_3 {
+.row__box-1,
+.row__box-2,
+.row__box-3 {
     padding: 10px 0 10px 0;
 }
 
-.row_box_1,
-.row_box_2 {
+.row__box-1,
+.row__box-2 {
     display: flex;
     gap: 10px;
 }
 
-.row_box_2 {
+.row__box-2 {
     flex-wrap: wrap;
 }
 
-.row_box_3 {
+.row__box-3 {
     display: block;
 }
 
@@ -202,7 +187,7 @@ br {
         padding-right: 10px;
     }
 
-    .row_box_2 {
+    .row__box-2 {
         flex-wrap: nowrap;
     }
 }
@@ -230,8 +215,8 @@ br {
     }
 }
 
-.square_image,
-.rectangle_image {
+.square__image,
+.rectangle__image {
     height: 60px;
     display: inline-block;
     font-weight: 400;
@@ -245,13 +230,13 @@ br {
     padding: 6px 6px 6px 6px;
 }
 
-.square_image {
+.square__image {
     width: 60px;
     object-fit: cover;
     object-position: left;
 }
 
-.rectangle_image {
+.rectangle__image {
     width: 100%;
     object-fit: contain;
 }
