@@ -9,12 +9,12 @@ const RecordsList = (props) => {
         (total, matchCount) => total + matchCount) : 0;
 
     return (
-        <div className={'row_box_3'}>
+        <div className={'row__box-3'}>
             <h2>브롤러 정보<span>({props.brawlers.length}종)</span></h2>
             <div className={'summary_list_2'}>
                 {
                     props.brawlers.map(brawler => {
-
+                        console.log(brawler)
                         const brawlerChange = props.brawlerChange
                             .filter(item => item.brawler_id === brawler.brawler_id)
                             .map(item => {

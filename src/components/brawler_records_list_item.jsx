@@ -15,7 +15,8 @@ const RecordsItem = ({brawler, trophyMatchTotal, leagueMatchTotal, rarity, brawl
 
     return (
         <ItemBox visible={graph}
-                 rarity={rarity}>
+                 rarity={rarity}
+                 id={brawler["Brawler.name"]}>
             <div className={'brawler__box'}>
                 <div className={'brawler__box_top'}>
                     <div className={'brawler_base_info'}>

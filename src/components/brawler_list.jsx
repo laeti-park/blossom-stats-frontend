@@ -23,7 +23,7 @@ const BrawlerList = (props) => {
                                     value={brawler.id}
                                     checked={radio === brawler.id}
                                     onChange={handleRadioButton}/>
-                                <img className={"square_image"}
+                                <img className={"square__image"}
                                      src={`/images/brawler_profile/${brawler.id}.webp`}
                                      alt={brawler.id}
                                      onClick={() => onBrawlerSelected(brawler)}/>
