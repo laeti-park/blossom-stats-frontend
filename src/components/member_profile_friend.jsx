@@ -4,7 +4,7 @@ import FriendsItem from "./member_profile_friend_item"
 const ProfileFriend = (props) => {
     return (
         <React.Fragment>
-            <div className={'row_box_3'}>
+            <div className={'row__box-3'}>
                 <h2>친밀도<span>({
                     props.friendsPoint !== null && props.friendsPoint.total_point !== undefined ?
                         props.friendsPoint.total_point.toFixed(2) : 0}점)</span></h2>

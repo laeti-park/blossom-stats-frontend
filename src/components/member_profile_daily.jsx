@@ -6,7 +6,7 @@ const ProfileDaily = ({id, battles, count, today, getDate, startDate}) => {
         Math.round(count.victory_count / (count.victory_count + count.defeat_count) * 100) : 0;
 
     return (
-        <div className={'row_box_3'}>
+        <div className={'row__box-3'}>
             <h2>일일 기록<span>({battles.length}회)</span></h2>
             <h4>
                 <span style={{color: '#5AA469'}}>승: {count.victory_count}회 </span>

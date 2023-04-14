@@ -12,6 +12,7 @@ const ProfileFriendItem = (props) => {
             <React.Fragment>
                 {
                     friendInfo.map(info => {
+                        console.log(info)
                         return (
                             <div
                                 key={`${info.member_id}_${info.friend_id}_${info.map_mode}_${info.match_type}_${info.match_grade}`}>
@@ -66,7 +67,9 @@ const ProfileFriendItem = (props) => {
                                         }
                                     </span>
                                     <span>
-                                        승률: {Math.round(info.victory_count / (parseInt(info.victory_count) + parseInt(info.defeat_count)) * 100)}%
+                                        승률: {
+                                        info.victory_count > 0 ?
+                                        Math.round(info.victory_count / (parseInt(info.victory_count) + parseInt(info.defeat_count)) * 100) : 0}%
                                     </span>
                                 </div>
                             </div>
@@ -158,7 +161,7 @@ const SummaryBox = styled.a`
       transition: transform 0.1s ease;
       padding: ${props => (props.hover ? '10px' : 0)};
     }
-    
+
     .friend_detail > div {
       width: 100%;
       display: flex;

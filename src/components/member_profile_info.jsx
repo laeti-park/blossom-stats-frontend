@@ -6,7 +6,7 @@ const ProfileInfo = (props) => {
 
     return (
         <React.Fragment>
-            <div className={'row_box_2'}>
+            <div className={'row__box-2'}>
                 <table className={'table__box_1'}>
                     <thead>
                     <tr>
