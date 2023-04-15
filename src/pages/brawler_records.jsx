@@ -3,6 +3,7 @@ import axios from "axios";
 import {useParams} from "react-router-dom";
 import Profile from "../components/tool_profile";
 import Brawlers from "../components/brawler_records_list";
+import MemberRecords from "../components/tool_member_records";
 
 import '../css/profile.css';
 
@@ -28,8 +29,11 @@ const BrawlerRecords = () => {
             <Profile id={member.id}
                      name={member.name}
                      profile={member.profile_picture}/>
+            <MemberRecords id={id}
+                           trophyCurrent={member.trophy_current}
+                           soloCurrent={member.league_solo_current}
+                           teamCurrent={member.league_team_current}/>
             {/*TODO: n각 그래프 만들기*/}
-            {/*<MemberRecords />*/}
             {/*<RadarChart brawlers={brawlers}/>*/}
             <Brawlers brawlers={brawlers}
                       brawlerChange={brawlerChange}/>

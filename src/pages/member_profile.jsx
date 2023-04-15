@@ -3,7 +3,7 @@ import axios from "axios";
 import {useParams} from "react-router-dom";
 import Profile from '../components/tool_profile';
 import MemberInfo from '../components/member_profile_info';
-import DailyRecord from '../components/member_profile_daily';
+import DailyRecord from '../components/member_profile_battle';
 import SeasonRecord from '../components/member_profile_season';
 import FriendRecord from '../components/member_profile_friend';
 import Brawlers from '../components/member_profile_brawler';

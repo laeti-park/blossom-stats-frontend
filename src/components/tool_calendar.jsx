@@ -19,7 +19,7 @@ const ToolMatchMenu = (props) => {
 
     return (
         <React.Fragment>
-            <div className={'date_box'}>
+            <div className={'date__box'}>
                 <label>
                     <input type="checkbox"
                            onChange={() => {

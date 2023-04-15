@@ -12,10 +12,10 @@ const ProfileFriend = (props) => {
                     {
                         props.friendsGroup !== undefined ?
                             props.friendsGroup.map(friend => {
-
                                 const friendInfo = props.friends.filter(item => item.friend_id === friend.friend_id)
                                 return (
-                                    <FriendsItem friend={friend}
+                                    <FriendsItem key={friend.friend_id}
+                                                 friend={friend}
                                                  friendInfo={friendInfo}/>
                                 )
                             }) : null

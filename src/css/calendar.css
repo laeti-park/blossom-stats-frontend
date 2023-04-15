@@ -1,9 +1,9 @@
-.date_box {
+.date__box {
     width: 100%;
     margin: 0 0 10px 0;
 }
 
-.date_box > label > div {
+.date__box > label > div {
     margin: 10px 0 10px 0;
     background-color: #F6C6EA;
     display: flex;
@@ -16,12 +16,12 @@
     padding: 10px 10px 10px 10px;
 }
 
-.date_box > label > div:hover,
-.date_box > label > input:checked + div {
+.date__box > label > div:hover,
+.date__box > label > input:checked + div {
     background-color: #C490E4;
 }
 
-.date_box > label > input {
+.date__box > label > input {
     display: none;
 }
 

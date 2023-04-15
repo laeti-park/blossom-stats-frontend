@@ -18,8 +18,10 @@ const ToolProfile = (props) => {
                                  onCopy={() => alert('태그를 복사했습니다.')}>
                     <span>태그 복사</span>
                 </CopyToClipboard>
-                <CopyToClipboard className={'clipboard'} text={props.id}><a
-                    href={'brawlstars://'}>태그 복사 + 브롤스타즈 실행</a>
+                <CopyToClipboard className={'clipboard'} text={props.id}>
+                    <a href={'brawlstars://'}>
+                        태그 복사 + 브롤스타즈 실행
+                    </a>
                 </CopyToClipboard>
             </div>
         </React.Fragment>

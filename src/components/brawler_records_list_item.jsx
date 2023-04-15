@@ -15,17 +15,16 @@ const RecordsItem = ({brawler, trophyMatchTotal, leagueMatchTotal, rarity, brawl
 
     return (
         <ItemBox visible={graph}
-                 rarity={rarity}
-                 id={brawler["Brawler.name"]}>
+                 rarity={rarity}>
             <div className={'brawler__box'}>
                 <div className={'brawler__box_top'}>
-                    <div className={'brawler_base_info'}>
+                    <a className={'brawler_base_info'}
+                       id={brawler["Brawler.name"]}>
                         <img
                             src={`/images/trophy_rank/${brawlerRank(brawler.trophy_highest)}.webp`}
                             alt={'브롤러 랭크'}/>
                         <h2>{brawler[`Brawler.name`]}</h2>
-                        <span></span>
-                    </div>
+                    </a>
                     <img src={`/images/brawler_profile/${brawler.brawler_id}.webp`}
                          alt={'브롤러 프로필'}/>
                     <div className={'brawler_detail_info'}>
@@ -69,16 +68,18 @@ const RecordsItem = ({brawler, trophyMatchTotal, leagueMatchTotal, rarity, brawl
                         </div>
                     </div>
                     <div>
-                        <button className={'brawler_button'}
+                        <button className={'brawler__button'}
                                 onClick={() => {
                                     setGraph(!graph)
                                 }}
                                 disabled={brawlerChange.length === 0}>
+                            <img src={require(`../images/game_icon/search.webp`)}
+                                 alt={'트로피 변화량'}/>
                         </button>
                     </div>
                 </div>
             </div>
-            <div className={'brawler_graph'}>
+            <div className={'brawler_graph__box'}>
                 <ResponsiveContainer width="100%" height={300}>
                     <AreaChart data={brawlerChange}
                                margin={{
@@ -192,12 +193,19 @@ const ItemBox = styled.div`
     margin-bottom: 8px;
   }
 
-  .brawler_button {
+  .brawler__button {
     width: 60px;
     height: 40px;
   }
+  
+  .brawler__button > img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    vertical-align: middle;
+  }
 
-  .brawler_graph {
+  .brawler_graph__box {
     max-height: ${props => (props.visible ? '' : 0)};
     padding: ${props => (props.visible ? '10px' : 0)};
     transform: scaleY(${props => (props.visible ? 1 : 0)});

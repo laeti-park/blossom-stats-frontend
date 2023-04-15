@@ -18,7 +18,7 @@ const ProfileInfo = (props) => {
                     <tbody>
                     <tr>
                         <td>
-                            <img src={require("../images/game_icon/trophy.webp")}
+                            <img src={`/images/game_mode/trophyLeague.webp`}
                                  alt={'트로피'}/>
                             현재 트로피
                         </td>

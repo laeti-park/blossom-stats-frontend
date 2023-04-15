@@ -7,9 +7,9 @@
 
 /* thead */
 
-.table__box_1 > thead > tr > th,
-.table__box_2 > thead > tr > th,
-.table__box_3 > thead > tr > th {
+.table__box_1 th,
+.table__box_2 th,
+.table__box_3 th {
     border-bottom: 1px solid #FFD1D1;
     background-color: #FF9494;
 }
@@ -68,10 +68,8 @@
     display: none;
 }
 
-.table__box_1 th img,
-.table__box_1 td img,
-.table__box_2 th img,
-.table__box_2 td img {
+.table__box_1 img,
+.table__box_2 img {
     height: 18px;
     margin-right: 4px;
 }

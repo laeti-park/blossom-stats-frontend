@@ -14,7 +14,6 @@ const RecordsList = (props) => {
             <div className={'summary_list_2'}>
                 {
                     props.brawlers.map(brawler => {
-                        console.log(brawler)
                         const brawlerChange = props.brawlerChange
                             .filter(item => item.brawler_id === brawler.brawler_id)
                             .map(item => {

@@ -12,7 +12,6 @@ const ProfileFriendItem = (props) => {
             <React.Fragment>
                 {
                     friendInfo.map(info => {
-                        console.log(info)
                         return (
                             <div
                                 key={`${info.member_id}_${info.friend_id}_${info.map_mode}_${info.match_type}_${info.match_grade}`}>

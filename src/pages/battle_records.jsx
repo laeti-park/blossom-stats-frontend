@@ -6,6 +6,7 @@ import Profile from "../components/tool_profile";
 import {useParams} from "react-router-dom";
 import Battles from "../components/battle_records_list";
 import Calendar from "../components/tool_calendar";
+import MemberRecords from "../components/tool_member_records";
 
 const url = process.env.REACT_APP_BASE_URL;
 const diffKST = 9 * 60 * 60 * 1000;
@@ -52,6 +53,10 @@ const BattleRecords = () => {
             <Profile id={member.id}
                      name={member.name}
                      profile={member.profile_picture}/>
+            <MemberRecords id={id}
+                           trophyCurrent={member.trophy_current}
+                           soloCurrent={member.league_solo_current}
+                           teamCurrent={member.league_team_current}/>
             <Calendar today={today}
                       startDate={startDate}
                       getDate={getDate}/>

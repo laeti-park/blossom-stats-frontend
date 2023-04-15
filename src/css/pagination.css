@@ -7,13 +7,5 @@
 
 .pagination > button {
     width: 48%;
-    padding: 4px;
     font-size: 16px;
-    background-color: #C3AED6;
-    border: none;
-    border-radius: 0.25rem;
-}
-
-.pagination > button:hover {
-    background-color: #8675A9;
 }

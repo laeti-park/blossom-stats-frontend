@@ -76,6 +76,21 @@ br {
     line-height: 50%;
 }
 
+button {
+    padding: 4px;
+    background-color: #C3AED6;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+button:hover {
+    background-color: #8675A9;
+}
+
+button:disabled {
+    background-color: gray;
+}
+
 .blossom_stats__image {
     width: 100%;
 }
@@ -163,6 +178,10 @@ br {
 .row__box-2 {
     display: flex;
     gap: 10px;
+}
+
+.row__box-1 {
+    align-items: center;
 }
 
 .row__box-2 {
