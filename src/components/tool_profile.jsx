@@ -5,7 +5,7 @@ const ToolProfile = (props) => {
     return (
         <React.Fragment>
             <div className={'row__box-1'}>
-                <img className={'profile_image'}
+                <img className={'profile__image'}
                      src={`/images/profile_pictures/${props.profile}.webp`}
                      alt={'프로필'}/>
                 <div>

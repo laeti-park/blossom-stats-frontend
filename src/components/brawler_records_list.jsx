@@ -11,7 +11,7 @@ const RecordsList = (props) => {
     return (
         <div className={'row__box-3'}>
             <h2>브롤러 정보<span>({props.brawlers.length}종)</span></h2>
-            <div className={'summary_list_2'}>
+            <div className={'summary__list-2'}>
                 {
                     props.brawlers.map(brawler => {
                         const brawlerChange = props.brawlerChange

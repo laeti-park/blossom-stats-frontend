@@ -22,7 +22,8 @@ export default (props) => {
                         닉네임
                     </th>
                     <th>
-                        <img src={require('../images/game_icon/trophy.webp')} alt='트로피'/>
+                        <img src={require('../images/game_icon/quests.webp')}
+                             alt="퀘스트"/>
                         매치
                     </th>
                     <th>
@@ -43,6 +44,8 @@ export default (props) => {
                                         {member[`Member.name`]}
                                     </td>
                                     <td>
+                                        <img src={require('../images/game_icon/quests.webp')}
+                                             alt="매치"/>
                                         {member.match_count}회
                                     </td>
                                     <td>

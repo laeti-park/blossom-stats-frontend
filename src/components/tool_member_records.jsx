@@ -37,7 +37,7 @@ const ToolMemberRecords = (props) => {
                     <td>
                         <img src={`/images/league_rank/${Math.floor(props.soloCurrent / 3)}.webp`}
                              alt={'파워 리그 랭크'}/>
-                        {roman[(props.teamCurrent % 3)]}
+                        {roman[(props.soloCurrent % 3)]}
                     </td>
                     <td>
                         <img src={`/images/league_rank/${Math.floor(props.teamCurrent / 3)}.webp`}

@@ -3,7 +3,6 @@ import ToolPagination from "./tool_pagination";
 import React from "react";
 
 export default (props) => {
-    console.log(props)
     const navigate = useNavigate();
 
     const offset = (props.page - 1) * 10;
@@ -23,7 +22,8 @@ export default (props) => {
                         닉네임
                     </th>
                     <th>
-                        <img src={require('../images/game_icon/trophy.webp')} alt='트로피'/>
+                        <img src={require('../images/game_icon/quests.webp')}
+                             alt='매치'/>
                         매치/변화
                     </th>
                     <th>
@@ -43,22 +43,22 @@ export default (props) => {
                                 <td>
                                     {member.name}
                                 </td>
-                                <td>
+                                <td style={{textAlign: "center"}}>
                                     <div>
-                                        <img src={require('../images/game_icon/account.webp')}
+                                        <img src={require('../images/game_icon/quests.webp')}
                                              alt='매치'/>
-                                        {member.records.match_count}회
+                                        {member.match_count}회
                                     </div>
                                     <div>
                                         <img src={require('../images/game_icon/trophy_plus.webp')}
-                                             alt='트로피 변화량'/>
-                                        {member.records.match_change}개
+                                             alt='변화량'/>
+                                        {member.match_change}개
                                     </div>
                                 </td>
                                 <td>
                                     <img src={require('../images/game_icon/friendly.webp')}
                                          alt='트로피 변화량'/>
-                                    {member.friends !== undefined ? member.friends.point.toFixed(2) : 0}
+                                    {member.point}
                                 </td>
                             </tr>
                         )
@@ -70,5 +70,5 @@ export default (props) => {
                             total={total}
                             getPage={getPage}/>
         </div>
-    )
+    );
 }

@@ -5,14 +5,6 @@ import {AreaChart, Area, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContain
 const RecordsItem = ({brawler, trophyMatchTotal, leagueMatchTotal, rarity, brawlerChange}) => {
     const [graph, setGraph] = useState(false);
 
-    const brawlerRank = (trophy) => {
-        return trophy < 40 ?
-            Math.floor(trophy / 10) :
-            trophy < 180 ? Math.floor(trophy / 20) + 4 :
-                trophy < 500 ? Math.floor(trophy / 40) + 7 :
-                    Math.floor(trophy / 50) + 10;
-    };
-
     return (
         <ItemBox visible={graph}
                  rarity={rarity}>
@@ -21,7 +13,7 @@ const RecordsItem = ({brawler, trophyMatchTotal, leagueMatchTotal, rarity, brawl
                     <a className={'brawler_base_info'}
                        id={brawler["Brawler.name"]}>
                         <img
-                            src={`/images/trophy_rank/${brawlerRank(brawler.trophy_highest)}.webp`}
+                            src={`/images/trophy_rank/${brawler.trophy_rank}.webp`}
                             alt={'브롤러 랭크'}/>
                         <h2>{brawler[`Brawler.name`]}</h2>
                     </a>

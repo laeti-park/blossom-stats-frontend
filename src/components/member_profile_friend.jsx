@@ -8,7 +8,7 @@ const ProfileFriend = (props) => {
                 <h2>친밀도<span>({
                     props.friendsPoint !== null && props.friendsPoint.total_point !== undefined ?
                         props.friendsPoint.total_point.toFixed(2) : 0}점)</span></h2>
-                <div className={'summary_list_2'}>
+                <div className={'summary__list-2'}>
                     {
                         props.friendsGroup !== undefined ?
                             props.friendsGroup.map(friend => {

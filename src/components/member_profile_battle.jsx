@@ -17,17 +17,17 @@ const ProfileDaily = ({id, battles, count, today, getDate, startDate}) => {
             <Calendar today={today}
                       startDate={startDate}
                       getDate={getDate}/>
-            <div className={'summary_list_1'}>
+            <div className={'summary__list-1'}>
                 {
                     battles.map(battle => {
                         return (
                             <SummaryBox key={battle.match_date}
                                         matchResult={battle.match_result}
                                         href={`../battle/${id.replace('#', '')}`}>
-                                <img className={'summary_image_1'}
+                                <img className={'summary__image-1'}
                                      src={`/images/game_mode/${battle.mode}.webp`}
                                      alt={'게임모드'}/>
-                                <img className={'summary_image_2'}
+                                <img className={'summary__image-2'}
                                      src={`/images/brawler_pin/${battle.brawler_id}.webp`}
                                      alt={'브롤러'}/>
                             </SummaryBox>

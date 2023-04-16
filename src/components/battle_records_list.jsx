@@ -4,7 +4,6 @@ const matchResultArray = ['승', '무', '패'];
 const roman = ['I', 'II', 'III'];
 
 const Battles = (props) => {
-    console.log(props.battles);
 
     const battleDiv = (array, players) => {
         return array.map(number =>
@@ -88,7 +87,7 @@ const Battles = (props) => {
     }
 
     return (
-        <div className={'summary_list_2'}>
+        <div className={'summary__list-2'}>
             {
                 props.battles.map(battle => {
                     return (
