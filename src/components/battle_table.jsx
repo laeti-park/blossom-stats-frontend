@@ -1,6 +1,8 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import ToolPagination from "./tool_pagination";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faAngleRight} from "@fortawesome/free-solid-svg-icons";
 
 export default (props) => {
     const navigate = useNavigate();
@@ -41,7 +43,7 @@ export default (props) => {
                                     navigate(`./${member.member_id.replace('#', '')}`)
                                 }}>
                                     <td>
-                                        {member[`Member.name`]}
+                                        <FontAwesomeIcon icon={faAngleRight}/> {member[`Member.name`]}
                                     </td>
                                     <td>
                                         <img src={require('../images/game_icon/quests.webp')}

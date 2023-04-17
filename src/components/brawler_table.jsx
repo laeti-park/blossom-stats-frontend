@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import ToolPagination from "./tool_pagination";
 import {useNavigate} from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faAngleRight} from "@fortawesome/free-solid-svg-icons";
 
 const BrawlerTable = ({memberBrawlers}) => {
     const navigate = useNavigate();
@@ -41,7 +43,7 @@ const BrawlerTable = ({memberBrawlers}) => {
                                     navigate(`./${brawler.member_id.replace('#', '')}`)
                                 }}>
                                 <td>
-                                    {brawler.name}
+                                    <FontAwesomeIcon icon={faAngleRight}/> {brawler.name}
                                 </td>
                                 <td>
                                     <img src={require('../images/game_icon/trophy.webp')} alt='트로피'/>

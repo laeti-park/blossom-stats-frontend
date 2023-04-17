@@ -1,4 +1,7 @@
 import {useNavigate} from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faAngleRight} from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 
 const roman = ['I', 'II', 'III'];
 
@@ -41,11 +44,11 @@ const MemberTable = ({members}) => {
                     return (
                         <tr key={member.id}
                             onClick={
-                            () => {
-                                navigate(`./${member.id.replace('#', '')}`)
-                            }}>
+                                () => {
+                                    navigate(`./${member.id.replace('#', '')}`)
+                                }}>
                             <td>
-                                {member.name}
+                                <FontAwesomeIcon icon={faAngleRight}/> {member.name}
                             </td>
                             <td>
                                 <img src={require('../images/game_icon/trophy.webp')}

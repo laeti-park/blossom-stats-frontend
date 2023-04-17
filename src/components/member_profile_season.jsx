@@ -96,7 +96,7 @@ const ProfileSeason = (props) => {
             <div className={'summary__list-2'}>
                 {
                     props.records.mapMode !== undefined ? modes.map(mode => {
-                        if (props.records.mapMode[`${mode}`] !== undefined) {
+                        if (props.records.mapMode[`${mode}`].match_count !== undefined) {
                             return (
                                 <SummaryBox key={mode}>
                                     <img className={'summary__image-1'}

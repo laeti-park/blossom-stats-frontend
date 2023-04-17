@@ -39,13 +39,28 @@
     height: 48px;
 }
 
+.table__box_3 th {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.table__box_3 th:first-child {
+    width: 400px;
+    max-width: 400px;
+}
+
+.table__box_3 th:nth-child(2) {
+    width: 200px;
+    max-width: 200px;
+}
+
 .table__box_1 th:first-child,
 .table__box_1 td:first-child,
 .table__box_2 th:first-child,
 .table__box_2 td:first-child {
     width: 40%;
     max-width: 40%;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .table__box_1 th:nth-child(n+2),

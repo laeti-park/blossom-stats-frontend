@@ -1,6 +1,8 @@
 import {useNavigate} from "react-router-dom";
 import ToolPagination from "./tool_pagination";
 import React from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faAngleRight} from "@fortawesome/free-solid-svg-icons";
 
 export default (props) => {
     const navigate = useNavigate();
@@ -41,7 +43,7 @@ export default (props) => {
                                     navigate(`../member/${member.id.replace('#', '')}`)
                                 }}>
                                 <td>
-                                    {member.name}
+                                    <FontAwesomeIcon icon={faAngleRight}/> {member.name}
                                 </td>
                                 <td style={{textAlign: "center"}}>
                                     <div>

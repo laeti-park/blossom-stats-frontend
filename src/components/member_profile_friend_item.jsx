@@ -53,16 +53,16 @@ const ProfileFriendItem = (props) => {
                                             info.match_type === '0' ?
                                                 <img className={'summary__image-3'}
                                                      src={`/images/trophy_rank/grade/${info.match_grade}.webp`}
-                                                     alt={'점수구간'}/> : ['2', '3'].includes(info.match_type) ?
+                                                     alt={'트로피 리그 랭크'}/> : ['2', '3'].includes(info.match_type) ?
                                                     <img className={'summary__image-3'}
                                                          src={`/images/league_rank/${Math.floor((info.match_grade - 1) / 3)}.webp`}
-                                                         alt={'점수구간'}/> : info.match_type === '6' ?
+                                                         alt={'파워 리그 랭크'}/> : info.match_type === '6' ?
                                                         <img className={'summary__image-3'}
                                                              src={`/images/game_mode/clubLeague.webp`}
-                                                             alt={'점수구간'}/> :
+                                                             alt={'클럽 리그'}/> :
                                                         <img className={'summary__image-3'}
                                                              src={`/images/game_mode/challenge.webp`}
-                                                             alt={'점수구간'}/>
+                                                             alt={'챌린지'}/>
                                         }
                                     </span>
                                     <span>
