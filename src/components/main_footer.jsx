@@ -1,7 +1,7 @@
 import React from "react";
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faGamepad, faMessage, faContactCard, faComputer, faAt} from '@fortawesome/free-solid-svg-icons';
+import {faGamepad, faTasks, faContactCard, faComputer, faAt} from '@fortawesome/free-solid-svg-icons';
 
 import "../css/footer.css";
 
@@ -14,6 +14,9 @@ const Footer = () => {
                 </a>
                 <a href={'https://open.kakao.com/me/Laeti_Cre'} target={'_blank'}>
                     <FontAwesomeIcon icon={faContactCard}/> 연락처
+                </a>
+                <a href={"https://laeti-park.notion.site/Blossom-Stats-To-Do-List-ac506cb69cb048d9b44fe2bb2ad14391"} target={'_blank'}>
+                    <FontAwesomeIcon icon={faTasks}/> 개발 진행사항
                 </a>
             </div>
             <div>

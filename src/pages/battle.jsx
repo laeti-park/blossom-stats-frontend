@@ -7,7 +7,6 @@ import Calendar from '../components/tool_calendar';
 import '../css/record.css';
 
 const url = process.env.REACT_APP_BASE_URL;
-const diffKST = 9 * 60 * 60 * 1000;
 const typeList = ['all', 'trophyLeague', 'powerLeague', 'clubLeague', 'challenge'];
 const modeList = ['gemGrab', 'brawlBall', 'bounty', 'heist', 'hotZone', 'knockout', 'basketBrawl', 'duels', 'soloShowdown', 'duoShowdown']
 
@@ -15,11 +14,11 @@ export default () => {
     const [today, setToday] = useState(new Date(
         new Date(new Date().getFullYear(),
             new Date().getMonth(),
-            new Date().getDate()).getTime() + diffKST));
+            new Date().getDate()).getTime()));
     const [tomorrow, setTomorrow] = useState(new Date(
         new Date(new Date().getFullYear(),
             new Date().getMonth(),
-            new Date().getDate() + 1).getTime() + diffKST));
+            new Date().getDate() + 1).getTime()));
     const [battles, setBattles] = useState([]);
     const [matchMode, setMatchMode] = useState('all');
     const [matchType, setMatchType] = useState('all');
@@ -52,7 +51,7 @@ export default () => {
         setMatchType(typeList.includes(radio) ? radio : 'all');
     };
 
-    const startDate = new Date(season.start_date);
+    const startDate = new Date(season.begin_date);
     startDate.setDate(startDate.getDate() - 1);
 
     const getPage = (num) => {

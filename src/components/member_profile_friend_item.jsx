@@ -68,7 +68,7 @@ const ProfileFriendItem = (props) => {
                                     <span>
                                         승률: {
                                         info.victory_count > 0 ?
-                                        Math.round(info.victory_count / (parseInt(info.victory_count) + parseInt(info.defeat_count)) * 100) : 0}%
+                                            Math.round(info.victory_count / (parseInt(info.victory_count) + parseInt(info.defeat_count)) * 100) : 0}%
                                     </span>
                                 </div>
                             </div>
@@ -91,7 +91,7 @@ const ProfileFriendItem = (props) => {
                     <img className={'summary__image-3'}
                          src={require(`../images/game_icon/friendly.webp`)}
                          alt={"친밀도"}/>
-                    <span>{props.friend.friend_name}({props.friend.friend_point.toFixed(2)}점)</span>
+                    <span>{props.friend.friend_name}({props.friend.friend_point}점)</span>
                 </div>
                 <div>
                     <img className={'summary__image-3'}

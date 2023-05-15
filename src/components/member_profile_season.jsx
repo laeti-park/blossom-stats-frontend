@@ -7,7 +7,6 @@ import {faAngleRight} from '@fortawesome/free-solid-svg-icons';
 const modes = ['gemGrab', 'brawlBall', 'bounty', 'heist', 'hotZone', 'knockout', 'basketBrawl', 'duels', 'soloShowdown', 'duoShowdown'];
 
 const ProfileSeason = (props) => {
-    console.log(props)
     const [trophyToggle, setTrophyToggle] = useState(false);
     const [soloLeagueToggle, setSoloLeagueToggle] = useState(false);
     const [teamLeagueToggle, setTeamLeagueToggle] = useState(false);

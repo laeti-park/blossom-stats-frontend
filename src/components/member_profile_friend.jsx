@@ -7,7 +7,7 @@ const ProfileFriend = (props) => {
             <div className={'row__box-3'}>
                 <h2>친밀도<span>({
                     props.friendsPoint !== null && props.friendsPoint.total_point !== undefined ?
-                        props.friendsPoint.total_point.toFixed(2) : 0}점)</span></h2>
+                        props.friendsPoint.total_point : 0}점)</span></h2>
                 <div className={'summary__list-2'}>
                     {
                         props.friendsGroup !== undefined ?

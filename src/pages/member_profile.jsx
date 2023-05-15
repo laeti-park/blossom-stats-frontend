@@ -11,7 +11,6 @@ import Brawlers from '../components/member_profile_brawler';
 import '../css/profile.css';
 
 const url = process.env.REACT_APP_BASE_URL;
-const diffKST = 9 * 60 * 60 * 1000;
 
 const Member_Profile = () => {
     const {id} = useParams();
@@ -23,11 +22,11 @@ const Member_Profile = () => {
     const [today, setToday] = useState(new Date(
         new Date(new Date().getFullYear(),
             new Date().getMonth(),
-            new Date().getDate()).getTime() + diffKST));
+            new Date().getDate()).getTime()));
     const [tomorrow, setTomorrow] = useState(new Date(
         new Date(new Date().getFullYear(),
             new Date().getMonth(),
-            new Date().getDate() + 1).getTime() + diffKST));
+            new Date().getDate() + 1).getTime()));
     const [season, setSeason] = useState({});
     const [friends, setFriends] = useState([]);
     const [friendsGroup, setFriendsGroup] = useState([]);
@@ -59,7 +58,7 @@ const Member_Profile = () => {
         setTomorrow(tomorrow)
     }
 
-    const startDate = new Date(season.start_date);
+    const startDate = new Date(season.begin_date);
     startDate.setDate(startDate.getDate() - 1);
 
     return (

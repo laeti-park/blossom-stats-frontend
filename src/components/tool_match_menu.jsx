@@ -97,8 +97,8 @@ const ToolMatchMenu = (props) => {
                        checked={radio === 'basketBrawl'}
                        onChange={handleRadioButton}/>
                 <img className={'rectangle__image'}
-                     src={'/images/game_mode/basketBrawl.webp'}
-                     alt={'바스켓 브롤'}/>
+                     src={'/images/game_mode/volleyBrawl.webp'}
+                     alt={'발리 브롤'}/>
             </label>
             <label>
                 <input type="radio" className={'radio_button'}

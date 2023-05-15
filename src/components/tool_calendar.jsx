@@ -5,8 +5,6 @@ import Calendar from "react-calendar";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAngleRight, faCalendarAlt} from "@fortawesome/free-solid-svg-icons";
 
-const diffKST = 9 * 60 * 60 * 1000;
-
 const ToolMatchMenu = (props) => {
     const [calendar, setCalendar] = useState(false);
 
@@ -45,8 +43,8 @@ const ToolMatchMenu = (props) => {
                           onChange={
                               (element) => {
                                   props.getDate(
-                                      new Date(new Date(element).getTime() + diffKST),
-                                      new Date(new Date(new Date(element).setDate(element.getDate() + 1)).getTime() + diffKST)
+                                      new Date(new Date(element).getTime()),
+                                      new Date(new Date(new Date(element).setDate(element.getDate() + 1)).getTime())
                                   );
                               }
                           }/>

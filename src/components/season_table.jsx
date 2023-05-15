@@ -38,12 +38,12 @@ export default (props) => {
                 {
                     props.members.slice(offset, offset + 10).map(member => {
                         return (
-                            <tr key={member.id}
+                            <tr key={`${member.member_id}_${member.match_type}_${member.map_mode}`}
                                 onClick={() => {
-                                    navigate(`../member/${member.id.replace('#', '')}`)
+                                    navigate(`../member/${member.member_id.replace('#', '')}`)
                                 }}>
                                 <td>
-                                    <FontAwesomeIcon icon={faAngleRight}/> {member.name}
+                                    <FontAwesomeIcon icon={faAngleRight}/> {member.member_name}
                                 </td>
                                 <td style={{textAlign: "center"}}>
                                     <div>

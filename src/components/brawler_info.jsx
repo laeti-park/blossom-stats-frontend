@@ -26,7 +26,6 @@ const brawlerPicked = ({brawler, pick}) => {
     const pickMatchLeague = filterPickLeague.reduce((sum, item) => sum + (item['match_count'] || 0), 0);
     const pickVictoryLeague = filterPickLeague.reduce((sum, item) => sum + (item['victory_count'] || 0), 0);
 
-
     return (
         <div className='info__box'>
             <div className='info__title'>

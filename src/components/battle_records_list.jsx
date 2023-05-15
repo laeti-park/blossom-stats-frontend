@@ -6,13 +6,14 @@ const roman = ['I', 'II', 'III'];
 const Battles = (props) => {
 
     const battleDiv = (array, players, matchType) => {
-        return array.map(number =>
-            <div className={'battle_detail'}>
+        return array.map(number => {
+            return (<div className={'battle_detail'}
+                         key={`${number}`}>
                 {
                     players.filter(player => player.player_team === number)
                         .map(player => {
                             return (
-                                <div>
+                                <div key={`${player.player_id}`}>
                                     <div>
                                         <img src={`/images/brawler_profile/${player.brawler_id}.webp`}
                                              alt={'브롤러'}/>
@@ -65,8 +66,8 @@ const Battles = (props) => {
                             )
                         })
                 }
-            </div>
-        )
+            </div>)
+        })
     }
 
     const battleDetail = (mode, matchType, players) => {
@@ -137,7 +138,7 @@ const Battles = (props) => {
                                 </th>
                                 <th>
                                     {
-                                        matchResultArray[parseInt(battle.players.find(player => player.player_id === battle.member_id).match_result) + 1]
+                                        matchResultArray[parseInt(battle.players.find(player => player.player_id === battle.member_id)?.match_result) + 1]
                                     }
                                 </th>
                                 <th>
