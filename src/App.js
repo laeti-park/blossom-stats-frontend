@@ -8,10 +8,11 @@ import {faBars, faTimes} from '@fortawesome/free-solid-svg-icons';
 import Index from './pages';
 import Member from './pages/member';
 import MemberProfile from './pages/member_profile';
-import Battle from "./pages/battle";
-import BattleRecords from "./pages/battle_records";
 import Brawler from "./pages/brawler";
 import BrawlerRecords from './pages/brawler_records';
+import Rotation from "./pages/rotation";
+import Battle from "./pages/battle";
+import BattleRecords from "./pages/battle_records";
 import Season from "./pages/season";
 import Footer from "./components/main_footer";
 
@@ -57,6 +58,10 @@ function App() {
                                   onClick={() => setIsToggled(!isToggled)}>브롤러</Link>
                         </li>
                         <li className='header__list-item'>
+                            <Link to='/rotation'
+                                  onClick={() => setIsToggled(!isToggled)}>로테이션</Link>
+                        </li>
+                        <li className='header__list-item'>
                             <Link to='/battle'
                                   onClick={() => setIsToggled(!isToggled)}>일일기록</Link>
                         </li>
@@ -73,6 +78,8 @@ function App() {
                 <Route path='/member/:id' element={<MemberProfile/>}/>
                 <Route path='/brawler' element={<Brawler/>}/>
                 <Route path='/brawler/:id' element={<BrawlerRecords/>}/>
+                <Route path='/rotation' element={<Rotation/>}/>
+                <Route path='/rotation/:id' element={<BrawlerRecords/>}/>
                 <Route path='/battle' element={<Battle/>}/>
                 <Route path='/battle/:id' element={<BattleRecords/>}/>
                 <Route path='/season' element={<Season/>}/>

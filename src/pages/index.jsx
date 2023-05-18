@@ -25,6 +25,12 @@ const index = () => {
                     </Link>
                 </li>
                 <li>
+                    <Link to={'/rotation'}>
+                        <img src={require('../images/game_icon/brawler.webp')} alt={'로테이션'}/>
+                        로테이션
+                    </Link>
+                </li>
+                <li>
                     <Link to={'/battle'}>
                         <img src={require('../images/game_icon/brawl_pass_free.webp')} alt={'일일기록'}/>
                         일일기록

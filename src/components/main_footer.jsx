@@ -16,7 +16,7 @@ const Footer = () => {
                     <FontAwesomeIcon icon={faContactCard}/> 연락처
                 </a>
                 <a href={"https://laeti-park.notion.site/Blossom-Stats-To-Do-List-ac506cb69cb048d9b44fe2bb2ad14391"} target={'_blank'}>
-                    <FontAwesomeIcon icon={faTasks}/> 개발 진행사항
+                    <FontAwesomeIcon icon={faTasks}/> 개발노트
                 </a>
             </div>
             <div>

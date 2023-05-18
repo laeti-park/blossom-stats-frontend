@@ -268,9 +268,6 @@ thumb
 sketch
 
 # End of https://www.toptal.com/developers/gitignore/api/react,node,intellij
-/front_start.sh
-/front_kill.sh
-/package-lock.json
-/blossom-web-frontend.iml
 /.idea/
 /public/images/team_logo_horizontal.png
+/blossom-web-frontend.iml
