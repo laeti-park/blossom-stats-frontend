@@ -12,6 +12,13 @@ const index = () => {
             <hr/>
             <h3>▶ Blossom Stats 메뉴 목록</h3>
             <ul className={"menu__list"}>
+                <li style={{width: "99%", height: "80px"}}>
+                    <a href={"https://laeti-park.notion.site/Blossom-Stats-To-Do-List-ac506cb69cb048d9b44fe2bb2ad14391"} target={'_blank'}>
+                        <img src={require('../images/game_icon/quests.webp')} alt={'클럽원'}
+                             style={{height: "20%", verticalAlign: "middle"}}/>
+                        <span style={{fontSize: "32px", verticalAlign: "middle"}}>개발노트</span>
+                    </a>
+                </li>
                 <li>
                     <Link to={'/member'}>
                         <img src={require('../images/game_icon/friendly.webp')} alt={'클럽원'}/>
@@ -26,7 +33,7 @@ const index = () => {
                 </li>
                 <li>
                     <Link to={'/rotation'}>
-                        <img src={require('../images/game_icon/brawler.webp')} alt={'로테이션'}/>
+                        <img src={require('../images/game_icon/map.webp')} alt={'로테이션'}/>
                         로테이션
                     </Link>
                 </li>

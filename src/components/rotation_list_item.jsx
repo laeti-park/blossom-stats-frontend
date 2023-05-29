@@ -5,17 +5,24 @@ import "moment/locale/ko";
 
 const RotationListItem = (props) => {
     const nextTime = moment(props.count === "end" ? props.map.end_time : props.map.begin_time);
-    const [time, setTime] = useState(moment.utc(nextTime.diff(moment())).format("H시간 mm분"));
+    const diffTime = {
+        day: props.count === "end" ?
+            moment.duration(nextTime.diff(moment())).days() : 0,
+        hour: props.count === "end" ?
+            moment.duration(nextTime.diff(moment())).hours() : Math.abs(moment.duration(nextTime.diff(moment())).hours()),
+        minute: props.count === "end" ?
+            moment.duration(nextTime.diff(moment())).minutes() : Math.abs(moment.duration(nextTime.diff(moment())).minutes()),
+    }
+    const [time, setTime] = useState(`${diffTime.day}일 ${diffTime.hour}시간 ${diffTime.minute}분`);
+    console.log();
 
     function useInterval(callback, delay) {
         const savedCallback = useRef();
 
-        // Remember the latest callback.
         useEffect(() => {
             savedCallback.current = callback;
         }, [callback]);
 
-        // Set up the interval.
         useEffect(() => {
             function tick() {
                 savedCallback.current();
@@ -29,7 +36,13 @@ const RotationListItem = (props) => {
     }
 
     useInterval(() => {
-        setTime(moment.utc(nextTime.diff(moment())).format("H시간 m분"));
+        diffTime.day = props.count === "end" ?
+            moment.duration(nextTime.diff(moment())).days() : 0;
+        diffTime.hour = props.count === "end" ?
+            moment.duration(nextTime.diff(moment())).hours() : Math.abs(moment.duration(nextTime.diff(moment())).hours());
+        diffTime.minute = props.count === "end" ?
+            moment.duration(nextTime.diff(moment())).minutes() : Math.abs(moment.duration(nextTime.diff(moment())).minutes());
+        setTime(`${diffTime.day}일 ${diffTime.hour}시간 ${diffTime.minute}분`);
     }, 1000);
 
     return (
@@ -48,7 +61,7 @@ const RotationListItem = (props) => {
                                 이름 : {props.map[`Map.name`]}
                             </div>
                             <div>
-                                시간 : {`${time}`}
+                                {props.count === "end" ? "종료까지" : "시작까지"} : {`${time}`}
                             </div>
                         </div>
                     </th>
