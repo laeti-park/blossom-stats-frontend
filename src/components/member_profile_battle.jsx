@@ -37,7 +37,7 @@ const ProfileDaily = ({id, battles, count, today, getDate, startDate}) => {
             </div>
         </div>
     )
-}
+};
 
 const SummaryBox = styled.a`
   display: flex;

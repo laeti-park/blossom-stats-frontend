@@ -119,7 +119,7 @@ const ProfileFriendItem = (props) => {
             </div>
         </SummaryBox>
     )
-}
+};
 
 const SummaryBox = styled.a`
   width: 100%;

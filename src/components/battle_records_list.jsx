@@ -4,7 +4,6 @@ const matchResultArray = ["승", "무", "패"];
 const roman = ["I", "II", "III"];
 
 const Battles = (props) => {
-
     const battleDiv = (array, players, matchType) => {
         return array.map(number => {
             return (<div className={"battle_detail"}

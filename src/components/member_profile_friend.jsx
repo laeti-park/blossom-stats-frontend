@@ -24,6 +24,6 @@ const ProfileFriend = (props) => {
             </div>
         </React.Fragment>
     )
-}
+};
 
 export default ProfileFriend;

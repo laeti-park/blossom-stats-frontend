@@ -51,5 +51,6 @@ const ToolMatchMenu = (props) => {
             </div>
         </React.Fragment>
     );
-}
+};
+
 export default ToolMatchMenu;

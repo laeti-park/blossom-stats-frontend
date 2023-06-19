@@ -94,7 +94,7 @@ const RecordsItem = ({brawler, trophyMatchTotal, leagueMatchTotal, rarity, brawl
             </div>
         </ItemBox>
     )
-}
+};
 
 const ItemBox = styled.div`
   width: 100%;

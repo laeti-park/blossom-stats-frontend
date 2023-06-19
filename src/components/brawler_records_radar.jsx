@@ -14,5 +14,6 @@ const RecordsRadarChart = (props) => {
             </ResponsiveContainer>
         </div>
     )
-}
+};
+
 export default RecordsRadarChart;

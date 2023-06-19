@@ -26,6 +26,6 @@ const ToolProfile = (props) => {
             </div>
         </React.Fragment>
     )
-}
+};
 
 export default ToolProfile;

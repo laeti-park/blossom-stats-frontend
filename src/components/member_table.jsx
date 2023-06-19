@@ -72,6 +72,6 @@ const MemberTable = ({members}) => {
             </tbody>
         </table>
     )
-}
+};
 
 export default MemberTable;

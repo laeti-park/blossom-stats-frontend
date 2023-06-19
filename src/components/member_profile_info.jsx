@@ -163,6 +163,6 @@ const ProfileInfo = (props) => {
             </div>
         </React.Fragment>
     )
-}
+};
 
 export default ProfileInfo;

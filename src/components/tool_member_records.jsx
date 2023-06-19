@@ -56,7 +56,7 @@ const ToolMemberRecords = (props) => {
             </MemberProfileButton>
         </div>
     )
-}
+};
 
 const MemberRecordsTable = styled.table`
   padding: 10px 0 10px 0;
@@ -85,7 +85,7 @@ const MemberRecordsTable = styled.table`
     height: 18px;
     margin-right: 4px;
   }
-`
+`;
 
 const MemberProfileButton = styled.button`
   width: 20%;
@@ -104,6 +104,6 @@ const MemberProfileButton = styled.button`
     object-fit: contain;
     vertical-align: middle;
   }
-`
+`;
 
 export default ToolMemberRecords;

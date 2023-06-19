@@ -4,7 +4,7 @@ import ToolPagination from "./tool_pagination";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAngleRight} from "@fortawesome/free-solid-svg-icons";
 
-export default (props) => {
+const BrawlerTable = (props) => {
     const navigate = useNavigate();
 
     const offset = (props.page - 1) * 12;
@@ -67,4 +67,6 @@ export default (props) => {
                             getPage={getPage}/>
         </div>
     )
-}
+};
+
+export default BrawlerTable;

@@ -78,6 +78,6 @@ const RotationListItem = (props) => {
             </table>
         </div>
     );
-}
+};
 
 export default RotationListItem;

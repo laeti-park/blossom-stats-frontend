@@ -243,7 +243,7 @@ const ProfileSeason = (props) => {
             }
         </React.Fragment>
     )
-}
+};
 
 const SummaryBox = styled.div`
   display: flex;

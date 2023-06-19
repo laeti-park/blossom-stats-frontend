@@ -6,7 +6,7 @@ import "../css/rotation.css";
 const rotationMaps = [1, 3, 4, 6, 33, 2, 5, 8]
 const challengeMaps = [20, 21, 22, 23, 24, 25, 26]
 
-const rotationTable = (map, count) => {
+const RotationTable = (map, count) => {
     if (map !== undefined) {
 
         return (
@@ -32,7 +32,7 @@ const RotationList = ({rotation}) => {
                 <div className={"rotation__box"}>
                     {
                         rotationMaps.map(slotID => {
-                            return rotationTable(rotation[`${slotID}`]?.at(0), "end");
+                            return RotationTable(rotation[`${slotID}`]?.at(0), "end");
                         })
                     }
                 </div>
@@ -47,7 +47,7 @@ const RotationList = ({rotation}) => {
                 <div className={"rotation__box"}>
                     {
                         challengeMaps.map(slotID => {
-                            return rotationTable(rotation[`${slotID}`]?.at(0), "end");
+                            return RotationTable(rotation[`${slotID}`]?.at(0), "end");
                         })
                     }
                 </div>
@@ -62,13 +62,13 @@ const RotationList = ({rotation}) => {
                 <div className={"rotation__box"}>
                     {
                         rotationMaps.map(slotID => {
-                            return rotationTable(rotation[`${slotID}`]?.at(rotation[`${slotID}`]?.length - 1), "start");
+                            return RotationTable(rotation[`${slotID}`]?.at(rotation[`${slotID}`]?.length - 1), "start");
                         })
                     }
                 </div>
             </div>
         </React.Fragment>
     );
-}
+};
 
 export default RotationList;

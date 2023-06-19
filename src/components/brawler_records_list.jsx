@@ -2,7 +2,6 @@ import React from "react";
 import ListItem from './brawler_records_list_item';
 
 const RecordsList = (props) => {
-
     const trophyMatchTotal = props.brawlers.length !== 0 ? props.brawlers.map(brawler => brawler.match_trophy).reduce(
         (total, matchCount) => total + matchCount) : 0;
     const leagueMatchTotal = props.brawlers.length !== 0 ? props.brawlers.map(brawler => brawler.match_league).reduce(
@@ -35,6 +34,5 @@ const RecordsList = (props) => {
         </div>
     )
 };
-
 
 export default RecordsList;

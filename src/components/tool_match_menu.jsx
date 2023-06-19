@@ -147,5 +147,6 @@ const ToolMatchMenu = (props) => {
             </label>
         </div>
     );
-}
+};
+
 export default ToolMatchMenu;

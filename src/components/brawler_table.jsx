@@ -64,6 +64,6 @@ const BrawlerTable = ({memberBrawlers}) => {
                             getPage={getPage}/>
         </React.Fragment>
     )
-}
+};
 
 export default BrawlerTable;

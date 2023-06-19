@@ -1,6 +1,6 @@
 import React from "react";
 
-const brawlerPicked = ({brawler, battlePicks}) => {
+const BrawlerInfo = ({brawler, battlePicks}) => {
     const brawlerTL = battlePicks.find(item => {
         return item.BRAWLER_ID === brawler.BRAWLER_ID && item.MATCH_TYP === 0
     });
@@ -85,4 +85,4 @@ const brawlerPicked = ({brawler, battlePicks}) => {
     )
 }
 
-export default brawlerPicked;
+export default BrawlerInfo;

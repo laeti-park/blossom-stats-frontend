@@ -14,5 +14,6 @@ const ToolPagination = ({page, total, getPage}) => {
             </button>
         </div>
     );
-}
+};
+
 export default ToolPagination;
