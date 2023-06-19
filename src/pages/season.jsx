@@ -35,8 +35,8 @@ export default () => {
     };
 
 
-    const startDate = new Date(season.begin_date);
-    const endDate = new Date(season.end_date);
+    const startDate = new Date(season.SEASON_BGN_DT);
+    const endDate = new Date(season.SEASON_END_DT);
     startDate.setDate(startDate.getDate() - 1);
 
     const getPage = (num) => {

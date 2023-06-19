@@ -9,31 +9,31 @@ const ProfileBrawler = (props) => {
                 {
                     props.brawlers.map(brawler => {
                         return (
-                            <SummaryBox key={`${brawler.member_id}_${brawler.brawler_id}`}
-                                        href={`../brawler/${brawler.member_id.replace('#', '')}#${brawler['Brawler.name']}`}>
+                            <SummaryBox key={`${brawler.MEMBER_ID}_${brawler.BRAWLER_ID}`}
+                                        href={`../brawler/${brawler.MEMBER_ID.replace('#', '')}#${brawler.BRAWLER_NM}`}>
                                 <div className={'summary_title'}>
                                     <img className={'summary__image-1'}
-                                         src={`/images/brawler_pin/${brawler.brawler_id}.webp`}
+                                         src={`/images/brawler_pin/${brawler.BRAWLER_ID}.webp`}
                                          alt={'브롤러'}/>
-                                    <div>{brawler['Brawler.name']}</div>
+                                    <div>{brawler.BRAWLER_NM}</div>
                                 </div>
                                 <div className={'summary_content'}>
                                     <div>
                                         <img className={'summary__image-3'}
                                              src={require('../images/game_icon/power_point.webp')}
                                              alt={'파워 레벨'}/>
-                                        <span>파워 레벨 : Lv.{brawler.power}</span>
+                                        <span>파워 레벨 : Lv.{brawler.BRAWLER_PWR}</span>
                                     </div>
                                     <div>
                                         <img className={'summary__image-3'}
                                              src={require('../images/game_icon/trophy.webp')}
                                              alt={'트로피'}/>
-                                        <span>현재 : {brawler.trophy_current}개 </span>
+                                        <span>현재 : {brawler.TROPHY_CUR}개 </span>
                                         <span>
                                             <img className={'summary__image-3'}
                                                  src={require('../images/game_icon/trophy_plus.webp')}
                                                  alt={'트로피 변화량'}/>
-                                            {brawler.trophy_current - brawler.trophy_begin}개
+                                            {brawler.TROPHY_CUR - brawler.TROPHY_BGN}개
                                         </span>
                                     </div>
                                 </div>

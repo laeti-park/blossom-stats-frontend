@@ -4,8 +4,10 @@
 
 ![Node.js](https://img.shields.io/badge/Node.js-v19.2.0-DDDDDD?style=flat&logo=Node.js&logoColor=FFFFFF&labelColor=339933)
 ![Javascript](https://img.shields.io/badge/Javascript-F7DF1E?style=flat&logo=Javascript&logoColor=000000)
-![IntelliJ](https://img.shields.io/badge/IntelliJ-2022.3.2-DDDDDD?style=flat&logo=IntelliJIDEA&logoColor=FFFFFF)
+![IntelliJ](https://img.shields.io/badge/IntelliJ-2023.1.2-DDDDDD?style=flat&logo=IntelliJIDEA&logoColor=FFFFFF)
 ![React](https://img.shields.io/badge/React-18.2.0-DDDDDD?logo=React&labelColor=61DAFB&logoColor=000000)
+![Blossom_Stats](https://img.shields.io/badge/Blossom_Stats-1.1.1-DDDDDD?logo=microsoftedge&labelColor=0078D7&logoColor=FFFFFF)
+
 - Brawl Stars Stats For Blossom Club
 
 ## Feature

@@ -63,20 +63,20 @@ const Member_Profile = () => {
 
     return (
         <div className={'container_block'}>
-            <Profile id={member.id}
-                     name={member.name}
-                     profile={member.profile_picture}/>
-            <MemberInfo trophyCurrent={member.trophy_current}
-                        trophyHighest={member.trophy_highest}
-                        soloCurrent={member.league_solo_current}
-                        soloHighest={member.league_solo_highest}
-                        teamCurrent={member.league_team_current}
-                        teamHighest={member.league_team_highest}
-                        victoryTriple={member.victory_triple}
-                        victoryDuo={member.victory_duo}
-                        rank25={member.rank_25}
-                        rank30={member.rank_30}
-                        rank35={member.rank_35}
+            <Profile id={member.MEMBER_ID}
+                     name={member.MEMBER_NM}
+                     profile={member.MEMBER_PROFILE}/>
+            <MemberInfo trophyCurrent={member.TROPHY_CUR}
+                        trophyHighest={member.TROPHY_HGH}
+                        soloCurrent={member.PL_SL_CUR}
+                        soloHighest={member.PL_SL_HGH}
+                        teamCurrent={member.PL_TM_CUR}
+                        teamHighest={member.PL_TM_HGH}
+                        victoryTriple={member.VICTORY_TRP}
+                        victoryDuo={member.VICTORY_DUO}
+                        rank25={member.BRAWLER_RNK_25}
+                        rank30={member.BRAWLER_RNK_30}
+                        rank35={member.BRAWLER_RNK_35}
                         matchChange={records.matchChange}/>
             <DailyRecord id={member.id}
                          battles={battles}

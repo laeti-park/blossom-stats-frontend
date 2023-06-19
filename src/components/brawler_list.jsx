@@ -16,16 +16,16 @@ const BrawlerList = (props) => {
                 {
                     props.brawlers.map(brawler => {
                         return (
-                            <label key={brawler.id}>
+                            <label key={brawler.BRAWLER_ID}>
                                 <input
                                     type="radio"
                                     className="radio_button"
-                                    value={brawler.id}
-                                    checked={radio === brawler.id}
+                                    value={brawler.BRAWLER_ID}
+                                    checked={radio === brawler.BRAWLER_ID}
                                     onChange={handleRadioButton}/>
                                 <img className={"square__image"}
-                                     src={`/images/brawler_profile/${brawler.id}.webp`}
-                                     alt={brawler.id}
+                                     src={`/images/brawler_profile/${brawler.BRAWLER_ID}.webp`}
+                                     alt={brawler.BRAWLER_ID}
                                      onClick={() => onBrawlerSelected(brawler)}/>
                             </label>
                         )
@@ -36,5 +36,5 @@ const BrawlerList = (props) => {
     )
 }
 
-export default BrawlerList
+export default BrawlerList;
 

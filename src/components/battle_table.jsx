@@ -38,22 +38,22 @@ export default (props) => {
                 {
                     props.battles.slice(offset, offset + 12).map(member => {
                         return (
-                            <React.Fragment key={member.member_id}>
+                            <React.Fragment key={member.MEMBER_ID}>
                                 <tr onClick={() => {
-                                    navigate(`./${member.member_id.replace('#', '')}`)
+                                    navigate(`./${member.MEMBER_ID.replace('#', '')}`)
                                 }}>
                                     <td>
-                                        <FontAwesomeIcon icon={faAngleRight}/> {member[`Member.name`]}
+                                        <FontAwesomeIcon icon={faAngleRight}/> {member.MEMBER_NM}
                                     </td>
                                     <td>
                                         <img src={require('../images/game_icon/quests.webp')}
                                              alt="매치"/>
-                                        {member.match_count}회
+                                        {member.MATCH_CNT}회
                                     </td>
                                     <td>
                                         <img src={require('../images/game_icon/trophy.webp')}
                                              alt='트로피'/>
-                                        {member.match_change}
+                                        {member.MATCH_CHG}
                                     </td>
                                 </tr>
                             </React.Fragment>

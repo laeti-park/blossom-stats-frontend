@@ -15,18 +15,18 @@ const RecordsList = (props) => {
                 {
                     props.brawlers.map(brawler => {
                         const brawlerChange = props.brawlerChange
-                            .filter(item => item.brawler_id === brawler.brawler_id)
+                            .filter(item => item.BRAWLER_ID === brawler.BRAWLER_ID)
                             .map(item => {
-                                item.match_change = parseInt(brawler.trophy_begin) + parseInt(item.match_change);
+                                item.MATCH_CHG = parseInt(brawler.TROPHY_BGN) + parseInt(item.MATCH_CHG);
                                 return item;
                             });
 
                         return (
-                            <ListItem key={`${brawler.member_id}_${brawler.brawler_id}`}
+                            <ListItem key={`${brawler.MEMBER_ID}_${brawler.BRAWLER_ID}`}
                                       brawler={brawler}
                                       trophyMatchTotal={trophyMatchTotal}
                                       leagueMatchTotal={leagueMatchTotal}
-                                      rarity={brawler[`Brawler.rarity`]}
+                                      rarity={brawler.BRAWLER_RRT}
                                       brawlerChange={brawlerChange}/>
                         )
                     })

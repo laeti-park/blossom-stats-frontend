@@ -38,20 +38,20 @@ const BrawlerTable = ({memberBrawlers}) => {
                 {
                     memberBrawlers.slice(offset, offset + 12).map(brawler => {
                         return (
-                            <tr key={`${brawler.member_id}_${brawler.brawler_id}`}
+                            <tr key={`${brawler.MEMBER_ID}_${brawler.BRAWLER_ID}`}
                                 onClick={() => {
-                                    navigate(`./${brawler.member_id.replace('#', '')}`)
+                                    navigate(`./${brawler.MEMBER_ID.replace('#', '')}`)
                                 }}>
                                 <td>
-                                    <FontAwesomeIcon icon={faAngleRight}/> {brawler.name}
+                                    <FontAwesomeIcon icon={faAngleRight}/> {brawler.MEMBER_NM}
                                 </td>
                                 <td>
                                     <img src={require('../images/game_icon/trophy.webp')} alt='트로피'/>
-                                    {brawler.trophy_current}
+                                    {brawler.TROPHY_CUR}
                                 </td>
                                 <td>
                                     <img src={require('../images/game_icon/trophy.webp')} alt='트로피'/>
-                                    {brawler.trophy_highest}
+                                    {brawler.TROPHY_HGH}
                                 </td>
                             </tr>
                         )

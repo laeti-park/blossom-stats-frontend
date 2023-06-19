@@ -26,13 +26,13 @@ const MemberTable = ({members}) => {
                 </th>
                 <th className='table__head_row__rank'>
                     <img className='table__head_row__image'
-                         src={'/images/game_mode/rankSolo.webp'}
+                         src={'/images/game_mode_icon/rankSolo.webp'}
                          alt='솔로'/>
                     솔로
                 </th>
                 <th className='table__head_row__rank'>
                     <img className='table__head_row__image'
-                         src={'/images/game_mode/rankTeam.webp'}
+                         src={'/images/game_mode_icon/rankTeam.webp'}
                          alt='팀'/>
                     팀
                 </th>
@@ -42,28 +42,28 @@ const MemberTable = ({members}) => {
             {
                 members.map(member => {
                     return (
-                        <tr key={member.id}
+                        <tr key={member.MEMBER_ID}
                             onClick={
                                 () => {
-                                    navigate(`./${member.id.replace('#', '')}`)
+                                    navigate(`./${member.MEMBER_ID.replace('#', '')}`)
                                 }}>
                             <td>
-                                <FontAwesomeIcon icon={faAngleRight}/> {member.name}
+                                <FontAwesomeIcon icon={faAngleRight}/> {member.MEMBER_NM}
                             </td>
                             <td>
                                 <img src={require('../images/game_icon/trophy.webp')}
                                      alt='트로피'/>
-                                {member.trophy_current}
+                                {member.TROPHY_CUR}
                             </td>
                             <td>
-                                <img src={`images/league_rank/${Math.floor(member.league_solo_current / 3)}.webp`}
+                                <img src={`images/rank_pl/${Math.floor(member.PL_SL_CUR / 3)}.webp`}
                                      alt={'솔로'}/>
-                                {roman[(member.league_solo_current % 3)]}
+                                {roman[(member.PL_SL_CUR % 3)]}
                             </td>
                             <td>
-                                <img src={`images/league_rank/${Math.floor(member.league_team_current / 3)}.webp`}
+                                <img src={`images/rank_pl/${Math.floor(member.PL_TM_CUR / 3)}.webp`}
                                      alt={'파워 리그 랭크'}/>
-                                {roman[(member.league_team_current % 3)]}
+                                {roman[(member.PL_TM_CUR % 3)]}
                             </td>
                         </tr>
                     )

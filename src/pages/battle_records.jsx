@@ -44,18 +44,18 @@ const BattleRecords = () => {
         setTomorrow(tomorrow)
     }
 
-    const startDate = new Date(season.begin_date);
+    const startDate = new Date(season.SEASON_BGN_DT);
     startDate.setDate(startDate.getDate() - 1);
 
     return (
         <div className={'container_block'}>
-            <Profile id={member.id}
-                     name={member.name}
-                     profile={member.profile_picture}/>
+            <Profile id={member.MEMBER_ID}
+                     name={member.MEMBER_NM}
+                     profile={member.MEMBER_PROFILE}/>
             <MemberRecords id={id}
-                           trophyCurrent={member.trophy_current}
-                           soloCurrent={member.league_solo_current}
-                           teamCurrent={member.league_team_current}/>
+                           trophyCurrent={member.TROPHY_CUR}
+                           soloCurrent={member.PL_SL_CUR}
+                           teamCurrent={member.PL_TM_CUR}/>
             <Calendar today={today}
                       startDate={startDate}
                       getDate={getDate}/>

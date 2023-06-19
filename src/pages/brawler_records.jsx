@@ -26,13 +26,13 @@ const BrawlerRecords = () => {
 
     return (
         <div className={'container_block'}>
-            <Profile id={member.id}
-                     name={member.name}
-                     profile={member.profile_picture}/>
+            <Profile id={member.MEMBER_ID}
+                     name={member.MEMBER_NM}
+                     profile={member.MEMBER_PROFILE}/>
             <MemberRecords id={id}
-                           trophyCurrent={member.trophy_current}
-                           soloCurrent={member.league_solo_current}
-                           teamCurrent={member.league_team_current}/>
+                           trophyCurrent={member.TROPHY_CUR}
+                           soloCurrent={member.PL_SL_CUR}
+                           teamCurrent={member.PL_TM_CUR}/>
             {/*TODO: n각 그래프 만들기*/}
             {/*<RadarChart brawlers={brawlers}/>*/}
             <Brawlers brawlers={brawlers}

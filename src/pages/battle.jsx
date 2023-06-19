@@ -51,7 +51,7 @@ export default () => {
         setMatchType(typeList.includes(radio) ? radio : 'all');
     };
 
-    const startDate = new Date(season.begin_date);
+    const startDate = new Date(season?.SEASON_BGN_DT);
     startDate.setDate(startDate.getDate() - 1);
 
     const getPage = (num) => {

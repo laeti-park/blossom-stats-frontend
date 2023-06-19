@@ -11,17 +11,17 @@ const ToolMemberRecords = (props) => {
                 <thead>
                 <tr>
                     <th>
-                        <img src={`/images/game_mode/trophyLeague.webp`}
+                        <img src={`/images/game_mode_icon/trophyLeague.webp`}
                              alt={'트로피'}/>
                         트로피
                     </th>
                     <th>
-                        <img src={`/images/game_mode/rankSolo.webp`}
+                        <img src={`/images/game_mode_icon/rankSolo.webp`}
                              alt={'솔로'}/>
                         솔로 리그
                     </th>
                     <th>
-                        <img src={`/images/game_mode/rankTeam.webp`}
+                        <img src={`/images/game_mode_icon/rankTeam.webp`}
                              alt={'팀'}/>
                         팀 리그
                     </th>
@@ -35,12 +35,12 @@ const ToolMemberRecords = (props) => {
                         {props.trophyCurrent}개
                     </td>
                     <td>
-                        <img src={`/images/league_rank/${Math.floor(props.soloCurrent / 3)}.webp`}
+                        <img src={`/images/rank_pl/${Math.floor(props.soloCurrent / 3)}.webp`}
                              alt={'파워 리그 랭크'}/>
                         {roman[(props.soloCurrent % 3)]}
                     </td>
                     <td>
-                        <img src={`/images/league_rank/${Math.floor(props.teamCurrent / 3)}.webp`}
+                        <img src={`/images/rank_pl/${Math.floor(props.teamCurrent / 3)}.webp`}
                              alt={'파워 리그 랭크'}/>
                         {roman[(props.teamCurrent % 3)]}
                     </td>

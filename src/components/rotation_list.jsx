@@ -10,7 +10,7 @@ const rotationTable = (map, count) => {
     if (map !== undefined) {
 
         return (
-            <RotationListItem key={`${map.map_id}_${map["Map.mode"]}_${map.begin_time}`}
+            <RotationListItem key={`${map.MAP_ID}_${map.MAP_MD}_${map.ROTATION_BGN_DT}`}
                               map={map}
                               count={count}
             />
@@ -20,7 +20,6 @@ const rotationTable = (map, count) => {
 }
 
 const RotationList = ({rotation}) => {
-    console.log(rotation);
     return (
         <React.Fragment>
             <div>
@@ -41,7 +40,7 @@ const RotationList = ({rotation}) => {
             <div>
                 <div className={"rotation__head"}>
                     <img className={"summary__image-1"}
-                         src={`/images/game_mode/challenge.webp`}
+                         src={`/images/game_mode_icon/challenge.webp`}
                          alt={"challenge"}/>
                     <span>챌린지 이벤트</span>
                 </div>

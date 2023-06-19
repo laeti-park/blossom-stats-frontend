@@ -14,61 +14,61 @@ const ProfileFriendItem = (props) => {
                     friendInfo.map(info => {
                         return (
                             <div
-                                key={`${info.member_id}_${info.friend_id}_${info.map_mode}_${info.match_type}_${info.match_grade}`}>
+                                key={`${info.MEMBER_ID}_${info.FRIEND_ID}_${info.MAP_MD}_${info.MATCH_TYP}_${info.MATCH_GRD}`}>
                                 <div>
                                     <span>
                                         {
-                                            info.match_type === '0' ?
+                                            info.MATCH_TYP === 0 ?
                                                 <img className={'summary__image-3'}
-                                                     src={`/images/game_mode/trophyLeague.webp`}
-                                                     alt={'게임방식'}/> : info.match_type === '2' ?
+                                                     src={`/images/game_mode_icon/trophyLeague.webp`}
+                                                     alt={'게임방식'}/> : info.MATCH_TYP === 2 ?
                                                     <img className={'summary__image-3'}
-                                                         src={`/images/game_mode/rankSolo.webp`}
-                                                         alt={'게임방식'}/> : info.match_type === '3' ?
+                                                         src={`/images/game_mode_icon/rankSolo.webp`}
+                                                         alt={'게임방식'}/> : info.MATCH_TYP === 3 ?
                                                         <img className={'summary__image-3'}
-                                                             src={`/images/game_mode/rankTeam.webp`}
-                                                             alt={'게임방식'}/> : info.match_type === '4' ?
+                                                             src={`/images/game_mode_icon/rankTeam.webp`}
+                                                             alt={'게임방식'}/> : info.MATCH_TYP === '4' ?
                                                             <img className={'summary__image-3'}
-                                                                 src={`/images/game_mode/challenge.webp`}
-                                                                 alt={'게임방식'}/> : info.match_type === '5' ?
+                                                                 src={`/images/game_mode_icon/challenge.webp`}
+                                                                 alt={'게임방식'}/> : info.MATCH_TYP === '5' ?
                                                                 <img className={'summary__image-3'}
-                                                                     src={`/images/game_mode/challenge.webp`}
+                                                                     src={`/images/game_mode_icon/challenge.webp`}
                                                                      alt={'게임방식'}/> :
                                                                 <img className={'summary__image-3'}
-                                                                     src={`/images/game_mode/clubLeague.webp`}
+                                                                     src={`/images/game_mode_icon/clubLeague.webp`}
                                                                      alt={'게임방식'}/>
                                         }
                                     </span>
                                     <span>
-                                         {info.match_count}회
-                                        <span style={{color: '#5AA469'}}> ({info.victory_count}</span>/
+                                         {info.MATCH_CNT}회
+                                        <span style={{color: '#5AA469'}}> ({info.MATCH_CNT_VIC}</span>/
                                         <span
-                                            style={{color: '#556FB5'}}>{drawCount(info.match_count, info.victory_count, info.defeat_count)}</span>/
-                                        <span style={{color: '#D35D6E'}}>{info.defeat_count})</span>
+                                            style={{color: '#556FB5'}}>{drawCount(info.MATCH_CNT, info.MATCH_CNT_VIC, info.MATCH_CNT_DEF)}</span>/
+                                        <span style={{color: '#D35D6E'}}>{info.MATCH_CNT_DEF})</span>
                                     </span>
                                 </div>
                                 <div>
                                     <span>
                                         {
-                                            info.match_type === '0' ?
+                                            info.MATCH_TYP === 0 ?
                                                 <img className={'summary__image-3'}
-                                                     src={`/images/trophy_rank/grade/${info.match_grade}.webp`}
-                                                     alt={'트로피 리그 랭크'}/> : ['2', '3'].includes(info.match_type) ?
+                                                     src={`/images/rank_tlgrade/${info.MATCH_GRD}.webp`}
+                                                     alt={'트로피 리그 랭크'}/> : [2, 3].includes(info.MATCH_TYP) ?
                                                     <img className={'summary__image-3'}
-                                                         src={`/images/league_rank/${Math.floor((info.match_grade - 1) / 3)}.webp`}
-                                                         alt={'파워 리그 랭크'}/> : info.match_type === '6' ?
+                                                         src={`/images/rank_pl/${Math.floor((info.MATCH_GRD - 1) / 3)}.webp`}
+                                                         alt={'파워 리그 랭크'}/> : info.MATCH_TYP === 6 ?
                                                         <img className={'summary__image-3'}
-                                                             src={`/images/game_mode/clubLeague.webp`}
+                                                             src={`/images/game_mode_icon/clubLeague.webp`}
                                                              alt={'클럽 리그'}/> :
                                                         <img className={'summary__image-3'}
-                                                             src={`/images/game_mode/challenge.webp`}
+                                                             src={`/images/game_mode_icon/challenge.webp`}
                                                              alt={'챌린지'}/>
                                         }
                                     </span>
                                     <span>
                                         승률: {
-                                        info.victory_count > 0 ?
-                                            Math.round(info.victory_count / (parseInt(info.victory_count) + parseInt(info.defeat_count)) * 100) : 0}%
+                                        info.MATCH_CNT_VIC > 0 ?
+                                            Math.round(info.MATCH_CNT_VIC / (parseInt(info.MATCH_CNT_VIC) + parseInt(info.MATCH_CNT_DEF)) * 100) : 0}%
                                     </span>
                                 </div>
                             </div>
@@ -81,8 +81,8 @@ const ProfileFriendItem = (props) => {
 
     return (
         <SummaryBox
-            key={`${props.friend.member_id}_${props.friend.friend_id}`}
-            href={`./${props.friend.friend_id.replace('#', '')}`}
+            key={`${props.friend.MEMBER_ID}_${props.friend.FRIEND_ID}`}
+            href={`./${props.friend.FRIEND_ID.replace('#', '')}`}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             hover={hover}>
@@ -91,18 +91,18 @@ const ProfileFriendItem = (props) => {
                     <img className={'summary__image-3'}
                          src={require(`../images/game_icon/friendly.webp`)}
                          alt={"친밀도"}/>
-                    <span>{props.friend.friend_name}({props.friend.friend_point}점)</span>
+                    <span>{props.friend.FRIEND_NM}({Math.round(props.friend.FRIEND_PT * 100) / 100.0}점)</span>
                 </div>
                 <div>
                     <img className={'summary__image-3'}
                          src={require(`../images/game_icon/quests.webp`)}
                          alt={"퀘스트"}/>
                     <span>
-                         매치: {props.friend.match_count}회
-                        <span style={{color: '#5AA469'}}> ({props.friend.victory_count}</span>/
+                         매치: {props.friend.MATCH_CNT}회
+                        <span style={{color: '#5AA469'}}> ({props.friend.MATCH_CNT_VIC}</span>/
                         <span
-                            style={{color: '#556FB5'}}>{drawCount(props.friend.match_count, props.friend.victory_count, props.friend.defeat_count)}</span>/
-                        <span style={{color: '#D35D6E'}}>{props.friend.defeat_count})</span>
+                            style={{color: '#556FB5'}}>{drawCount(props.friend.MATCH_CNT, props.friend.MATCH_CNT_VIC, props.friend.MATCH_CNT_DEF)}</span>/
+                        <span style={{color: '#D35D6E'}}>{props.friend.MATCH_CNT_DEF})</span>
                     </span>
                 </div>
                 <div>
@@ -110,7 +110,7 @@ const ProfileFriendItem = (props) => {
                          src={require(`../images/game_icon/aim.webp`)}
                          alt={"에임"}/>
                     <span>
-                        승률: {Math.round(props.friend.victory_count / (parseInt(props.friend.victory_count) + parseInt(props.friend.defeat_count)) * 100)}%
+                        승률: {Math.round(props.friend.MATCH_CNT_VIC / (parseInt(props.friend.MATCH_CNT_VIC) + parseInt(props.friend.MATCH_CNT_DEF)) * 100)}%
                     </span>
                 </div>
             </div>

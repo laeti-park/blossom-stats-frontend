@@ -6,15 +6,15 @@ const ProfileFriend = (props) => {
         <React.Fragment>
             <div className={'row__box-3'}>
                 <h2>친밀도<span>({
-                    props.friendsPoint !== null && props.friendsPoint.total_point !== undefined ?
-                        props.friendsPoint.total_point : 0}점)</span></h2>
+                    props.friendsPoint !== null && props.friendsPoint.FRIEND_PT_TOT !== undefined ?
+                        props.friendsPoint.FRIEND_PT_TOT : 0}점)</span></h2>
                 <div className={'summary__list-2'}>
                     {
                         props.friendsGroup !== undefined ?
                             props.friendsGroup.map(friend => {
-                                const friendInfo = props.friends.filter(item => item.friend_id === friend.friend_id)
+                                const friendInfo = props.friends.filter(item => item.FRIEND_ID === friend.FRIEND_ID)
                                 return (
-                                    <FriendsItem key={friend.friend_id}
+                                    <FriendsItem key={friend.FRIEND_ID}
                                                  friend={friend}
                                                  friendInfo={friendInfo}/>
                                 )

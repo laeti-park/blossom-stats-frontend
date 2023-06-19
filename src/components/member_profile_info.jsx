@@ -18,7 +18,7 @@ const ProfileInfo = (props) => {
                     <tbody>
                     <tr>
                         <td>
-                            <img src={`/images/game_mode/trophyLeague.webp`}
+                            <img src={`/images/game_mode_icon/trophyLeague.webp`}
                                  alt={'트로피'}/>
                             현재 트로피
                         </td>
@@ -38,12 +38,12 @@ const ProfileInfo = (props) => {
                     </tr>
                     <tr>
                         <td>
-                            <img src={`/images/game_mode/rankSolo.webp`}
+                            <img src={`/images/game_mode_icon/rankSolo.webp`}
                                  alt={'솔로'}/>
                             솔로 리그 현재 랭크
                         </td>
                         <td>
-                            <img src={`/images/league_rank/${Math.floor(props.soloCurrent / 3)}.webp`}
+                            <img src={`/images/rank_pl/${Math.floor(props.soloCurrent / 3)}.webp`}
                                  alt={'파워 리그 랭크'}/>
                             {roman[(props.soloCurrent % 3)]}
                         </td>
@@ -51,12 +51,12 @@ const ProfileInfo = (props) => {
 
                     <tr>
                         <td>
-                            <img src={`/images/game_mode/rankTeam.webp`}
+                            <img src={`/images/game_mode_icon/rankTeam.webp`}
                                  alt={'팀'}/>
                             팀 리그 현재 랭크
                         </td>
                         <td>
-                            <img src={`/images/league_rank/${Math.floor(props.teamCurrent / 3)}.webp`}
+                            <img src={`/images/rank_pl/${Math.floor(props.teamCurrent / 3)}.webp`}
                                  alt={'파워 리그 랭크'}/>
                             {roman[(props.teamCurrent % 3)]}
                         </td>
@@ -85,7 +85,7 @@ const ProfileInfo = (props) => {
                     </tr>
                     <tr>
                         <td>
-                            <img src={`/images/game_mode/rankTriple.webp`}
+                            <img src={`/images/game_mode_icon/rankTriple.webp`}
                                  alt={'3vs3모드'}/>
                             3vs3 승리
                         </td>
@@ -95,7 +95,7 @@ const ProfileInfo = (props) => {
                     </tr>
                     <tr>
                         <td>
-                            <img src={`/images/game_mode/duoShowdown.webp`}
+                            <img src={`/images/game_mode_icon/duoShowdown.webp`}
                                  alt={'듀오'}/>
                             듀오 승리
                         </td>
@@ -105,7 +105,7 @@ const ProfileInfo = (props) => {
                     </tr>
                     <tr>
                         <td>
-                            <img src={`/images/trophy_rank/grade/3.webp`}
+                            <img src={`/images/rank_tlgrade/3.webp`}
                                  alt={'25랭크'}/>
                             25랭크 개수
                         </td>
@@ -115,7 +115,7 @@ const ProfileInfo = (props) => {
                     </tr>
                     <tr>
                         <td>
-                            <img src={`/images/trophy_rank/grade/4.webp`}
+                            <img src={`/images/rank_tlgrade/4.webp`}
                                  alt={'30랭크'}/>
                             30랭크 개수
                         </td>
@@ -125,7 +125,7 @@ const ProfileInfo = (props) => {
                     </tr>
                     <tr>
                         <td>
-                            <img src={`/images/trophy_rank/grade/5.webp`}
+                            <img src={`/images/rank_tlgrade/5.webp`}
                                  alt={'35랭크'}/>
                             35랭크 개수
                         </td>
@@ -135,12 +135,12 @@ const ProfileInfo = (props) => {
                     </tr>
                     <tr>
                         <td>
-                            <img src={`/images/game_mode/rankSolo.webp`}
+                            <img src={`/images/game_mode_icon/rankSolo.webp`}
                                  alt={'솔로'}/>
                             솔로 리그 최대 랭크
                         </td>
                         <td>
-                            <img src={`/images/league_rank/${Math.floor(props.soloHighest / 3)}.webp`}
+                            <img src={`/images/rank_pl/${Math.floor(props.soloHighest / 3)}.webp`}
                                  alt={'솔로'}/>
                             {roman[(props.soloHighest % 3)]}
                         </td>
@@ -148,12 +148,12 @@ const ProfileInfo = (props) => {
                     <tr>
                         <td>
                             <img
-                                src={`/images/game_mode/rankTeam.webp`}
+                                src={`/images/game_mode_icon/rankTeam.webp`}
                                 alt={'팀'}/>
                             팀 리그 최대 랭크
                         </td>
                         <td>
-                            <img src={`/images/league_rank/${Math.floor(props.teamHighest / 3)}.webp`}
+                            <img src={`/images/rank_pl/${Math.floor(props.teamHighest / 3)}.webp`}
                                  alt={'솔로'}/>
                             {roman[(props.teamHighest % 3)]}
                         </td>

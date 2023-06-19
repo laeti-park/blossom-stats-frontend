@@ -38,29 +38,29 @@ export default (props) => {
                 {
                     props.members.slice(offset, offset + 10).map(member => {
                         return (
-                            <tr key={`${member.member_id}_${member.match_type}_${member.map_mode}`}
+                            <tr key={`${member.MEMBER_ID}_${member.MATCH_TYP}_${member.MAP_MD}`}
                                 onClick={() => {
-                                    navigate(`../member/${member.member_id.replace('#', '')}`)
+                                    navigate(`../member/${member.MEMBER_ID.replace('#', '')}`)
                                 }}>
                                 <td>
-                                    <FontAwesomeIcon icon={faAngleRight}/> {member.member_name}
+                                    <FontAwesomeIcon icon={faAngleRight}/> {member.MEMBER_NM}
                                 </td>
                                 <td style={{textAlign: "center"}}>
                                     <div>
                                         <img src={require('../images/game_icon/quests.webp')}
                                              alt='매치'/>
-                                        {member.match_count}회
+                                        {member.MATCH_CNT}회
                                     </div>
                                     <div>
                                         <img src={require('../images/game_icon/trophy_plus.webp')}
                                              alt='변화량'/>
-                                        {member.match_change}개
+                                        {member.MATCH_CHG}개
                                     </div>
                                 </td>
                                 <td>
                                     <img src={require('../images/game_icon/friendly.webp')}
                                          alt='트로피 변화량'/>
-                                    {member.point}
+                                    {member.FRIEND_PT}
                                 </td>
                             </tr>
                         )

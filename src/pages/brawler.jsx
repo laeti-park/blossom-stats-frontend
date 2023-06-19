@@ -11,25 +11,35 @@ const url = process.env.REACT_APP_BASE_URL;
 export default () => {
     const [brawlers, setBrawlers] = useState([]);
     const [memberBrawlers, setMemberBrawlers] = useState([]);
-    const [pick, setPick] = useState([]);
+    const [battlePicks, setBattlePicks] = useState([]);
     const [brawler, setBrawler] = useState({
-        "id": "16000000",
-        "name": "쉘리",
-        "rarity": "기본",
-        "class": "대미지 딜러",
-        "gender": "여성",
-        "icon": "<:Brawler_1:1015890389993005096>"
+        "BRAWLER_ID": "16000000",
+        "BRAWLER_NM": "쉘리",
+        "BRAWLER_RRT": "기본",
+        "BRAWLER_CL": "대미지 딜러",
+        "BRAWLER_GNDR": "여성"
     });
 
     useEffect(() => {
         axios.get(`${url}/brawler`, {
             params: {
-                brawler: brawler.id,
+                brawler: brawler.BRAWLER_ID,
             },
         }).then((result) => {
             setBrawlers(result.data.brawlers);
             setMemberBrawlers(result.data.memberBrawlers);
-            setPick(result.data.pick);
+            setBattlePicks(result.data.battlePicks);
+        });
+    }, []);
+
+    useEffect(() => {
+        axios.get(`${url}/brawler`, {
+            params: {
+                brawler: brawler.BRAWLER_ID,
+            },
+        }).then((result) => {
+            setMemberBrawlers(result.data.memberBrawlers);
+            setBattlePicks(result.data.battlePicks);
         });
     }, [brawler]);
 
@@ -44,7 +54,7 @@ export default () => {
             <div className={'brawler_table__box'}>
                 <BrawlerPicked
                     brawler={brawler}
-                    pick={pick}/>
+                    battlePicks={battlePicks}/>
                 <BrawlerTable
                     memberBrawlers={memberBrawlers}/>
             </div>

@@ -37,15 +37,15 @@ const ProfileSeason = (props) => {
     const powerLeague = (item) => {
         return (
             <SummaryBox
-                key={`${item.member_id}_${item.map_mode}_${item.match_type}_${item.match_grade}`}>
+                key={`${item.MEMBER_ID}_${item.MAP_MD}_${item.MATCH_TYP}_${item.MATCH_GRD}`}>
                 <img className={'summary__image-1'}
-                     src={`/images/game_mode/${item.map_mode}.webp`}
+                     src={`/images/game_mode_icon/${item.MAP_MD}.webp`}
                      alt={'게임모드'}/>
                 <div>
                     <div>
                         <span>
                             <img className={'summary__image-3'}
-                                 src={`/images/league_rank/${Math.floor((item.match_grade - 1) / 3)}.webp`}
+                                 src={`/images/rank_pl/${Math.floor((item.MATCH_GRD - 1) / 3)}.webp`}
                                  alt={'파워 리그 랭크'}/>
                         </span>
                     </div>
@@ -53,26 +53,26 @@ const ProfileSeason = (props) => {
                         <img className={'summary__image-3'}
                              src={require(`../images/game_icon/quests.webp`)}
                              alt={"퀘스트"}/>
-                        <span>매치: {item.match_count}회</span>
+                        <span>매치: {item.MATCH_CNT}회</span>
                         (
                         <span
-                            style={{color: '#5AA469'}}>{item.victory_count}</span>/
+                            style={{color: '#5AA469'}}>{item.MATCH_CNT_VIC}</span>/
                         <span
                             style={{color: '#556FB5'}}>{
-                            drawCount(item.match_count,
-                                item.victory_count,
-                                item.defeat_count)}
+                            drawCount(item.MATCH_CNT,
+                                item.MATCH_CNT_VIC,
+                                item.MATCH_CNT_DEF)}
                                             </span>/
                         <span
-                            style={{color: '#D35D6E'}}>{item.defeat_count}</span>
+                            style={{color: '#D35D6E'}}>{item.MATCH_CNT_DEF}</span>
                         )
                     </div>
                     <div>
                         <img className={'summary__image-3'}
                              src={require(`../images/game_icon/aim.webp`)}
                              alt={"에임"}/>
-                        <span>승률: {victoryRate(item.victory_count,
-                            item.defeat_count)}%</span>
+                        <span>승률: {victoryRate(item.MATCH_CNT_VIC,
+                            item.MATCH_CNT_DEF)}%</span>
                     </div>
                 </div>
             </SummaryBox>
@@ -82,50 +82,50 @@ const ProfileSeason = (props) => {
     return (
         <React.Fragment>
             <div className={'row__box-3'}>
-                <h2>시즌 기록<span>({props.seasonCount.match_count}회)</span></h2>
+                <h2>시즌 기록<span>({props.seasonCount.MATCH_CNT}회)</span></h2>
                 <h4>
-                    <span style={{color: '#5AA469'}}>승: {props.seasonCount.victory_count}회 </span>
+                    <span style={{color: '#5AA469'}}>승: {props.seasonCount.MATCH_CNT_VIC}회 </span>
                     <span style={{color: '#556FB5'}}>
-                        무: {drawCount(props.seasonCount.match_count, props.seasonCount.victory_count, props.seasonCount.defeat_count)}회 </span>
-                    <span style={{color: '#D35D6E'}}>패: {props.seasonCount.defeat_count}회 </span>
-                    <span>/ 승률: {victoryRate(props.seasonCount.victory_count, props.seasonCount.defeat_count)}%</span>
+                        무: {drawCount(props.seasonCount.MATCH_CNT, props.seasonCount.MATCH_CNT_VIC, props.seasonCount.MATCH_CNT_DEF)}회 </span>
+                    <span style={{color: '#D35D6E'}}>패: {props.seasonCount.MATCH_CNT_DEF}회 </span>
+                    <span>/ 승률: {victoryRate(props.seasonCount.MATCH_CNT_VIC, props.seasonCount.MATCH_CNT_DEF)}%</span>
                 </h4>
             </div>
             <h3>전체 모드</h3>
             <div className={'summary__list-2'}>
                 {
                     props.records.mapMode !== undefined ? modes.map(mode => {
-                        if (props.records.mapMode[`${mode}`].match_count !== undefined) {
+                        if (props.records.mapMode[`${mode}`].MATCH_CNT !== undefined) {
                             return (
                                 <SummaryBox key={mode}>
                                     <img className={'summary__image-1'}
-                                         src={`/images/game_mode/${mode}.webp`}
+                                         src={`/images/game_mode_icon/${mode}.webp`}
                                          alt={'게임모드'}/>
                                     <div>
                                         <div>
                                             <img className={'summary__image-3'}
                                                  src={require(`../images/game_icon/quests.webp`)}
                                                  alt={"퀘스트"}/>
-                                            <span>매치: {props.records.mapMode[`${mode}`].match_count}회</span>
+                                            <span>매치: {props.records.mapMode[`${mode}`].MATCH_CNT}회</span>
                                             (
                                             <span
-                                                style={{color: '#5AA469'}}>{props.records.mapMode[`${mode}`].victory_count}</span>/
+                                                style={{color: '#5AA469'}}>{props.records.mapMode[`${mode}`].MATCH_CNT_VIC}</span>/
                                             <span
                                                 style={{color: '#556FB5'}}>{
-                                                drawCount(props.records.mapMode[`${mode}`].match_count,
-                                                    props.records.mapMode[`${mode}`].victory_count,
-                                                    props.records.mapMode[`${mode}`].defeat_count)}
+                                                drawCount(props.records.mapMode[`${mode}`].MATCH_CNT,
+                                                    props.records.mapMode[`${mode}`].MATCH_CNT_VIC,
+                                                    props.records.mapMode[`${mode}`].MATCH_CNT_DEF)}
                                             </span>/
                                             <span
-                                                style={{color: '#D35D6E'}}>{props.records.mapMode[`${mode}`].defeat_count}</span>
+                                                style={{color: '#D35D6E'}}>{props.records.mapMode[`${mode}`].MATCH_CNT_DEF}</span>
                                             )
                                         </div>
                                         <div>
                                             <img className={'summary__image-3'}
                                                  src={require(`../images/game_icon/aim.webp`)}
                                                  alt={"에임"}/>
-                                            <span>승률: {victoryRate(props.records.mapMode[`${mode}`].victory_count,
-                                                props.records.mapMode[`${mode}`].defeat_count)}% </span>
+                                            <span>승률: {victoryRate(props.records.mapMode[`${mode}`].MATCH_CNT_VIC,
+                                                props.records.mapMode[`${mode}`].MATCH_CNT_DEF)}% </span>
                                         </div>
                                     </div>
                                 </SummaryBox>
@@ -151,15 +151,15 @@ const ProfileSeason = (props) => {
                                     props.records.trophyLeague.map(record => {
                                         return (
                                             <SummaryBox
-                                                key={`${record.member_id}_${record.map_mode}_${record.match_type}_${record.match_grade}`}>
+                                                key={`${record.MEMBER_ID}_${record.MAP_MD}_${record.MATCH_TYP}_${record.MATCH_GRD}`}>
                                                 <img className={'summary__image-1'}
-                                                     src={`/images/game_mode/${record.map_mode}.webp`}
+                                                     src={`/images/game_mode_icon/${record.MAP_MD}.webp`}
                                                      alt={'게임모드'}/>
                                                 <div>
                                                     <div>
                                                         <span>
                                                             <img className={'summary__image-3'}
-                                                                 src={`/images/trophy_rank/grade/${record.match_grade}.webp`}
+                                                                 src={`/images/rank_tlgrade/${record.MATCH_GRD}.webp`}
                                                                  alt={'트로피 리그 랭크'}/>
                                                         </span>
                                                     </div>
@@ -167,18 +167,18 @@ const ProfileSeason = (props) => {
                                                         <img className={'summary__image-3'}
                                                              src={require(`../images/game_icon/quests.webp`)}
                                                              alt={"퀘스트"}/>
-                                                        <span>매치: {record.match_count}회</span>
+                                                        <span>매치: {record.MATCH_CNT}회</span>
                                                         (
                                                         <span
-                                                            style={{color: '#5AA469'}}>{record.victory_count}</span>/
+                                                            style={{color: '#5AA469'}}>{record.MATCH_CNT_VIC}</span>/
                                                         <span
                                                             style={{color: '#556FB5'}}>{
-                                                            drawCount(record.match_count,
-                                                                record.victory_count,
-                                                                record.defeat_count)}
+                                                            drawCount(record.MATCH_CNT,
+                                                                record.MATCH_CNT_VIC,
+                                                                record.MATCH_CNT_DEF)}
                                                         </span>/
                                                         <span
-                                                            style={{color: '#D35D6E'}}>{record.defeat_count}</span>
+                                                            style={{color: '#D35D6E'}}>{record.MATCH_CNT_DEF}</span>
                                                         )
 
                                                     </div>
@@ -186,8 +186,8 @@ const ProfileSeason = (props) => {
                                                         <img className={'summary__image-3'}
                                                              src={require(`../images/game_icon/aim.webp`)}
                                                              alt={"에임"}/>
-                                                        <span>승률: {victoryRate(record.victory_count,
-                                                            record.defeat_count)}% </span>
+                                                        <span>승률: {victoryRate(record.MATCH_CNT_VIC,
+                                                            record.MATCH_CNT_DEF)}% </span>
                                                     </div>
                                                 </div>
                                             </SummaryBox>
